@@ -2,7 +2,6 @@ import React from 'react'
 import Header from '../global/header'
 import About from './about/page'
 import Features from './features/page'
-import Slider from './slider/page'
 import Information from './information/page'
 import FleetSection from './fleet/page'
 import WhyChooseUsSection from './whychoosesection/page'
@@ -31,7 +30,6 @@ const Homepage = () => {
         <Header />
         <About />
         <Features />
-        <Slider></Slider>
         <Information></Information>
         <TickerSection></TickerSection>
         <FleetSection></FleetSection>
