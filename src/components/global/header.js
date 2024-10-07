@@ -32,20 +32,20 @@ const Header = () => {
             </div>
             {/* Desktop Menu */}
             <ul className='hidden md:flex items-center space-x-4 md:space-x-8 font-medium text-sm md:text-md border-r border-gray-300 pr-3'>
-              <li><Link href="/">HOME</Link></li>
+              <li><Link href="#">HOME</Link></li>
               <li><Link href="/kochi-city-taxi">FLEET</Link></li>
               <li><Link href="/kochi-taxi-rates">TARIFF</Link></li>
               <li><Link href="/general-contact">CONTACT</Link></li>
-              <li><Link href="/book-now">BOOK NOW</Link></li>
+              <li><Link href="/book-now">CONTACT</Link></li>
             </ul>
           </div>
 
           {/* Right - Contact Links for larger screens */}
           <div className='hidden md:flex w-auto justify-center md:justify-end'>
-            <Link href='tel:979885118877' className='border border-red-500 px-4 py-2 mr-2 rounded-md text-red-500 inline-block hover:bg-red-500 hover:text-white cursor-pointer text-sm md:text-base'>
+            <Link href='/signup' className='border border-red-500 px-4 py-2 mr-2 rounded-md text-red-500 inline-block hover:bg-red-500 hover:text-white cursor-pointer text-sm md:text-base'>
               +91 9895 11 8877
             </Link>
-            <Link href='/book-now' className='border border-red bg-red-500 px-4 py-2 rounded-md text-white inline-block hover:bg-red-500 hover:border-red-500 cursor-pointer text-sm md:text-base'>
+            <Link href='/login' className='border border-red bg-red-500 px-4 py-2 rounded-md text-white inline-block hover:bg-red-500 hover:border-red-500 cursor-pointer text-sm md:text-base'>
               Book Now!
             </Link>
           </div>
@@ -59,11 +59,10 @@ const Header = () => {
           <button onClick={toggleMenu} className="text-2xl">&times;</button> {/* Close button */}
         </div>
         <ul className='p-4 space-y-6'>
-          <li><Link href="/" className="text-lg" onClick={toggleMenu}>HOME</Link></li>
-          <li><Link href="/kochi-city-taxi" className="text-lg" onClick={toggleMenu}>FLEET</Link></li>
-          <li><Link href="/kochi-taxi-rates" className="text-lg" onClick={toggleMenu}>TARIFF</Link></li>
-          <li><Link href="/general-contact" className="text-lg" onClick={toggleMenu}>CONTACT</Link></li>
-          <li><Link href="/book-now" className="text-lg" onClick={toggleMenu}>Book Now</Link></li>
+          <li><Link href="#" className="text-lg" onClick={toggleMenu}>HOME</Link></li>
+          <li><Link href="#" className="text-lg" onClick={toggleMenu}>FLEET</Link></li>
+          <li><Link href="#" className="text-lg" onClick={toggleMenu}>TARIFF</Link></li>
+          <li><Link href="#" className="text-lg" onClick={toggleMenu}>CONTACT</Link></li>
         </ul>
       </div>
 

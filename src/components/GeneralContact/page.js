@@ -9,7 +9,7 @@ import { IoMailOutline } from "react-icons/io5";
 import { FaPhone } from "react-icons/fa6";
 import { FaGoogle } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
-import Footer from '../global/footer'
+
 const GeneralContact = () => {
   return (
     <div>
@@ -125,8 +125,6 @@ const GeneralContact = () => {
                 </div>
             </div>
         </div>
-
-        <Footer></Footer>
     </div>
   )
 }

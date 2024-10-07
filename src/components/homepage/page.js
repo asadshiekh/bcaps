@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../global/header'
 import About from './about/page'
 import Features from './features/page'
+import Slider from './slider/page'
 import Information from './information/page'
 import FleetSection from './fleet/page'
 import WhyChooseUsSection from './whychoosesection/page'
@@ -10,6 +11,8 @@ import FaqSection from './faqsection/page'
 import ThreeBlockSection from './threeblocksection/page'
 import TrustedPartners from './trustedpatner/page'
 import Footer from '../global/footer'
+import BannerSlider from './banner-slider/page'
+import FullWidthVideoSection from './video-section/page'
 
 const Homepage = () => {
 
@@ -28,13 +31,16 @@ const Homepage = () => {
   return (
     <div>
         <Header />
+        <BannerSlider></BannerSlider>
         <About />
         <Features />
+        <Slider></Slider>
         <Information></Information>
         <TickerSection></TickerSection>
         <FleetSection></FleetSection>
         <WhyChooseUsSection/>
         <FaqSection></FaqSection>
+        <FullWidthVideoSection></FullWidthVideoSection>
         <ThreeBlockSection></ThreeBlockSection>
         <TrustedPartners images={images}></TrustedPartners>
         <Footer></Footer>

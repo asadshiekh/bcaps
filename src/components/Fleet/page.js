@@ -3,7 +3,6 @@ import Header from '../global/header'
 import Link from 'next/link'
 import GalleryCard from '../global/gallery-card'
 import { FaChevronRight } from "react-icons/fa6";
-import Footer from '../global/footer'
 
 const Fleet = () => {
   return (
@@ -111,8 +110,6 @@ const Fleet = () => {
                 </div>
             </div>
         </div>
-        
-        <Footer></Footer>
 
     </div>
   )

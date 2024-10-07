@@ -24,16 +24,16 @@ const FaqSection = () => {
     : faqData.filter((faq) => faq.category === activeFilter);
 
   return (
-    <section className="py-[60px] px-20 lg:px-[250px]">
+    <section className="py-[60px] sm:px-2 lg:px-20 lg:px-[250px]">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
         <h3 className="text-lg mb-4">How can we help you?</h3>
 
         {/* FAQ Filter Tabs */}
-        <ul className="flex justify-center space-x-4 mb-6">
+        <ul className="flex justify-center space-x-2 lg:space-x-4 mb-2 lg:mb-6">
           <li>
             <button
-              className={`transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 px-4 ${activeFilter === 'faq' ? 'border-red-500 text-red-500 bg-white py-2 px-4 rounded-full' : 'text-blue-500 hover:border-red-500'}`}
+              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq' ? 'border-red-500 text-red-500 bg-white py-2 lg:px-4 rounded-full' : 'text-blue-500 hover:border-red-500'}`}
               onClick={() => setActiveFilter('faq')}
             >
               All
@@ -41,7 +41,7 @@ const FaqSection = () => {
           </li>
           <li>
             <button
-              className={`transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 px-4 ${activeFilter === 'faq-1' ? 'border-red-500 text-red-500 bg-white py-2 px-4 rounded-full' : 'text-blue-500 hover:border-red-500'}`}
+              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq-1' ? 'border-red-500 text-red-500 bg-white py-2 lg:px-4 rounded-full' : 'text-blue-500 hover:border-red-500'}`}
               onClick={() => setActiveFilter('faq-1')}
             >
               Kochi Taxi
@@ -49,7 +49,7 @@ const FaqSection = () => {
           </li>
           <li>
             <button
-              className={`transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 px-4 ${activeFilter === 'faq-2' ? 'border-red-500 text-red-500 bg-white py-2 px-4 rounded-full' : 'text-blue-500 hover:border-red-500'}`}
+              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq-2' ? 'border-red-500 text-red-500 bg-white py-2 lg:px-4 rounded-full' : 'text-blue-500 hover:border-red-500'}`}
               onClick={() => setActiveFilter('faq-2')}
             >
               Kerala Tour Package
@@ -57,26 +57,29 @@ const FaqSection = () => {
           </li>
           <li>
             <button
-              className={`transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 px-4 ${activeFilter === 'faq-3' ? 'border-red-500 text-red-500 bg-white py-2 px-4 rounded-full' : 'text-blue-500 hover:border-red-500'}`}
+              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq-3' ? 'border-red-500 text-red-500 bg-white py-2 lg:px-4 rounded-full' : 'text-blue-500 hover:border-red-500'}`}
               onClick={() => setActiveFilter('faq-3')}
             >
               Kochi Airport Taxi
             </button>
           </li>
+       
+        </ul>
+
+        <ul className="flex justify-center space-x-2 lg:space-x-4 mb-6">
+
           <li>
             <button
-              className={`transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 px-4 ${activeFilter === 'faq-4' ? 'border-red-500 text-red-500 bg-white py-2 px-4 rounded-full' : 'text-blue-500 hover:border-red-500'}`}
+              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq-4' ? 'border-red-500 text-red-500 bg-white py-2 lg:px-4 rounded-full' : 'text-blue-500 hover:border-red-500'}`}
               onClick={() => setActiveFilter('faq-4')}
             >
               Trivandrum Airport Taxi
             </button>
           </li>
-        </ul>
 
-        <ul className="flex justify-center space-x-4 mb-6">
           <li>
             <button
-              className={`transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 px-4 ${activeFilter === 'faq-5' ? 'border-red-500 text-red-500 bg-white py-2 px-4 rounded-full' : 'text-blue-500 hover:border-red-500'}`}
+              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 px-4 ${activeFilter === 'faq-5' ? 'border-red-500 text-red-500 bg-white py-2 lg:px-4 rounded-full' : 'text-blue-500 hover:border-red-500'}`}
               onClick={() => setActiveFilter('faq-5')}
             >
               Kozhikode Airport Taxi
@@ -84,7 +87,7 @@ const FaqSection = () => {
           </li>
           <li>
             <button
-              className={`transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 px-4 ${activeFilter === 'faq-6' ? 'border-red-500 text-red-500 bg-white py-2 px-4 rounded-full' : 'text-blue-500 hover:border-red-500'}`}
+              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 px-4 ${activeFilter === 'faq-6' ? 'border-red-500 text-red-500 bg-white py-2 lg:px-4 rounded-full' : 'text-blue-500 hover:border-red-500'}`}
               onClick={() => setActiveFilter('faq-6')}
             >
               Kannur Airport Taxi
@@ -95,7 +98,7 @@ const FaqSection = () => {
         {/* FAQ Items */}
         <div>
           {filteredFaqs.map((faq) => (
-            <div key={faq.id} className="border-b border-gray-200 py-4 flex items-center justify-left">
+            <div key={faq.id} className="border-b border-gray-200 py-4  flex items-center justify-left">
               <span className="mr-2 text-gray-700">{faq.icon}</span>
               <div className="text-left">
                 <h3 className="text-lg font-semibold">{faq.question}</h3>

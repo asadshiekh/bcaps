@@ -3,7 +3,6 @@ import React from 'react'
 import Header from '../global/header'
 import Link from 'next/link'
 import { useState } from 'react';
-import Footer from '../global/footer'
 
 const BookNow = () => {
     const [showInput, setShowInput] = useState(false);
@@ -34,7 +33,7 @@ const BookNow = () => {
         
         {/* contact form */}
 
-        <div className="contact-form py-10 px-10 mt-8">
+        <div className="contact-form py-10 mt-8">
             <div className="container mx-auto">
                 <div className="w-2/4">
                     <div>
@@ -149,9 +148,6 @@ const BookNow = () => {
                 </div>
             </div>
         </div>
-
-        <Footer></Footer>
-
     </div>
   )
 }
