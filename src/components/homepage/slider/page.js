@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from 'next/image';
 
 export default function Slider() {
   const [showModal, setShowModal] = useState(false);
@@ -8,28 +9,27 @@ export default function Slider() {
   const videos = [
     {
       id: 1,
-      title: "Video 1",
-      src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      title: "",
+      src: "https://www.youtube.com/embed/95MXNUlm22M",
+      thumbnail: "/images/assets/thumb1.jpg",
     },
     {
       id: 2,
-      title: "Video 2",
-      src: "https://www.youtube.com/embed/3JZ_D3ELwOQ",
+      title: "",
+      src: "https://www.youtube.com/embed/exCuiobQYPM",
+      thumbnail: "/images/assets/thumb2.jpg",
     },
     {
       id: 3,
-      title: "Video 3",
-      src: "https://www.youtube.com/embed/5NV6Rdv1a3I",
+      title: "",
+      src: "https://www.youtube.com/embed/j1iHMqjRLIU",
+      thumbnail: "/images/assets/thumb3.jpg",
     },
     {
       id: 4,
-      title: "Video 4",
-      src: "https://www.youtube.com/embed/ktvTqknDobU",
-    },
-    {
-      id: 5,
-      title: "Video 5",
-      src: "https://www.youtube.com/embed/lWA2pjMjpBs",
+      title: "",
+      src: "https://www.youtube.com/embed/MTuFumSGbfo",
+      thumbnail: "/images/assets/thumb4.jpg",
     },
   ];
 
@@ -50,7 +50,7 @@ export default function Slider() {
 
       {/* Description */}
       <p className="text-white text-lg mb-8 max-w-lg">
-      Hire a BCabs for your Kerala tour from BCabs and have total peace of mind with Guranteed satisfaction.
+        Hire a BCabs for your Kerala tour from BCabs and have total peace of mind with Guaranteed satisfaction.
       </p>
 
       {/* Video Slider */}
@@ -59,27 +59,63 @@ export default function Slider() {
           {videos.map((video) => (
             <div
               key={video.id}
-              className="min-w-[400px] bg-gray-900 rounded-lg p-4 cursor-pointer"
+              className="min-w-[400px] relative cursor-pointer"
               onClick={() => openModal(video.src)}
             >
-              <iframe
+              {/* Thumbnail Image */}
+              <Image
+                src={video.thumbnail}
+                alt={video.title}
+                width={360}
+                height={400}
                 className="rounded-lg"
-                width="360"
-                height="400"
-                src={video.src}
-                title={video.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-              <p className="text-white mt-2">{video.title}</p>
+              />
+              {/* Play Icon Overlay */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-16 w-16 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14.752 11.168l-5.197-3.003A1 1 0 008 9.065v5.869a1 1 0 001.555.832l5.197-3.003a1 1 0 000-1.664z"
+                  />
+                </svg>
+              </div>
+              <p className="text-white mt-2 text-center">{video.title}</p>
             </div>
           ))}
         </div>
       </div>
 
-
-
+      {/* Modal for Video */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
+          <div className="relative w-full max-w-4xl">
+            {/* Close Button */}
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 text-white bg-red-600 rounded-full p-2 hover:bg-red-700 focus:outline-none"
+            >
+              ✕
+            </button>
+            {/* Embedded YouTube Video */}
+            <iframe
+              className="w-full h-[500px] rounded-lg"
+              src={iframeSrc}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

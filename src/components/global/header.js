@@ -31,12 +31,12 @@ const Header = () => {
               </button>
             </div>
             {/* Desktop Menu */}
-            <ul className='hidden md:flex items-center space-x-4 md:space-x-8 font-medium text-sm md:text-md border-r border-gray-300 pr-3'>
-              <li><Link href="#">HOME</Link></li>
+            <ul className='hidden md:flex items-center space-x-4 md:space-x-8 font-medium text-sm md:text-lg border-r border-gray-300 pr-3'>
+              <li><Link href="/">HOME</Link></li>
               <li><Link href="/kochi-city-taxi">FLEET</Link></li>
               <li><Link href="/kochi-taxi-rates">TARIFF</Link></li>
               <li><Link href="/general-contact">CONTACT</Link></li>
-              <li><Link href="/book-now">CONTACT</Link></li>
+              <li><Link href="/book-now">BOOK NOW</Link></li>
             </ul>
           </div>
 
@@ -59,10 +59,11 @@ const Header = () => {
           <button onClick={toggleMenu} className="text-2xl">&times;</button> {/* Close button */}
         </div>
         <ul className='p-4 space-y-6'>
-          <li><Link href="#" className="text-lg" onClick={toggleMenu}>HOME</Link></li>
-          <li><Link href="#" className="text-lg" onClick={toggleMenu}>FLEET</Link></li>
-          <li><Link href="#" className="text-lg" onClick={toggleMenu}>TARIFF</Link></li>
-          <li><Link href="#" className="text-lg" onClick={toggleMenu}>CONTACT</Link></li>
+          <li><Link href="/" className="text-lg" onClick={toggleMenu}>HOME</Link></li>
+          <li><Link href="/kochi-city-taxi" className="text-lg" onClick={toggleMenu}>FLEET</Link></li>
+          <li><Link href="/kochi-taxi-rates" className="text-lg" onClick={toggleMenu}>TARIFF</Link></li>
+          <li><Link href="/general-contact" className="text-lg" onClick={toggleMenu}>CONTACT</Link></li>
+          <li><Link href="/book-now" className="text-lg" onClick={toggleMenu}>BOOK NOW</Link></li>
         </ul>
       </div>
 

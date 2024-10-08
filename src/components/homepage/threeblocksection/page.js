@@ -2,7 +2,7 @@
 
 const ThreeBlockSection = () => {
     return (
-      <div className="flex flex-col lg:flex-row mb-6 w-full">
+      <div className="flex flex-col lg:flex-row w-full">
         {/* Block 1: Red Background */}
         <div className="flex-1 bg-red-600 p-8 overflow-hidden">
           <h3 className="text-uppercase font-semibold text-white text-3xl mb-5">Why choose Us</h3>

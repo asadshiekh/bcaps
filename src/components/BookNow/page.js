@@ -3,6 +3,7 @@ import React from 'react'
 import Header from '../global/header'
 import Link from 'next/link'
 import { useState } from 'react';
+import Footer from '../global/footer';
 
 const BookNow = () => {
     const [showInput, setShowInput] = useState(false);
@@ -148,6 +149,7 @@ const BookNow = () => {
                 </div>
             </div>
         </div>
+        <Footer></Footer>
     </div>
   )
 }

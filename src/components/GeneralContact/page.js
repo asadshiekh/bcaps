@@ -1,16 +1,72 @@
+"use client"; // Add this directive at the top of your component
+
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'; // Import useState for managing form state
 import Header from '../global/header'
 import { GrFacebookOption } from "react-icons/gr";
 import { FaPinterestP } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
-import { FaPhone } from "react-icons/fa6";
+import { FaPhone } from "react-icons/fa";
 import { FaGoogle } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
+import Footer from '../global/footer';
 
 const GeneralContact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    department: 'Sales',
+    message: ''
+  });
+
+  const [status, setStatus] = useState('');
+
+  // Handle form input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('Sending...');
+
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('Email sent successfully!');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          department: 'Sales',
+          message: ''
+        });
+      } else {
+        const errorData = await response.json();
+        setStatus(errorData.message || 'Error sending email. Please try again.');
+      }
+    } catch (error) {
+      setStatus('Error sending email. Please try again.');
+    }
+  };
+
   return (
     <div>
         <Header />
@@ -56,42 +112,80 @@ const GeneralContact = () => {
                     </div>
                     <div>
                         <h4 className="text-3xl mb-3">General Contact</h4>
-                        <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-2 mb-5">
-                            <div>
-                                <label>Name*:</label>
-                                <input type="text" placeholder="" className="w-full p-2 border border-2 rounded-md"/>
-                            </div>
-                            <div>
-                                <label>Email*:</label>
-                                <input type="text" placeholder="" className="w-full p-2 border border-2 rounded-md"/>
-                            </div>
-                            <div>
-                                <label>Phone:</label>
-                                <input type="text" placeholder="" className="w-full p-2 border border-2 rounded-md"/>
-                            </div>
-                        </div>
-                        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-2 mb-5">
-                            <div>
-                                <label>Subject*:</label>
-                                <input type="text" placeholder="" className="w-full p-2 border border-2 rounded-md"/>
-                            </div>
-                            <div>
-                                <label>Department*:</label>
-                                <select className="w-full p-2 border border-2 rounded-md">
-                                    <option value="Sales">Sales</option>
-                                    <option value="Admin">Admin</option>
-                                    <option value="Admin">Accounts</option>
-                                    <option value="Admin">Marketing</option>
-                                    <option value="Admin">Human Resource</option>
-                                    <option value="Admin">Vehicle Attachment</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div className="mb-5">
-                            <label>Message*:</label>
-                            <textarea rows="4" className="w-full p-2 border border-2 rounded-md"></textarea>
-                        </div>
-                        <Link href='/login' className='border border-red bg-red-500 px-6 py-2 rounded-md text-white inline-block hover:bg-red-500 hover:border-red-500 cursor-pointer'>Submit</Link>
+                        <form onSubmit={handleSubmit}> {/* Add form onSubmit handler */}
+                          <div className="grid sm:grid-cols-1 lg:grid-cols-3 gap-2 mb-5">
+                              <div>
+                                  <label>Name*:</label>
+                                  <input 
+                                      type="text" 
+                                      name="name" 
+                                      value={formData.name} 
+                                      onChange={handleChange} 
+                                      placeholder="" 
+                                      className="w-full p-2 border border-2 rounded-md"/>
+                              </div>
+                              <div>
+                                  <label>Email*:</label>
+                                  <input 
+                                      type="email" 
+                                      name="email" 
+                                      value={formData.email} 
+                                      onChange={handleChange} 
+                                      placeholder="" 
+                                      className="w-full p-2 border border-2 rounded-md"/>
+                              </div>
+                              <div>
+                                  <label>Phone:</label>
+                                  <input 
+                                      type="text" 
+                                      name="phone" 
+                                      value={formData.phone} 
+                                      onChange={handleChange} 
+                                      placeholder="" 
+                                      className="w-full p-2 border border-2 rounded-md"/>
+                              </div>
+                          </div>
+                          <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-2 mb-5">
+                              <div>
+                                  <label>Subject*:</label>
+                                  <input 
+                                      type="text" 
+                                      name="subject" 
+                                      value={formData.subject} 
+                                      onChange={handleChange} 
+                                      placeholder="" 
+                                      className="w-full p-2 border border-2 rounded-md"/>
+                              </div>
+                              <div>
+                                  <label>Department*:</label>
+                                  <select 
+                                      name="department" 
+                                      value={formData.department} 
+                                      onChange={handleChange} 
+                                      className="w-full p-2 border border-2 rounded-md">
+                                      <option value="Sales">Sales</option>
+                                      <option value="Admin">Admin</option>
+                                      <option value="Accounts">Accounts</option>
+                                      <option value="Marketing">Marketing</option>
+                                      <option value="Human Resource">Human Resource</option>
+                                      <option value="Vehicle Attachment">Vehicle Attachment</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div className="mb-5">
+                              <label>Message*:</label>
+                              <textarea 
+                                  name="message" 
+                                  value={formData.message} 
+                                  onChange={handleChange} 
+                                  rows="4" 
+                                  className="w-full p-2 border border-2 rounded-md"></textarea>
+                          </div>
+                          <button type="submit" className='border border-red bg-red-500 px-6 py-2 rounded-md text-white inline-block hover:bg-red-500 hover:border-red-500 cursor-pointer'>
+                            Submit
+                          </button>
+                          {status && <p className="mt-3 text-red-500">{status}</p>} {/* Display status message */}
+                        </form>
                     </div>
                 </div>
             </div>
@@ -119,14 +213,15 @@ const GeneralContact = () => {
                     </div>
                     <div className="contact-box relative border border-1 w-full px-3 py-8 text-center">
                         <FaWhatsapp className="bg-white text-red-500 text-4xl absolute top-[-15%] left-[45%]"/>
-                        <h4 className="font-semibold">Connect with us</h4>
-                        <p>on Whatsapp</p>
+                        <h4 className="font-semibold">WhatsApp</h4>
+                        <p>Send us a message</p>
                     </div>
                 </div>
             </div>
         </div>
+        <Footer></Footer>
     </div>
-  )
-}
+  );
+};
 
-export default GeneralContact
+export default GeneralContact;

@@ -13,6 +13,8 @@ import TrustedPartners from './trustedpatner/page'
 import Footer from '../global/footer'
 import BannerSlider from './banner-slider/page'
 import FullWidthVideoSection from './video-section/page'
+import Newsletter from './newsletter/page'
+import FloatingBtns from './floating-btns/page'
 
 const Homepage = () => {
 
@@ -42,8 +44,10 @@ const Homepage = () => {
         <FaqSection></FaqSection>
         <FullWidthVideoSection></FullWidthVideoSection>
         <ThreeBlockSection></ThreeBlockSection>
+        <Newsletter />
         <TrustedPartners images={images}></TrustedPartners>
         <Footer></Footer>
+        <FloatingBtns />
     </div>
   )
 }

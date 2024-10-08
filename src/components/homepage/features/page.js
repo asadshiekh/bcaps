@@ -12,7 +12,7 @@ import { IoImageOutline } from "react-icons/io5";
 
 const Features = () => {
   return (
-    <div className="container mx-auto py-10 border-t border-gray-300 mt-5">
+    <div className="container mx-auto py-20 border-t border-gray-300">
         {/* Grid layout for responsive design */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {/* Feature boxes with responsive padding */}
