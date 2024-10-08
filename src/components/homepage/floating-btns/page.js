@@ -10,10 +10,10 @@ const FloatingBtns = () => {
         <Link href="/" className='h-[50px] w-[50px] text-white bg-[#00AFF0] text-xl flex items-center justify-center rounded-md'>
             <FaShareAlt />
         </Link>
-        <Link href="/" className='h-[50px] w-[50px] text-white bg-[#3B5998] text-xl flex items-center justify-center rounded-md'>
+        <Link href="https://www.facebook.com/bcabs/" className='h-[50px] w-[50px] text-white bg-[#3B5998] text-xl flex items-center justify-center rounded-md'>
             <FaFacebookF />
         </Link>
-        <Link href="/" className='h-[50px] w-[50px] text-white bg-[#25D366] text-2xl flex items-center justify-center rounded-md'>
+        <Link href="https://wa.me/919895118877" className='h-[50px] w-[50px] text-white bg-[#25D366] text-2xl flex items-center justify-center rounded-md'>
             <IoLogoWhatsapp />
         </Link>
     </div>

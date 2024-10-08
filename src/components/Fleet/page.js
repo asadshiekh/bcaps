@@ -10,8 +10,8 @@ const Fleet = () => {
     <div>
         <Header />
         <div className="contact-banner border border-b-2 h-[383px] overflow-hidden relative">
-            <video preload="auto" autoplay="" muted="" playsinline="" className="w-full scale-11">
-                <source src="/video/kochi-city-taxi-fleet2.mp4" type="video/mp4"></source>
+            <video autoPlay loop muted className="w-full scale-11">
+                <source src="/videos/kochi-city-taxi-fleet.mp4" type="video/mp4"></source>
             </video>
             <div className="banner-block absolute top-0 left-0 right-0 bottom-0 bg-[#0000004f] text-white text-center flex items-center">
                 <div className="container mx-auto">
