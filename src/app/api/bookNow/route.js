@@ -1,4 +1,4 @@
-
+import dotenv from 'dotenv';
 // src/app/api/bookNow.js
 import nodemailer from 'nodemailer';
 export async function POST(request) {
@@ -12,24 +12,34 @@ export async function POST(request) {
     tripType,
   } = await request.json();
 
+
+  const host = process.env.SMTP_HOST;
+  const port = process.env.SMTP_PORT;
+  const username = process.env.SMTP_USER;
+  const password = process.env.SMTP_USER;
+  const smtp_name = process.env.SMTP_FROM_NAME;
+  const smtp_from_email = process.env.SMTP_FROM_EMAIL;
+  const smtp_to_email = process.env.SMTP_TO_EMAIL;
+
   // Create a transporter using your Mailtrap email configuration from environment variables
   const transporter = nodemailer.createTransport({
-    host: 'sandbox.smtp.mailtrap.io', // Mailtrap SMTP server
-    port: 587, // Mailtrap SMTP port
-    secure: false, // Set to true for port 465, false for other ports like 587
+    host: host, // Use Mailtrap SMTP server
+    port: port, // Use Mailtrap SMTP port
+    secure: false, // Set to true for port 465, false for other ports
     auth: {
-      user: '0a30a9945c4d10', // Mailtrap username
-      pass: '85a0eb664373b0', // Mailtrap password
+      user: username, // Use Mailtrap username
+      pass: password, // Use Mailtrap password
     },
     tls: {
-      rejectUnauthorized: false, // Optional: Allow self-signed certificates
+      rejectUnauthorized: false, // Allow self-signed certificates (optional)
     },
   });
 
+  
   // Set up email data
   const mailOptions = {
-    from: '"Your Name" <asad@globalweb.ae>', // Sender's email and name
-    to: 'asadshiekh9@gmail.com', // Recipient email
+    from: `${smtp_name} <${smtp_from_email}>`,
+    to: smtp_to_email, // Use environment variable for recipient's email address
     subject: 'New Reservation Request', // Subject line
     text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nWhatsApp: ${whatsapp}\nPickup Date: ${pickupDate}\nVehicle Type: ${vehicleType}\nTrip Type: ${tripType}`, // Plain text body
   };
