@@ -1,5 +1,7 @@
-// Import the dotenv package to load .env files (if using locally)
-require('dotenv').config();
+import dotenv from 'dotenv';
+
+// Load environment variables from .env file
+dotenv.config();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -13,6 +15,5 @@ const nextConfig = {
     SMTP_TO_EMAIL: process.env.SMTP_TO_EMAIL,
   },
 };
-
 
 export default nextConfig;
