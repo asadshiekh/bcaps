@@ -1,6 +1,5 @@
 // src/app/api/bookNow.js
 import nodemailer from 'nodemailer';
-
 export async function POST(request) {
   const {
     name,
@@ -14,22 +13,22 @@ export async function POST(request) {
 
   // Create a transporter using your Mailtrap email configuration from environment variables
   const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST, // Use Mailtrap SMTP server
-    port: Number(process.env.SMTP_PORT), // Use Mailtrap SMTP port
-    secure: false, // Set to true for port 465, false for other ports
+    host: 'sandbox.smtp.mailtrap.io', // Mailtrap SMTP server
+    port: 587, // Mailtrap SMTP port
+    secure: false, // Set to true for port 465, false for other ports like 587
     auth: {
-      user: process.env.SMTP_USER, // Use Mailtrap username
-      pass: process.env.SMTP_PASS, // Use Mailtrap password
+      user: '0a30a9945c4d10', // Mailtrap username
+      pass: '85a0eb664373b0', // Mailtrap password
     },
     tls: {
-      rejectUnauthorized: false, // Allow self-signed certificates (optional)
+      rejectUnauthorized: false, // Optional: Allow self-signed certificates
     },
   });
 
   // Set up email data
   const mailOptions = {
-    from: `${process.env.SMTP_FROM_NAME} <${process.env.SMTP_FROM_EMAIL}>`, // Sender address
-    to: process.env.SMTP_TO_EMAIL, // Use environment variable for recipient's email address
+    from: '"Your Name" <asad@globalweb.ae>', // Sender's email and name
+    to: 'asadshiekh9@gmail.com', // Recipient email
     subject: 'New Reservation Request', // Subject line
     text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nWhatsApp: ${whatsapp}\nPickup Date: ${pickupDate}\nVehicle Type: ${vehicleType}\nTrip Type: ${tripType}`, // Plain text body
   };
