@@ -27,19 +27,19 @@ const Footer = () => {
           {/* Second Section: Links */}
           <div className="flex flex-col  pl-0 lg:pl-[30px]">
             <h4 className="font-bold mb-2">Useful Links</h4>
-            <Link href="/about" className="font-light hover:underline">About Us</Link>
-            <Link href="/services" className="font-light hover:underline">Our Services</Link>
-            <Link href="/contact" className="font-light hover:underline">Contact Us</Link>
-            <Link href="/faq" className="font-light hover:underline">FAQ</Link>
+            <Link href="#" className="font-light hover:underline">About Us</Link>
+            <Link href="#" className="font-light hover:underline">Our Services</Link>
+            <Link href="#" className="font-light hover:underline">Contact Us</Link>
+            <Link href="#" className="font-light hover:underline">FAQ</Link>
           </div>
 
           {/* Third Section: Additional Links */}
           <div className="flex flex-col">
             <h4 className="font-bold mb-2">Quick Links</h4>
-            <Link href="/terms" className="font-light hover:underline">Terms & Conditions</Link>
-            <Link href="/privacy" className="font-light hover:underline">Privacy Policy</Link>
-            <Link href="/blog" className="font-light hover:underline">Blog</Link>
-            <Link href="/careers" className="font-light hover:underline">Careers</Link>
+            <Link href="#" className="font-light hover:underline">Terms & Conditions</Link>
+            <Link href="#" className="font-light hover:underline">Privacy Policy</Link>
+            <Link href="#" className="font-light hover:underline">Blog</Link>
+            <Link href="#" className="font-light hover:underline">Careers</Link>
           </div>
 
           {/* Fourth Section: Stats and Contact */}
@@ -51,8 +51,9 @@ const Footer = () => {
               <p>bcabs@bintel.com</p>
               <p>+91 9895 11 88 77</p>
               <p>BCabsOnSkype</p>
-              <p>Connect with us on <a href="https://wa.me/yourwhatsappnumber" className="text-blue-400 hover:underline">WhatsApp</a>!</p>
+              <p>Connect with us on <Link href="https://wa.me/919895118877?text=Just%20visited%20www.bcabs.com,%20would%20like%20to%20get%20a%20quote?" className="text-blue-400 hover:underline">WhatsApp</Link>!</p>
             </div>
+
           </div>
         </div>
       </div>

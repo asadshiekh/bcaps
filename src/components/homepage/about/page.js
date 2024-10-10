@@ -16,7 +16,7 @@ const About = () => {
         <p className="mb-7 text-sm sm:text-base md:text-lg">
           BTransport Solutions Private Limited. A synonym in transport solutions.
         </p>
-        <Link href='/login' className='border border-red bg-red-500 px-6 py-2 rounded-md text-white inline-block hover:bg-red-500 hover:border-red-500 cursor-pointer'>
+        <Link href='/book-now' className='border border-red bg-red-500 px-6 py-2 rounded-md text-white inline-block hover:bg-red-500 hover:border-red-500 cursor-pointer'>
           Book Now!
         </Link>
     </div>

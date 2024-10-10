@@ -42,10 +42,10 @@ const Header = () => {
 
           {/* Right - Contact Links for larger screens */}
           <div className='hidden md:flex w-auto justify-center md:justify-end'>
-            <Link href='/signup' className='border border-red-500 px-4 py-2 mr-2 rounded-md text-red-500 inline-block hover:bg-red-500 hover:text-white cursor-pointer text-sm md:text-base'>
+            <Link href='tel:+919895118877' className='border border-red-500 px-4 py-2 mr-2 rounded-md text-red-500 inline-block hover:bg-red-500 hover:text-white cursor-pointer text-sm md:text-base'>
               +91 9895 11 8877
             </Link>
-            <Link href='/login' className='border border-red bg-red-500 px-4 py-2 rounded-md text-white inline-block hover:bg-red-500 hover:border-red-500 cursor-pointer text-sm md:text-base'>
+            <Link href='/book-now' className='border border-red bg-red-500 px-4 py-2 rounded-md text-white inline-block hover:bg-red-500 hover:border-red-500 cursor-pointer text-sm md:text-base'>
               Book Now!
             </Link>
           </div>

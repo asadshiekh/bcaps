@@ -20,14 +20,14 @@ const FleetSection = () => {
       {/* Vehicle Images Section */}
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {[
-          { name: 'Sedan', src: '/images/assets/kochi-city-dzire-taxi.jpg' },
-          { name: 'SUV', src: '/images/assets/kochi-city-ertiga-taxi.jpg' },
-          { name: 'Coach', src: '/images/assets/kochi-city-crysta-taxi.jpg' },
-          { name: 'Luxury Sedan', src: '/images/assets/kochi-city-traveller-taxi.jpg' },
-          { name: 'Minivan', src: '/images/assets/kochi-luxury-traveller-taxi.jpg' },
-          { name: 'Electric Car', src: '/images/assets/kochi-city-26-seater-traveller-taxi.jpg' },
-          { name: 'Convertible', src: '/images/assets/kochi-city-bus-rental-taxi.jpg' },
-          { name: 'Limousine', src: '/images/assets/kochi-premium-cabs-mercedes-benz.jpg' },
+          { name: 'Suzuki Dzire', lable:'Sedan', src: '/images/assets/kochi-city-dzire-taxi.jpg' },
+          { name: 'Suzuki Ertiga', lable:'Compact MUV', src: '/images/assets/kochi-city-ertiga-taxi.jpg' },
+          { name: 'Toyota Crysta', lable:'Luxury MUV', src: '/images/assets/kochi-city-crysta-taxi.jpg' },
+          { name: '12/17 Seater Force Traveller', lable:'Standard, Executive and Luxury Coaches', src: '/images/assets/kochi-city-traveller-taxi.jpg' },
+          { name: '14 Seater Ultra Luxury Traveller', lable:'Enhanced Leg Space', src:  '/images/assets/kochi-luxury-traveller-taxi.jpg' },
+          { name: '26 Seater Force Traveller', lable:'Executive Coach', src: '/images/assets/kochi-city-26-seater-traveller-taxi.jpg' },
+          { name: '45 Seater Mercedes Benz Glider', lable:'Luxury Coach', src: '/images/assets/kochi-city-bus-rental-taxi.jpg' },
+          { name: 'Mercedes Benz E Class', lable:'Ultra Luxury Premium Fleet', src: '/images/assets/kochi-premium-cabs-mercedes-benz.jpg' },
         ].map((vehicle, index) => (
           <div key={index} className="relative group">
             <Image 
@@ -40,9 +40,10 @@ const FleetSection = () => {
             />
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <h3 className="text-white text-lg font-bold">{vehicle.name}</h3>
-              <button className="mt-2 px-4 py-2 bg-white text-black rounded-md">
+              <h5 className="text-white text-sm font-normal">{vehicle.lable}</h5>
+              <Link href="/kochi-city-taxi" className="mt-2 px-4 py-2 bg-white text-black rounded-md">
                 View More Details
-              </button>
+              </Link>
             </div>
           </div>
         ))}
@@ -55,7 +56,7 @@ const FleetSection = () => {
             We have more than 25+ categories of vehicles in Kochi City and Cochin Airport
           </h3>
           <div className="flex justify-center mt-4">
-            <Link  href='' className="border border-red-500 px-4 py-2 mr-2 rounded-md text-red-500 inline-block hover:bg-red-500 hover:text-white cursor-pointer text-sm md:text-base">
+            <Link  href='/kochi-city-taxi' className="border border-red-500 px-4 py-2 mr-2 rounded-md text-red-500 inline-block hover:bg-red-500 hover:text-white cursor-pointer text-sm md:text-base">
               See More
             </Link>
       

@@ -44,10 +44,10 @@ const BannerSlider = () => {
                         <h4 className="text-3xl font-medium mb-2"><span className="text-red-600">1000+</span> 5 Star reviews</h4>
                         <h4 className="text-3xl font-medium"><span className="text-red-600">18000+</span> regular customers</h4>
                         <div className='flex justify-center mt-8'>
-                            <Link href='/' className='border border-red-500 text-2xl bg-red-500 px-6 py-2 mr-2 rounded-md text-white inline-block hover:bg-red-500 hover:border-red-500 cursor-pointer'>
+                            <Link href='/book-now' className='border border-red-500 text-2xl bg-red-500 px-6 py-2 mr-2 rounded-md text-white inline-block hover:bg-red-500 hover:border-red-500 cursor-pointer'>
                                 Book Now!
                             </Link>
-                            <Link href='/' className='border border-black-500 text-2xl px-6 py-2 rounded-md text-black-500 inline-block hover:bg-black-500 hover:text-white cursor-pointer'>
+                            <Link href='https://wa.me/919895118877?text=Just%20visited%20www.bcabs.com,%20would%20like%20to%20get%20a%20quote?' className='border border-black-500 text-2xl px-6 py-2 rounded-md text-black-500 inline-block hover:bg-black-500 hover:text-white cursor-pointer'>
                                 Get a Quote
                             </Link>
                         </div>
