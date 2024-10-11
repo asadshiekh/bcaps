@@ -30,24 +30,24 @@ const BannerSlider = () => {
             <Image 
                 src='/images/assets/bcabs-kochi-cabs.jpg' 
                 alt='BCabs Kochi' 
-                className='w-full h-[650px] object-cover' 
+                className='w-full h-[950px]  lg:h-[650px] object-cover' 
                 width={1920} 
                 height={650} 
                 priority
             />
             <div className="banner-block absolute top-0 left-0 right-0 bottom-0 bg-[#00000090] text-white text-center flex items-center">
                 <div className="container mx-auto">
-                    <div>
+                    <div className=''>
                         <h4 className="text-3xl font-medium mb-8">BCabs Ride Easy...<span className='bg-red-300'>24x7 Taxi Service</span></h4>
                         <h4 className="text-4xl font-semibold mb-8">Sabarimala Taxi</h4>
-                        <h4 className="text-3xl font-medium mb-8 w-2/4 mx-auto">Kerala's Most Trusted & Largest Taxi Cab Operator</h4>
+                        <h4 className="text-3xl font-medium mb-8 w-full lg:w-2/4 mx-auto">Kerala's Most Trusted & Largest Taxi Cab Operator</h4>
                         <h4 className="text-3xl font-medium mb-2"><span className="text-red-600">1000+</span> 5 Star reviews</h4>
                         <h4 className="text-3xl font-medium"><span className="text-red-600">18000+</span> regular customers</h4>
                         <div className='flex justify-center mt-8'>
-                            <Link href='/book-now' className='border border-red-500 text-2xl bg-red-500 px-6 py-2 mr-2 rounded-md text-white inline-block hover:bg-red-500 hover:border-red-500 cursor-pointer'>
+                            <Link href='/book-now' className='py-2 px-3 border border-red-500 text-2xl bg-red-500 lg:px-6 lg:py-2 mr-2 rounded-md text-white inline-block hover:bg-red-500 hover:border-red-500 cursor-pointer'>
                                 Book Now!
                             </Link>
-                            <Link href='https://wa.me/919895118877?text=Just%20visited%20www.bcabs.com,%20would%20like%20to%20get%20a%20quote?' className='border border-black-500 text-2xl px-6 py-2 rounded-md text-black-500 inline-block hover:bg-black-500 hover:text-white cursor-pointer'>
+                            <Link href='https://wa.me/919895118877?text=Just%20visited%20www.bcabs.com,%20would%20like%20to%20get%20a%20quote?' className='py-2 px-3 border border-black-500 text-2xl lg:px-6 lg:py-2 rounded-md text-black-500 inline-block hover:bg-black-500 hover:text-white cursor-pointer'>
                                 Get a Quote
                             </Link>
                         </div>

@@ -7,7 +7,7 @@ export async function POST(request) {
   const host = process.env.SMTP_HOST;
   const port = process.env.SMTP_PORT;
   const username = process.env.SMTP_USER;
-  const password = process.env.SMTP_USER;
+  const password = process.env.SMTP_PASS;
   const smtp_name = process.env.SMTP_FROM_NAME;
   const smtp_from_email = process.env.SMTP_FROM_EMAIL;
   const smtp_to_email = process.env.SMTP_TO_EMAIL;

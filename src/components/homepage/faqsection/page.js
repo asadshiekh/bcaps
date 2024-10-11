@@ -66,7 +66,7 @@ const FaqSection = () => {
     : faqData.filter((faq) => faq.category === activeFilter);
 
   return (
-    <section className="py-[60px] sm:px-2 lg:px-20 lg:px-[250px]">
+    <section className="py-[60px] px-2 lg:px-[250px]">
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
         <h3 className="text-lg mb-4">How can we help you?</h3>
