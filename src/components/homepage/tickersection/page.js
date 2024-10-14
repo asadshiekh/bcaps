@@ -38,7 +38,7 @@ const TickerSection = () => {
       <style jsx>{`
         .ticker-animate {
           display: flex;
-          animation: ticker-scroll 50s linear infinite;
+          animation: ticker-scroll 30s linear infinite;
           width: max-content; /* Ensures that all items scroll fully */
         }
 
