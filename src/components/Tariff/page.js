@@ -3,6 +3,9 @@ import Link from 'next/link'
 import Header from '../global/header'
 import Footer from '../global/footer'
 
+
+  
+
 const Tariff = () => {
   return (
     <div>

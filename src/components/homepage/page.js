@@ -16,6 +16,11 @@ import FullWidthVideoSection from './video-section/page'
 import Newsletter from './newsletter/page'
 import FloatingBtns from './floating-btns/page'
 
+
+
+
+
+
 const Homepage = () => {
 
   const images = [

@@ -7,28 +7,28 @@ const TickerSection = () => {
       <div className="overflow-hidden">
         {/* Ticker Wrapper */}
         <div className="ticker flex ticker-animate">
-          <div className="ticker-item text-white flex items-center w-full whitespace-nowrap lg:mr-5">
-            <FaCheck className="text-green-500 mr-2" />
+          <div className="ticker-item text-white flex items-center w-full whitespace-nowrap  mr-5  lg:mr-10">
+            <FaCheck className="text-green-500 mr-3" />
             Highly cooperative and guide equivalent chauffeurs
           </div>
-          <div className="ticker-item text-white flex items-center w-full whitespace-nowrap lg:mr-5">
-            <FaCheck className="text-green-500 mr-2" />
+          <div className="ticker-item text-white flex items-center w-full whitespace-nowrap  mr-5 lg:mr-10">
+            <FaCheck className="text-green-500 mr-3" />
             English and Hindi Speaking chauffeurs
           </div>
-          <div className="ticker-item text-white flex items-center w-full whitespace-nowrap lg:mr-5">
-            <FaStar className="text-yellow-400 mr-2" />
+          <div className="ticker-item text-white flex items-center w-full whitespace-nowrap   mr-5 lg:mr-10">
+            <FaStar className="text-yellow-400 mr-3" />
             Consistently reviewed 5-Star on Google, Facebook & Tripadvisor
           </div>
-          <div className="ticker-item text-white flex items-center w-full whitespace-nowrap lg:mr-5">
-            <FaCheck className="text-green-500 mr-2" />
+          <div className="ticker-item text-white flex items-center w-full whitespace-nowrap  mr-5  lg:mr-10">
+            <FaCheck className="text-green-500 mr-3 " />
             Well maintained vehicles
           </div>
-          <div className="ticker-item text-white flex items-center w-full whitespace-nowrap lg:mr-5">
-            <FaCheck className="text-green-500 mr-2" />
+          <div className="ticker-item text-white flex items-center w-full whitespace-nowrap  mr-5  lg:mr-10">
+            <FaCheck className="text-green-500 mr-3" />
             Legible and clear tariff, no surge
           </div>
-          <div className="ticker-item text-white flex items-center w-full whitespace-nowrap lg:mr-5">
-            <FaCheck className="text-green-500 mr-2" />
+          <div className="ticker-item text-white flex items-center w-full whitespace-nowrap  mr-5 lg:mr-10">
+            <FaCheck className="text-green-500 mr-3" />
             Guaranteed Satisfaction
           </div>
         </div>
@@ -36,12 +36,10 @@ const TickerSection = () => {
 
       {/* Tailwind CSS Custom Styles */}
       <style jsx>{`
-        @media (min-width: 768px) {
-          .ticker-animate {
-            display: flex;
-            animation: ticker-scroll 20s linear infinite;
-            width: 100%;
-          }
+        .ticker-animate {
+          display: flex;
+          animation: ticker-scroll 50s linear infinite;
+          width: max-content; /* Ensures that all items scroll fully */
         }
 
         @keyframes ticker-scroll {
@@ -50,17 +48,6 @@ const TickerSection = () => {
           }
           100% {
             transform: translateX(-100%);
-          }
-        }
-
-        @media (max-width: 767px) {
-          .ticker-animate {
-            display: block;
-            animation: none;
-          }
-
-          .ticker-item {
-            margin-bottom: 1rem;
           }
         }
       `}</style>
