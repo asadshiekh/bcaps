@@ -21,7 +21,7 @@ const RatingList = () => {
     return (
         <ul className='flex items-center justify-center space-x-10 text-medium'>
             {ratingData.map((item, index) => (
-                <li key={index} className='flex items-center justify-center text-[18px]'>
+                <li key={index} className='flex items-center justify-center text-[18px] font-bold'>
                     <Image 
                         src={item.src} 
                         alt={`Image ${index + 1}`} 
@@ -30,7 +30,7 @@ const RatingList = () => {
                         className='mr-2' // Add margin if needed
                     />
                     {item.rating} {/* Dynamic rating */}
-                    <FaStar style={{ color: 'yellow', fontSize: '18px' }} className='ml-2' />
+                    <FaStar style={{ color: 'orange', fontSize: '18px' }} className='ml-2' />
                 </li>
             ))}
         </ul>

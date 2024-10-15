@@ -44,7 +44,7 @@ const BannerSlider = () => {
             
             {/* White background section for mobile */}
             {isMobile && (
-                <div className="w-full h-[1000px] lg:h-[650px] bg-white flex items-center  md:pt-0">
+                <div className="w-full h-[1100px] lg:h-[650px] bg-white flex items-center pt-[100px]  md:pt-0">
                     <div className="container mx-auto text-center">
                         <h4 className="text-xl md:text-3xl font-medium mb-8">BCabs Ride Easy...<span className='bg-red-300'>24x7 Taxi Service</span></h4>
 
@@ -79,7 +79,7 @@ const BannerSlider = () => {
                         </ul>
 
                         <p className='flex  justify-center  text-center my-5 px-4'>
-                            <FaStar style={{ color: 'yellow', fontSize: '14px' }} className='mr-2 mb-2 sm:mb-0'/> 
+                            <FaStar style={{ color: 'orange', fontSize: '14px' }} className='mr-2 mb-2 sm:mb-0'/> 
                             Consistently received 5-Star on Google, Facebook & Tripadvisor
                         </p>
                            
@@ -117,7 +117,7 @@ const BannerSlider = () => {
                                 <li className='text-[14px]'><FaCheck className='inline-block'/> 15+ Years in service</li>
                             </ul>
 
-                            <p className='flex justify-center items-center my-5'> <FaStar style={{ color: 'yellow', fontSize: '14px' }} className='mr-2'/> Consistently revieved 5-Star on Google, Facebook & Tripadvisor</p>
+                            <p className='flex justify-center items-center my-5'> <FaStar style={{ color: 'orange', fontSize: '14px' }} className='mr-2'/> Consistently revieved 5-Star on Google, Facebook & Tripadvisor</p>
                            
                             <RatingList></RatingList>
 
