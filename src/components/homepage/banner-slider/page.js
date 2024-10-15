@@ -5,6 +5,9 @@ import Image from 'next/image';
 import { FaCheck } from "react-icons/fa6";
 import BasicSlider from '../BasicSlider/page';
 import TypingComponent from '../TypingComponent/page';
+import { FaStar } from 'react-icons/fa'; // Import the star icon
+import RatingList from '../RatingList/page';
+
 
 
 const BannerSlider = () => {
@@ -32,7 +35,7 @@ const BannerSlider = () => {
                 <Image 
                     src='/images/assets/bcabs-kochi-cabs.jpg' 
                     alt='BCabs Kochi' 
-                    className='w-full h-[950px] lg:h-[650px] object-cover' 
+                    className='w-full h-[950px] lg:h-[700px] object-cover' 
                     width={1920} 
                     height={650} 
                     priority
@@ -41,7 +44,7 @@ const BannerSlider = () => {
             
             {/* White background section for mobile */}
             {isMobile && (
-                <div className="w-full h-[950px] lg:h-[650px] bg-white flex items-center pt-[200px] md:pt-0">
+                <div className="w-full h-[1000px] lg:h-[650px] bg-white flex items-center  md:pt-0">
                     <div className="container mx-auto text-center">
                         <h4 className="text-xl md:text-3xl font-medium mb-8">BCabs Ride Easy...<span className='bg-red-300'>24x7 Taxi Service</span></h4>
 
@@ -67,20 +70,28 @@ const BannerSlider = () => {
                                 Get a Quote
                             </Link>
                         </div>
-                        <ul className='flex align-center justify-center space-x-10 text-medium mt-10'>
-                            <li><FaCheck className='inline-block'/> On-Time</li>
-                            <li><FaCheck className='inline-block'/> Reliable</li> 
-                            <li><FaCheck className='inline-block'/> Guaranteed</li> 
-                            <li><FaCheck className='inline-block'/> Satisfaction</li> 
-                            <li><FaCheck className='inline-block'/> 15+ Years in service</li>
+                        <ul className='flex flex-wrap items-center justify-center space-x-10 text-medium mt-10 text-center'>
+                            <li className='flex items-center mb-2'><FaCheck className='inline-block mr-3'/> On-Time</li>
+                            <li className='flex items-center mb-2'><FaCheck className='inline-block mr-3'/> Reliable</li> 
+                            <li className='flex items-center mb-2'><FaCheck className='inline-block mr-3'/> Guaranteed</li> 
+                            <li className='flex items-center mb-2'><FaCheck className='inline-block mr-3'/> Satisfaction</li> 
+                            <li className='flex items-center mb-2'><FaCheck className='inline-block mr-3'/> 15+ Years in service</li>
                         </ul>
+
+                        <p className='flex  justify-center  text-center my-5 px-4'>
+                            <FaStar style={{ color: 'yellow', fontSize: '14px' }} className='mr-2 mb-2 sm:mb-0'/> 
+                            Consistently received 5-Star on Google, Facebook & Tripadvisor
+                        </p>
+                           
+                        <RatingList></RatingList>
+
                     </div>
                 </div>
             )}
 
             {/* Overlay and white background for larger screens */}
             {!isMobile && (
-                <div className="banner-block absolute top-0 left-0 right-0 bottom-0 bg-[#00000090] text-white text-center flex items-center">
+                <div className="banner-block absolute top-0 left-0 right-0 bottom-0 bg-[#00000090] text-white text-center flex items-center pt-[70px]">
                     <div className="container mx-auto">
                         <div>
                             <h4 className="text-3xl font-medium mb-8">BCabs Ride Easy...<span className='bg-red-300'>24x7 Taxi Service</span></h4>
@@ -99,12 +110,17 @@ const BannerSlider = () => {
                                 </Link>
                             </div>
                             <ul className='flex align-center justify-center space-x-10 text-medium mt-10'>
-                                <li><FaCheck className='inline-block'/> On-Time</li>
-                                <li><FaCheck className='inline-block'/> Reliable</li> 
-                                <li><FaCheck className='inline-block'/> Guaranteed</li> 
-                                <li><FaCheck className='inline-block'/> Satisfaction</li> 
-                                <li><FaCheck className='inline-block'/> 15+ Years in service</li>
+                                <li className='text-[14px]'><FaCheck className='inline-block'/> On-Time</li>
+                                <li className='text-[14px]'><FaCheck className='inline-block'/> Reliable</li> 
+                                <li className='text-[14px]'><FaCheck className='inline-block'/> Guaranteed</li> 
+                                <li className='text-[14px]'><FaCheck className='inline-block'/> Satisfaction</li> 
+                                <li className='text-[14px]'><FaCheck className='inline-block'/> 15+ Years in service</li>
                             </ul>
+
+                            <p className='flex justify-center items-center my-5'> <FaStar style={{ color: 'yellow', fontSize: '14px' }} className='mr-2'/> Consistently revieved 5-Star on Google, Facebook & Tripadvisor</p>
+                           
+                            <RatingList></RatingList>
+
                         </div>
                     </div>
                 </div>
