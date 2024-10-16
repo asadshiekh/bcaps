@@ -15,12 +15,12 @@ const Footer = () => {
           {/* Second Section: Links */}
           <div className="flex flex-col   text-xl space-y-2">
             {/* <h4 className="font-bold mb-2">Useful Links</h4> */}
-            <Link href="#" className="hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' size="10" />Home</Link>
-            <Link href="#" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />Fleet </Link>
-            <Link href="#" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />Tariff</Link>
-            <Link href="#" className=" hover:underline flex items-center text-[16px] font-medium"><BsArrowDownRightSquare className='inline-block text-md mr-2' />Contact</Link>
-            <Link href="#" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />General Contact</Link>
-            <Link href="#" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />Book Now</Link>
+            <Link href="/" className="hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' size="10" />Home</Link>
+            <Link href="/kochi-city-taxi" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />Fleet </Link>
+            <Link href="/kochi-taxi-rates" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />Tariff</Link>
+            <Link href="/general-contact" className=" hover:underline flex items-center text-[16px] font-medium"><BsArrowDownRightSquare className='inline-block text-md mr-2' />Contact</Link>
+            <Link href="/general-contact" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />General Contact</Link>
+            <Link href="/book-now" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />Book Now</Link>
           </div>
 
           {/* Third Section: Additional Links */}
@@ -97,11 +97,11 @@ const Footer = () => {
       {/* Right Section */}
       <div className="text-center md:text-right space-y-2 w-full">
           <div className="flex justify-center md:justify-end space-x-2 md:space-x-8">
-              <a href="#" className="hover:text-white"><FaFacebookF /></a>
-              <a href="#" className="hover:text-white"><FaTwitter /></a>
-              <a href="#" className="hover:text-white"><FaGoogle /></a>
-              <a href="#" className="hover:text-white"><FaPinterest /></a>
-              <a href="#" className="hover:text-white"><FaInstagram /></a>
+              <a href="https://www.facebook.com/bcabs/" target="_blank" className="hover:text-white"><FaFacebookF /></a>
+              <a href="https://twitter.com/bcabsrideeasy/" target="_blank" className="hover:text-white"><FaTwitter /></a>
+              <a href="https://maps.app.goo.gl/yHhNHxfk6uctkh7z6" target="_blank" className="hover:text-white"><FaGoogle /></a>
+              <a href="https://in.pinterest.com/bcabsrideeasy/" target="_blank" className="hover:text-white"><FaPinterest /></a>
+              <a href="https://instagram.com/bcabs_taxi" target="_blank" className="hover:text-white"><FaInstagram /></a>
             </div>
             <div className="text-center md:text-right space-y-2">
               <p className="flex items-center justify-center md:justify-end space-x-2 mt-4">
