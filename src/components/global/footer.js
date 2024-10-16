@@ -90,7 +90,7 @@ const Footer = () => {
         <div className="flex justify-center md:justify-start mt-5 mb-5 space-x-2 md:space-x-5">
           <a href="#" className="hover:text-white underline decoration-dotted text-[12px] md:text-[13px] text-white">Terms & Conditions</a>
           <a href="#" className="hover:text-white underline decoration-dotted text-[12px] md:text-[13px] text-white">Cancellation & Refund policy</a>
-          <a href="#" className="hover:text-white underline decoration-dotted text-[1px]  md:text-[13px] text-white">Privacy Policy</a>
+          <a href="#" className="hover:text-white underline decoration-dotted text-[12px]  md:text-[13px] text-white">Privacy Policy</a>
         </div>
       </div>
 
