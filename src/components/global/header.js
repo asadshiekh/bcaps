@@ -17,31 +17,32 @@ const Header = () => {
       <header className='fixed top-0 left-0 right-0 bg-white shadow-md z-50'>
         <div className='container-fluid mx-auto'>
           <div className='px-3 py-3 flex flex-wrap justify-between items-center text-black rounded-md'>
-            <div className="flex items-center justify-between w-full md:w-auto mb-4 md:mb-0">
-              <div className='border-r border-gray-300 pr-3 mr-3 flex items-center'>
-                <h3 className='text-xl md:text-2xl'>
+            <div className="flex items-center justify-between w-full md:w-auto mb-4 md:mb-0 pr-3 border-r border-gray-300">
+              <div className='border-r border-gray-300 pr-8 mr-5 py-1 flex items-center'>
+                {/* <h3 className='text-xl md:text-2xl'> */}
                   <Link href='/' className='flex items-center'>
-                    <Image
+                    {/* <Image
                       src='/images/assets/bcabs-logo.png'
                       alt='logo'
                       width={100} // Replace this with the actual width of your image
                       height={100} // Replace this with the actual height of your image
                       className='w-full'
-                    />
+                    /> */}
+                    <img src='/images/assets/bcabs-logo.png' alt='logo' className='w-48' />
                   </Link>
-                </h3>
+                {/* </h3> */}
               </div>
               <div className="md:hidden flex items-center">
                 <button onClick={toggleMenu} className="text-3xl focus:outline-none">
                   &#9776;
                 </button>
               </div>
-              <ul className='hidden md:flex items-center space-x-4 md:space-x-8 font-medium text-sm md:text-lg border-r border-gray-300 pr-3'>
-                <li><Link href="/">HOME</Link></li>
-                <li><Link href="/kochi-city-taxi">FLEET</Link></li>
-                <li><Link href="/kochi-taxi-rates">TARIFF</Link></li>
-                <li><Link href="/general-contact">CONTACT</Link></li>
-                <li><Link href="/book-now">BOOK NOW</Link></li>
+              <ul className='hidden md:flex items-center space-x-4 md:space-x-8 font-semibold  md:text-lg pr-3 text-gray-800'>
+                <li className='text-[14px]'><Link href="/">HOME</Link></li>
+                <li className='text-[14px]'><Link href="/kochi-city-taxi">FLEET</Link></li>
+                <li className='text-[14px]'><Link href="/kochi-taxi-rates">TARIFF</Link></li>
+                <li className='text-[14px]'><Link href="/general-contact">CONTACT</Link></li>
+                <li className='text-[14px]'><Link href="/book-now">BOOK NOW</Link></li>
               </ul>
             </div>
 

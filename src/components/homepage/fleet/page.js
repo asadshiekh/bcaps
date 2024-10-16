@@ -32,8 +32,7 @@ const FleetSection = () => {
           <div key={index} className="relative group">
             <Image 
               src={vehicle.src} 
-              alt={vehicle.name} 
-              layout="responsive" 
+              alt={vehicle.name}   
               width={400} 
               height={300} 
               className="object-cover w-full h-full"

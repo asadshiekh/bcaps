@@ -14,18 +14,18 @@ const Fleet = () => {
         <source src="/videos/kochi-city-taxi-fleet.mp4" type="video/mp4" />
     </video>
     <div className="banner-block absolute top-0 left-0 right-0 bottom-0 bg-[#0000004f] text-white text-center flex items-center">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 lg:px-0 pt-[170px] pb-[70px]">
             <div>
                 <h4 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4">Fleet: Kochi General City Cab Fleet</h4>
                 <p className="text-gray-300 mb-4 text-sm md:text-base lg:text-lg">We have a combined fleet strength of 750+ vehicles</p>
             </div>
             <div>
-                <ul className="flex space-x-2 text-gray-300 justify-center text-sm md:text-base">
-                    <li><Link href="#">Home</Link></li>
+                <ul className="flex space-x-2 text-gray-300 justify-center text-sm md:text-base mt-4">
+                    <li><Link href="/">Home</Link></li>
                     <li>/</li>
-                    <li><Link href="#">Fleet</Link></li>
+                    <li><Link href="/kochi-city-taxi">Fleet</Link></li>
                     <li>/</li>
-                    <li><Link href="#">General Fleet</Link></li>
+                    <li><Link href="/kochi-city-taxi">General Fleet</Link></li>
                 </ul>
             </div>
         </div>

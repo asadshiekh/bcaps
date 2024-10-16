@@ -70,20 +70,20 @@ const GeneralContact = () => {
   return (
     <div>
         <Header />
-        <div className="contact-banner border border-b-2 py-10">
+        <div className="contact-banner border border-b-2 px-4 lg:px-0 pt-[150px] pb-[70px]">
             <div className="container mx-auto">
                 <div className="block md:flex items-center justify-between">
                     <div>
-                        <h4 className="text-4xl font-semibold">Contact</h4>
+                        <h4 className="text-2xl md:text-4xl font-semibold">Contact</h4>
                         <p className="text-gray-500">Get In Touch With Us</p>
                     </div>
                     <div>
-                        <ul className="flex space-x-3 text-gray-500">
-                            <li><Link href="#">Home</Link></li>
+                        <ul className="flex space-x-3 text-gray-500 mt-5">
+                            <li><Link href="/">Home</Link></li>
                             <li>/</li>
-                            <li><Link href="#">Contact</Link></li>
+                            <li><Link href="/general-contact">Contact</Link></li>
                             <li>/</li>
-                            <li><Link href="#">General Contact</Link></li>
+                            <li><Link href="/general-contact">General Contact</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -92,7 +92,7 @@ const GeneralContact = () => {
         
         {/* contact form */}
 
-        <div className="contact-form py-10 mt-8">
+        <div className="contact-form py-10 mt-8 px-4">
             <div className="container mx-auto">
                 <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-8">
                     <div className="bg-gray-200 p-3 flex items-center justify-center rounded-md">
@@ -193,7 +193,7 @@ const GeneralContact = () => {
 
         {/* contact types */}
 
-        <div className="contact-types py-10">
+        <div className="contact-types py-10 px-4">
             <div className="container mx-auto">
                 <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
                     <div className="contact-box relative border border-1 w-full px-3 py-8 text-center">

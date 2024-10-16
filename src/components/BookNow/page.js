@@ -78,19 +78,19 @@ const BookNow = () => {
   return (
     <div>
       <Header />
-      <div className="contact-banner border border-b-2 py-10">
+      <div className="contact-banner border border-b-2 px-4 lg:px-0 pt-[150px] pb-[70px]">
         <div className="container mx-auto">
           <div className="block md:flex items-center justify-between">
             <div>
-              <h4 className="text-4xl font-semibold">Book your BCabs in Kerala now!</h4>
+              <h4 className="text-2xl md:text-4xl font-semibold">Book your BCabs in Kerala now!</h4>
             </div>
             <div>
-              <ul className="flex space-x-3 text-gray-500">
-                <li><Link href="#">Home</Link></li>
+              <ul className="flex space-x-3 text-gray-500 mt-4">
+                <li><Link href="/">Home</Link></li>
                 <li>/</li>
-                <li><Link href="#">Contact</Link></li>
+                <li><Link href="/general-contact">Contact</Link></li>
                 <li>/</li>
-                <li><Link href="#">Book Now</Link></li>
+                <li><Link href="/book-now">Book Now</Link></li>
               </ul>
             </div>
           </div>
@@ -98,9 +98,9 @@ const BookNow = () => {
       </div>
 
       {/* contact form */}
-      <div className="contact-form py-10 mt-8">
+      <div className="contact-form py-10 mt-8 p-4">
         <div className="container mx-auto">
-          <form onSubmit={handleSubmit} className="w-2/4">
+          <form onSubmit={handleSubmit} className="w-full md:w-2/4">
             <h4 className="text-3xl mb-3">General Contact</h4>
             <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-2 mb-5">
               <div>

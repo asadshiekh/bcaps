@@ -44,7 +44,7 @@ const BannerSlider = () => {
             
             {/* White background section for mobile */}
             {isMobile && (
-                <div className="w-full h-[1100px] lg:h-[650px] bg-white flex items-center pt-[100px]  md:pt-0">
+                <div className="w-full h-[1100px] lg:h-[650px] bg-white flex items-center pt-[150px]  md:pt-0">
                     <div className="container mx-auto text-center">
                         <h4 className="text-xl md:text-3xl font-medium mb-8">BCabs Ride Easy...<span className='bg-red-300'>24x7 Taxi Service</span></h4>
 
