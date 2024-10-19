@@ -7,7 +7,8 @@ import BasicSlider from '../BasicSlider/page';
 import TypingComponent from '../TypingComponent/page';
 import { FaStar } from 'react-icons/fa'; // Import the star icon
 import RatingList from '../RatingList/page';
-
+import { FaWhatsapp } from "react-icons/fa6";
+import { FaCar } from "react-icons/fa";
 
 
 const BannerSlider = () => {
@@ -44,7 +45,7 @@ const BannerSlider = () => {
             
             {/* White background section for mobile */}
             {isMobile && (
-                <div className="w-full h-[1100px] lg:h-[650px] bg-white flex items-center pt-[150px]  md:pt-0">
+                <div className="w-full h-[1100px] lg:h-[650px] bg-white flex items-center pt-[60px] lg:pt-[150px]  md:pt-0 border-b border-gray-300">
                     <div className="container mx-auto text-center">
                         <h4 className="text-xl md:text-3xl font-medium mb-8">BCabs Ride Easy...<span className='bg-red-300'>24x7 Taxi Service</span></h4>
 
@@ -55,17 +56,17 @@ const BannerSlider = () => {
                         </div>
 
 
-                        <h4 className="text-2xl md:text-3xl font-medium mb-8 w-full lg:w-2/4 mx-auto">Kerala's Most Trusted & Largest Taxi Cab Operator</h4>
-                        <h4 className="text-2xl md:text-3xl font-medium mb-2"><span className="text-red-600">1000+</span> 5 Star reviews</h4>
-                        <h4 className="text-2xl md:text-3xl font-medium"><span className="text-red-600">18000+</span> regular customers</h4>
+                        <h4 className="text-2xl md:text-2xl font-medium mb-8 w-full lg:w-2/4 mx-auto">Kerala's Most Trusted <br /> & Largest Taxi Cab Operator</h4>
+                        <h4 className="text-2xl md:text-2xl font-medium mb-2"><span className="text-red-600">1000+</span> 5 Star reviews</h4>
+                        <h4 className="text-2xl md:text-2xl font-medium"><span className="text-red-600">18000+</span> regular customers</h4>
                         <div className='flex justify-center mt-8 space-x-2'> {/* Added space-x-2 for spacing between buttons */}
                             <Link href='/book-now' 
-                                className='py-2 px-3 border border-red-500 text-2xl bg-red-500 lg:px-6 lg:py-2 rounded-md text-white inline-block hover:bg-red-500 hover:border-red-500 cursor-pointer'
+                                className='py-2 px-3 border border-[#ed2124] text-xl bg-[#ed2124] lg:px-6 lg:py-2 rounded-md text-white inline-block hover:bg-[#ed2124] hover:border-[#ed2124] cursor-pointer'
                             >
                                 Book Now!
                             </Link>
                             <Link  href='https://wa.me/919895118877?text=Just%20visited%20www.bcabs.com,%20would%20like%20to%20get%20a%20quote?' 
-                                className='py-2 px-3 border border-black text-2xl lg:px-6 lg:py-2 rounded-md text-black inline-block hover:bg-black hover:text-white cursor-pointer'
+                                className='py-2 px-3 border border-black text-xl lg:px-6 lg:py-2 rounded-md text-black inline-block hover:bg-black hover:text-white cursor-pointer'
                             >
                                 Get a Quote
                             </Link>
@@ -94,19 +95,17 @@ const BannerSlider = () => {
                 <div className="banner-block absolute top-0 left-0 right-0 bottom-0 bg-[#00000090] text-white text-center flex items-center pt-[70px]">
                     <div className="container mx-auto">
                         <div>
-                            <h4 className="text-3xl font-medium mb-8">BCabs Ride Easy...<span className='bg-red-300'>24x7 Taxi Service</span></h4>
+                            <h4 className="text-2xl font-medium mb-6">BCabs Ride Easy...<span className='bg-red-300'>24x7 Taxi Service</span></h4>
                             <TypingComponent fontColor="text-white" fontSize="4xl"></TypingComponent>
-
-
-                            <h4 className="text-3xl font-medium mb-8 w-full lg:w-2/4 mx-auto">Kerala's Most Trusted & Largest Taxi Cab Operator</h4>
-                            <h4 className="text-3xl font-medium mb-2"><span className="text-red-600">1000+</span> 5 Star reviews</h4>
-                            <h4 className="text-3xl font-medium"><span className="text-red-600">18000+</span> regular customers</h4>
+                            <h4 className="text-2xl font-medium mb-6 w-full lg:w-2/4 mx-auto text-gray-50">Kerala's <b className='text-white'>Most Trusted <br /> & Largest</b> Taxi Cab Operator</h4>
+                            <h4 className="text-2xl font-medium mb-2"><span className="text-red-600">1000+</span> 5 Star reviews</h4>
+                            <h4 className="text-2xl font-medium"><span className="text-red-600">18000+</span> regular customers</h4>
                             <div className='flex justify-center mt-8'>
-                                <Link href='/book-now' className='py-2 px-3 border border-red-500 text-2xl bg-red-500 lg:px-6 lg:py-2 mr-2 rounded-md text-white inline-block hover:bg-red-500 hover:border-red-500 cursor-pointer'>
-                                    Book Now!
+                                <Link href='/book-now' className='py-2 px-3 border border-[#ed2124] text-lg bg-[#ed2124] lg:px-6 lg:py-2 mr-2 rounded-md text-white inline-block hover:bg-[#ed2124] hover:border-[#ed2124] cursor-pointer flex items-center'>
+                                    <FaCar className='mr-1'/> Book Now!
                                 </Link>
-                                <Link href='https://wa.me/919895118877?text=Just%20visited%20www.bcabs.com,%20would%20like%20to%20get%20a%20quote?' className='py-2 px-3 border border-black-500 text-2xl lg:px-6 lg:py-2 rounded-md text-black-500 inline-block hover:bg-black-500 hover:text-white cursor-pointer'>
-                                    Get a Quote
+                                <Link href='https://wa.me/919895118877?text=Just%20visited%20www.bcabs.com,%20would%20like%20to%20get%20a%20quote?' className='py-2 px-3 border border-black-500 text-lg lg:px-6 lg:py-2 rounded-md text-black-500 inline-block hover:bg-black-500 hover:text-white cursor-pointer flex items-center'>
+                                <FaWhatsapp className='mr-1' /> Get a Quote
                                 </Link>
                             </div>
                             <ul className='flex align-center justify-center space-x-10 text-medium mt-10'>

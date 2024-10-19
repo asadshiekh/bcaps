@@ -29,7 +29,7 @@ export default function Information() {
           <div className="flex justify-center md:justify-start">
             <Link
               href="/kochi-taxi-rates" // Update the link to your actual tariff page
-              className="inline-block bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-200"
+              className="inline-block bg-[#ed2124] text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-200"
             >
               Explore our Kerala Tour Taxi Tariff
             </Link>

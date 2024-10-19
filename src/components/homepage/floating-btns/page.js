@@ -7,13 +7,13 @@ import { IoLogoWhatsapp } from "react-icons/io";
 const FloatingBtns = () => {
   return (
     <div className='fixed right-0 top-[50%] p-1 space-y-2'>
-        <Link href="/" className='h-[50px] w-[50px] text-white bg-[#00AFF0] text-xl flex items-center justify-center rounded-md'>
+        <Link href="/" className='h-[40px] w-[40px] text-white bg-[#00AFF0] text-xl flex items-center justify-center rounded-md'>
             <FaShareAlt />
         </Link>
-        <Link href="https://www.facebook.com/bcabs/" target="_blank" className='h-[50px] w-[50px] text-white bg-[#3B5998] text-xl flex items-center justify-center rounded-md'>
+        <Link href="https://www.facebook.com/bcabs/" target="_blank" className='h-[40px] w-[40px] text-white bg-[#3B5998] text-xl flex items-center justify-center rounded-md'>
             <FaFacebookF />
         </Link>
-        <Link href="https://wa.me/919895118877" target="_blank" className='h-[50px] w-[50px] text-white bg-[#25D366] text-2xl flex items-center justify-center rounded-md'>
+        <Link href="https://wa.me/919895118877" target="_blank" className='h-[40px] w-[40px] text-white bg-[#25D366] text-2xl flex items-center justify-center rounded-md'>
             <IoLogoWhatsapp />
         </Link>
     </div>

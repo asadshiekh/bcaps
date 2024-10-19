@@ -4,8 +4,8 @@ const FeatureBox = ({icon,title,des}) => {
   return (
     <div className="feature-box flex">
         <div className="mr-3">
-            <BsBuildings className="text-red-500 text-3xl"/>
-            <icon className="text-red-500 text-3xl"/>
+            <BsBuildings className="text-[#ed2124] text-3xl"/>
+            <icon className="text-[#ed2124] text-3xl"/>
         </div>
         <div>
             <h4 className="text-xl font-medium mb-2">{title}</h4>

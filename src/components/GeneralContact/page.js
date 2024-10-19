@@ -181,10 +181,10 @@ const GeneralContact = () => {
                                   rows="4" 
                                   className="w-full p-2 border border-2 rounded-md"></textarea>
                           </div>
-                          <button type="submit" className='border border-red bg-red-500 px-6 py-2 rounded-md text-white inline-block hover:bg-red-500 hover:border-red-500 cursor-pointer'>
+                          <button type="submit" className='border border-red bg-[#ed2124] px-6 py-2 rounded-md text-white inline-block hover:bg-[#ed2124] hover:border-[#ed2124] cursor-pointer'>
                             Submit
                           </button>
-                          {status && <p className="mt-3 text-red-500">{status}</p>} {/* Display status message */}
+                          {status && <p className="mt-3 text-[#ed2124]">{status}</p>} {/* Display status message */}
                         </form>
                     </div>
                 </div>
@@ -197,22 +197,22 @@ const GeneralContact = () => {
             <div className="container mx-auto">
                 <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
                     <div className="contact-box relative border border-1 w-full px-3 py-8 text-center">
-                        <IoMailOutline className="bg-white text-red-500 text-4xl absolute top-[-15%] left-[45%]"/>
+                        <IoMailOutline className="bg-white text-[#ed2124] text-4xl absolute top-[-15%] left-[45%]"/>
                         <h4 className="font-semibold">Mail us on</h4>
                         <p>bcabs@bintel.com</p>
                     </div>
                     <div className="contact-box relative border border-1 w-full px-3 py-8 text-center">
-                        <FaPhone className="bg-white text-red-500 text-4xl absolute top-[-15%] left-[45%]"/>
+                        <FaPhone className="bg-white text-[#ed2124] text-4xl absolute top-[-15%] left-[45%]"/>
                         <h4 className="font-semibold">24x7 Taxi Hotline</h4>
                         <p>(+91) 9895 11 88 77</p>
                     </div>
                     <div className="contact-box relative border border-1 w-full px-3 py-8 text-center">
-                        <FaGoogle className="bg-white text-red-500 text-4xl absolute top-[-15%] left-[45%]"/>
+                        <FaGoogle className="bg-white text-[#ed2124] text-4xl absolute top-[-15%] left-[45%]"/>
                         <h4 className="font-semibold">Visit Us</h4>
                         <p>On Google</p>
                     </div>
                     <div className="contact-box relative border border-1 w-full px-3 py-8 text-center">
-                        <FaWhatsapp className="bg-white text-red-500 text-4xl absolute top-[-15%] left-[45%]"/>
+                        <FaWhatsapp className="bg-white text-[#ed2124] text-4xl absolute top-[-15%] left-[45%]"/>
                         <h4 className="font-semibold">WhatsApp</h4>
                         <p>Send us a message</p>
                     </div>

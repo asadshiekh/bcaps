@@ -3,7 +3,7 @@ import { FaCheckCircle } from 'react-icons/fa'; // Importing icons
 
 const WhyChooseUsSection = () => {
   return (
-    <section className="bg-gray-100 py-8">
+    <section className="bg-gray-100 py-20">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
         {/* Left Side Image */}
         <div className="md:w-1/2 w-full mb-8 md:mb-0">

@@ -18,7 +18,7 @@ const Features = () => {
             {/* Feature boxes with responsive padding */}
             <div className="feature-box flex mb-3 px-4">
                 <div className="mr-3">
-                    <BsBuildings className="text-red-500 text-3xl" />
+                    <BsBuildings className="text-[#ed2124] text-3xl" />
                 </div>
                 <div>
                     <h4 className="text-xl font-medium mb-2">Kochi City Taxi</h4>
@@ -27,7 +27,7 @@ const Features = () => {
             </div>
             <div className="feature-box flex mb-3 px-4">
                 <div className="mr-3">
-                    <BsAirplane className="text-red-500 text-3xl" />
+                    <BsAirplane className="text-[#ed2124] text-3xl" />
                 </div>
                 <div>
                     <h4 className="text-xl font-medium mb-2">Kochi Airport Taxi</h4>
@@ -36,7 +36,7 @@ const Features = () => {
             </div>
             <div className="feature-box flex mb-3 px-4 ">
                 <div className="mr-3">
-                    <BsAppIndicator className="text-red-500 text-3xl" />
+                    <BsAppIndicator className="text-[#ed2124] text-3xl" />
                 </div>
                 <div>
                     <h4 className="text-xl font-medium mb-2">Sabarimala Taxi</h4>
@@ -45,7 +45,7 @@ const Features = () => {
             </div>
             <div className="feature-box flex mb-3 px-4 ">
                 <div className="mr-3">
-                    <IoImageOutline className="text-red-500 text-3xl" />
+                    <IoImageOutline className="text-[#ed2124] text-3xl" />
                 </div>
                 <div>
                     <h4 className="text-xl font-medium mb-2">Kerala Tour Packages</h4>
@@ -54,7 +54,7 @@ const Features = () => {
             </div>
             <div className="feature-box flex mb-3 px-4">
                 <div className="mr-3">
-                    <FaCarSide className="text-red-500 text-3xl" />
+                    <FaCarSide className="text-[#ed2124] text-3xl" />
                 </div>
                 <div>
                     <h4 className="text-xl font-medium mb-2">Kochi Premium Cabs</h4>
@@ -63,7 +63,7 @@ const Features = () => {
             </div>
             <div className="feature-box flex mb-3 px-4">
                 <div className="mr-3">
-                    <TbBus className="text-red-500 text-3xl" />
+                    <TbBus className="text-[#ed2124] text-3xl" />
                 </div>
                 <div>
                     <h4 className="text-xl font-medium mb-2">Tempo Traveller</h4>
@@ -72,7 +72,7 @@ const Features = () => {
             </div>
             <div className="feature-box flex mb-3 px-4">
                 <div className="mr-3">
-                    <IoBusOutline className="text-red-500 text-3xl" />
+                    <IoBusOutline className="text-[#ed2124] text-3xl" />
                 </div>
                 <div>
                     <h4 className="text-xl font-medium mb-2">Luxury Coaches and Bus</h4>
@@ -81,7 +81,7 @@ const Features = () => {
             </div>
             <div className="feature-box flex mb-3 px-4">
                 <div className="mr-3">
-                    <FaPix className="text-red-500 text-3xl" />
+                    <FaPix className="text-[#ed2124] text-3xl" />
                 </div>
                 <div>
                     <h4 className="text-xl font-medium mb-2">Corporate Transport Solutions</h4>
@@ -90,7 +90,7 @@ const Features = () => {
             </div>
             <div className="feature-box flex mb-3 px-4">
                 <div className="mr-3">
-                    <IoGitNetworkOutline className="text-red-500 text-3xl" />
+                    <IoGitNetworkOutline className="text-[#ed2124] text-3xl" />
                 </div>
                 <div>
                     <h4 className="text-xl font-medium mb-2">Pan Kerala Network</h4>

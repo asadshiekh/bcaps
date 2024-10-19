@@ -75,7 +75,7 @@ const FaqSection = () => {
         <ul className="flex justify-center space-x-2 lg:space-x-4 mb-2 lg:mb-6">
           <li>
             <button
-              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq' ? 'border-red-500 text-red-500 bg-white' : 'text-blue-500 hover:border-red-500'}`}
+              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq' ? 'border-[#ed2124] text-[#ed2124] bg-white' : 'text-blue-500 hover:border-[#ed2124]'}`}
               onClick={() => setActiveFilter('faq')}
             >
               All
@@ -83,7 +83,7 @@ const FaqSection = () => {
           </li>
           <li>
             <button
-              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq-1' ? 'border-red-500 text-red-500 bg-white' : 'text-blue-500 hover:border-red-500'}`}
+              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq-1' ? 'border-[#ed2124] text-[#ed2124] bg-white' : 'text-blue-500 hover:border-[#ed2124]'}`}
               onClick={() => setActiveFilter('faq-1')}
             >
               Kochi Taxi
@@ -91,7 +91,7 @@ const FaqSection = () => {
           </li>
           <li>
             <button
-              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq-2' ? 'border-red-500 text-red-500 bg-white' : 'text-blue-500 hover:border-red-500'}`}
+              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq-2' ? 'border-[#ed2124] text-[#ed2124] bg-white' : 'text-blue-500 hover:border-[#ed2124]'}`}
               onClick={() => setActiveFilter('faq-2')}
             >
               Kerala Tour Package
@@ -99,7 +99,7 @@ const FaqSection = () => {
           </li>
           <li>
             <button
-              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq-3' ? 'border-red-500 text-red-500 bg-white' : 'text-blue-500 hover:border-red-500'}`}
+              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq-3' ? 'border-[#ed2124] text-[#ed2124] bg-white' : 'text-blue-500 hover:border-[#ed2124]'}`}
               onClick={() => setActiveFilter('faq-3')}
             >
               Kochi Airport Taxi
@@ -108,7 +108,7 @@ const FaqSection = () => {
 
           <li>
             <button
-              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq-6' ? 'border-red-500 text-red-500 bg-white' : 'text-blue-500 hover:border-red-500'}`}
+              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq-6' ? 'border-[#ed2124] text-[#ed2124] bg-white' : 'text-blue-500 hover:border-[#ed2124]'}`}
               onClick={() => setActiveFilter('faq-6')}
             >
                     Trivandrum Airport Taxi
@@ -122,7 +122,7 @@ const FaqSection = () => {
         <ul className="flex justify-center space-x-2 lg:space-x-4 mb-2 lg:mb-6">
         <li>
             <button
-              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq-4' ? 'border-red-500 text-red-500 bg-white' : 'text-blue-500 hover:border-red-500'}`}
+              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq-4' ? 'border-[#ed2124] text-[#ed2124] bg-white' : 'text-blue-500 hover:border-[#ed2124]'}`}
               onClick={() => setActiveFilter('faq-4')}
             >
              Kozhikode Airport Taxi
@@ -131,7 +131,7 @@ const FaqSection = () => {
           </li>
           <li>
             <button
-              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq-5' ? 'border-red-500 text-red-500 bg-white' : 'text-blue-500 hover:border-red-500'}`}
+              className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq-5' ? 'border-[#ed2124] text-[#ed2124] bg-white' : 'text-blue-500 hover:border-[#ed2124]'}`}
               onClick={() => setActiveFilter('faq-5')}
             >
               Kannur Airport Taxi
