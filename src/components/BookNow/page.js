@@ -23,7 +23,9 @@ const BookNow = () => {
     pickupLocation: '',
     dropLocation: '',
     airport: '',
-    flightNumber: ''
+    flightNumber: '',
+    dropDate: '', // Added for multi-day package
+    itinerary: ''  // Added for multi-day package
   });
 
   const [loading, setLoading] = useState(false); // To manage loading state
@@ -68,7 +70,9 @@ const BookNow = () => {
           pickupLocation: '',
           dropLocation: '',
           airport: '',
-          flightNumber: ''
+          flightNumber: '',
+          dropDate: '',
+          itinerary: ''
         });
       } else {
         setMessage('Failed to send reservation request.');
@@ -86,7 +90,7 @@ const BookNow = () => {
   return (
     <div>
       <Header />
-      <div className="contact-banner border border-b-2 px-4 lg:px-0 pt-[150px] pb-[70px]">
+      <div className="contact-banner border border-b-2 px-4 pt-[150px] pb-[70px]">
         <div className="container mx-auto">
           <div className="block md:flex items-center justify-between">
             <div>
@@ -108,7 +112,7 @@ const BookNow = () => {
       {/* contact form */}
       <div className="contact-form py-10 mt-8 p-4">
         <div className="container mx-auto">
-          <form onSubmit={handleSubmit} className="w-full md:w-2/4">
+          <form onSubmit={handleSubmit} className="w-full md:w-2/4 md:pl-[30px]">
             <h4 className="text-3xl mb-3">General Contact</h4>
             <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-2 mb-5">
               <div>
@@ -259,45 +263,49 @@ const BookNow = () => {
                 className="w-full p-2 border border-2 rounded-md"
                 required
               >
+                 <option value="" disabled hidden>
+                  Select City
+                </option>
                 <option value="city-travel">City Travel</option>
                 <option value="airport-pickup">Pickup from Airport</option>
                 <option value="airport-drop">Drop to Airport</option>
                 <option value="drop-only">Drop Only</option>
-                <option value="outstation trip">Outstation Trip</option>
-                <option value="sabarimala package">Sabarimala Package</option>
-                <option value="multu day package">Multi Day Package</option>
+                <option value="outstation-trip">Outstation Trip</option>
+                <option value="sabarimala-package">Sabarimala Package</option>
+                <option value="multi-day-package">Multi Day Package</option>
               </select>
             </div>
 
             {/* Additional Fields based on tripType */}
-            {formData.tripType === 'city-travel' && (
-              <>
-                <div className="mb-5">
-                  <label>Pickup Location*:</label>
-                  <textarea
-                    type="text"
-                    name="pickupLocation"
-                    value={formData.pickupLocation}
-                    onChange={handleInputChange}
-                    className="w-full p-2 border border-2 rounded-md"
-                    required
-                    placeholder='Enter Your Pickup Address'
-                  />
-                </div>
-                <div className="mb-5">
-                  <label>Drop Location*:</label>
-                  <textarea
-                    type="text"
-                    name="dropLocation"
-                    value={formData.dropLocation}
-                    onChange={handleInputChange}
-                    className="w-full p-2 border border-2 rounded-md"
-                    required
-                     placeholder='Enter Your Drop Loction'
-                  />
-                </div>
-              </>
-            )}
+  {/* Additional Fields based on tripType */}
+  {['city-travel', 'drop-only', 'outstation-trip', 'sabarimala-package'].includes(formData.tripType) && (
+        <>
+          <div className="mb-5">
+            <label>Pickup Location*:</label>
+            <textarea
+              type="text"
+              name="pickupLocation"
+              value={formData.pickupLocation}
+              onChange={handleInputChange}
+              className="w-full p-2 border border-2 rounded-md"
+              required
+              placeholder="Enter Your Pickup Address"
+            />
+          </div>
+          <div className="mb-5">
+            <label>Drop Location*:</label>
+            <textarea
+              type="text"
+              name="dropLocation"
+              value={formData.dropLocation}
+              onChange={handleInputChange}
+              className="w-full p-2 border border-2 rounded-md"
+              required
+              placeholder="Enter Your Drop Location"
+            />
+          </div>
+        </>
+      )}
 
                 {formData.tripType === 'airport-pickup' && (
                   <>
@@ -346,6 +354,100 @@ const BookNow = () => {
                 )}
 
 
+{formData.tripType === 'airport-drop' && (
+        <>
+          <div className="mb-5">
+            <label>Select Airport*:</label>
+            <select
+              name="airport"
+              value={formData.airport}
+              onChange={handleInputChange}
+              className="w-full p-2 border border-2 rounded-md"
+              required
+            >
+              <option value="" disabled>
+                Select an airport
+              </option>
+              <option value="Cochin/Kochi Airport">Cochin/Kochi Airport</option>
+              <option value="Trivandrum Airport">Trivandrum Airport</option>
+              <option value="Kozhikode/Calicut Airport">Kozhikode/Calicut Airport</option>
+              <option value="Kannur Airport">Kannur Airport</option>
+            </select>
+          </div>
+          <div className="mb-5">
+            <label>Pickup Location*:</label>
+            <textarea
+              type="text"
+              name="pickupLocation"
+              value={formData.pickupLocation}
+              onChange={handleInputChange}
+              className="w-full p-2 border border-2 rounded-md"
+              required
+              placeholder="Enter Your Pickup Location"
+            />
+          </div>
+        </>
+      )}
+
+
+{formData.tripType === 'multi-day-package' && (
+        <>
+          <div className="mb-5">
+            <label>Pickup Location*:</label>
+            <textarea
+              type="text"
+              name="pickupLocation"
+              value={formData.pickupLocation}
+              onChange={handleInputChange}
+              className="w-full p-2 border border-2 rounded-md"
+              required
+              placeholder="Enter Your Pickup Location"
+            />
+          </div>
+          
+                    <div className="mb-5">
+            <label>Itinerary*:</label>
+            <textarea
+              type="text"
+              name="itinerary"
+              value={formData.itinerary}
+              onChange={handleInputChange}
+              className="w-full p-2 border border-2 rounded-md"
+              required
+              rows="4"
+              placeholder="Enter the locations you are planning to visit (eg: 2 nights at Munnar, 1 night at Thekkady, 1 Night at Alleppey etc...
+                          Also if you have booked the hotels: please do mention the names of the same. Eg: Munnar: Abad Copper Castle, Thekkady: Grand Thekkady, Aleppey: Houseboat"
+            />
+          </div>
+
+          <div className="mb-5">
+            <label>Drop Location*:</label>
+            <textarea
+              type="text"
+              name="dropLocation"
+              value={formData.dropLocation}
+              onChange={handleInputChange}
+              className="w-full p-2 border border-2 rounded-md"
+              required
+              placeholder="Enter Your Drop Location"
+            />
+          </div>
+          <div className="mb-5">
+            <label>Drop Date*:</label>
+            <input
+              type="date"
+              name="dropDate"
+              value={formData.dropDate}
+              onChange={handleInputChange}
+              className="w-full p-2 border border-2 rounded-md"
+              required
+            />
+          </div>
+
+        </>
+      )}
+
+
                   
 
             <button
@@ -360,9 +462,20 @@ const BookNow = () => {
                 {message}
               </div>
             )}
+
+<div class="bg-gray-100 p-3 rounded mt-4 border-2">
+  <div class="p-3">
+    <p class="mb-0">We shall connect with you and convey the complete tariff prior to confirming the booking.</p>
+  </div>
+</div>
+
           </form>
+          
         </div>
       </div>
+
+
+
       <Footer />
     </div>
   );

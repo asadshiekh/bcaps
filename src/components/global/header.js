@@ -21,7 +21,7 @@ const Header = () => {
   };
 
   return (
-    <div className='inset-0'>
+    <div className='inset-0' id="header">
       {/* Fixed Header */}
       <header className='fixed top-0 left-0 right-0 bg-white shadow-md z-50'>
         <div className='container-fluid mx-auto'>

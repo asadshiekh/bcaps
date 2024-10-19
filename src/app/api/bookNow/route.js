@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 // src/app/api/bookNow.js
 import nodemailer from 'nodemailer';
+
 export async function POST(request) {
   const {
     name,
@@ -10,8 +11,15 @@ export async function POST(request) {
     pickupDate,
     vehicleType,
     tripType,
+    numberOfPassengers,
+    preferredModel,
+    pickupLocation,
+    dropLocation,
+    airport,
+    flightNumber,
+    dropDate,
+    itinerary
   } = await request.json();
-
 
   const host = process.env.SMTP_HOST;
   const port = process.env.SMTP_PORT;
@@ -35,13 +43,32 @@ export async function POST(request) {
     },
   });
 
-  
+  // Build the email body
+  const emailBody = [
+    `*New Reservation Request*`,
+    `\nName: ${name || 'N/A'}`,
+    `Email: ${email || 'N/A'}`,
+    `Phone: ${phone || 'N/A'}`,
+    `WhatsApp: ${whatsapp || 'N/A'}`,
+    `Pickup Date: ${pickupDate || 'N/A'}`,
+    `Vehicle Type: ${vehicleType || 'N/A'}`,
+    `Trip Type: ${tripType || 'N/A'}`,
+    `Number of Passengers: ${numberOfPassengers || 'N/A'}`,
+    `Preferred Model: ${preferredModel || 'N/A'}`,
+    `Pickup Location: ${pickupLocation || 'N/A'}`,
+    `Drop Location: ${dropLocation || 'N/A'}`,
+    `Airport: ${airport || 'N/A'}`,
+    `Flight Number: ${flightNumber || 'N/A'}`,
+    `Drop Date: ${dropDate || 'N/A'}`,
+    `Itinerary: ${itinerary || 'N/A'}`
+  ].filter(line => !line.includes('N/A') || line.split(': ')[1] !== 'N/A').join('\n');
+
   // Set up email data
   const mailOptions = {
     from: `${smtp_name} <${smtp_from_email}>`,
     to: smtp_to_email, // Use environment variable for recipient's email address
     subject: 'New Reservation Request', // Subject line
-    text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nWhatsApp: ${whatsapp}\nPickup Date: ${pickupDate}\nVehicle Type: ${vehicleType}\nTrip Type: ${tripType}`, // Plain text body
+    text: emailBody, // Styled email body
   };
 
   try {
