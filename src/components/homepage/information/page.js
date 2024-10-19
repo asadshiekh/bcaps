@@ -24,7 +24,8 @@ export default function Information() {
                Travelling to Kerala?
           </h2>
           <p className="mb-6  text-center md:text-left">
-           whether you are travelling for business, pleasure or anything else; BCabs will have the perfect taxi for your journey to Kerala .
+          Kerala is renowned for its breathtaking backwaters, hills, captivating wildlife and vibrant cultural heritage. To explore this enchanting paradise it's essential to have an comfortable taxi service that can effortlessly transport you to Keralas destinations. That's where BCabs Kerala Tour Package Taxi comes in – as the leading provider of taxi services in Kerala. We offer tailored and affordable taxi packages that cater to all your travel requirements. Whether you have your heart set on visiting Munnar, Thekkady, Alleppey, Kovalam or any other place in Kerala we have the taxi package designed for you. With a fleet of maintained vehicles ranging from sedans, MUVs, to luxury coaches and our team of professional and courteous drivers at your disposal we guarantee a seamless and secure journey. Don't miss out on experiencing the allure and magnificence of Kerala. Book your BCabs for your Kerala Tour Package today!
+
           </p>
           <div className="flex justify-center md:justify-start">
             <Link

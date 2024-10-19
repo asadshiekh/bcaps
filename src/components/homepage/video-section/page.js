@@ -18,7 +18,7 @@ const FullWidthVideoSection = () => {
       </video>
 
       {/* Overlay Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 text-white text-center">
+      <div className="relative z-10 flex flex-col items-center justify-center w-full h-full bg-black bg-opacity-50 text-white text-center px-4">
         <h2 className="text-3xl font-bold md:text-4xl">Travelling to Kerala?</h2>
         <p className="text-md md:text-2xl text-gray-200 my-8">
         whether you are travelling for business, pleasure or anything else;

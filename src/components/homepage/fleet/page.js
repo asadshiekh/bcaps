@@ -11,10 +11,10 @@ const FleetSection = () => {
           Modern & Varied fleet of vehicles at your service.
         </p>
         <div className='h-[1.5px] w-10 bg-gray-900 mx-auto my-8'></div>
-        <p className="mt-4 mx-auto">
+        <p className="mt-4 mx-auto w-full md:w-[90%] px-5 md:px-0">
           At B-Cabs Ride Easy, we have a diverse and well-maintained fleet of vehicles to suit your every need. Whether you are looking for a budget-friendly and spacious sedan, a luxurious SUV, or a large coach, we have it all.
         </p>
-        <strong className="block mt-4 mx-auto">
+        <strong className="block mt-4 w-full mx-auto md:w-[90%] px-4 md:px-0">
           No matter what your occasion, destination, or budget, B-Cabs Ride Easy has the perfect vehicle for you. Book now and enjoy a smooth and safe ride with our professional and courteous drivers.
         </strong>
       </div>
@@ -53,7 +53,7 @@ const FleetSection = () => {
       {/* Categories Section */}
       <div className="bg-gray-900 text-white py-8">
         <div className="container mx-auto">
-          <h3 className="text-3xl lg:text-4xl text-center leading-relaxed px-2 lg:px-0">
+          <h3 className="text-3xl lg:text-4xl text-center leading-relaxed px-4 lg:px-0">
             We have more than 25+ categories of vehicles in Kochi City and Cochin Airport
           </h3>
           <div className="flex justify-center mt-4">

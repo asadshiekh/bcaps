@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Header from '../global/header'
 import Footer from '../global/footer'
+import FloatingBtns from '../homepage/floating-btns/page'
 
 
   
@@ -34,67 +35,70 @@ const Tariff = () => {
                     <strong>Point to Point Billing: </strong>
                     Pickup and Drop should be within Kochi City Limits (OR) Pickup and Drop should be within Airport Limits Else return to the respective City or Airport Limit will be charged.
                 </p>
-                <div className="overflow-auto">
-                    <table className="border border-1 border-gray-300 w-full text-center">
-                        <thead>
-                            <tr className="bg-gray-800 text-white">
-                                <th className="border border-r-2 border-gray-500 p-2">Vehicle <br/>(Make/Model)</th>
-                                <th className="border border-r-2 border-gray-500 p-2">Seating Capacity</th>
-                                <th className="border border-r-2 border-gray-500 p-2">Minimum Tariff</th>
-                                <th className="border border-r-2 border-gray-500 p-2" colspan="2">Additional Hour/Km<br/> whichever comes higher</th>
-                                <th className="border border-r-2 border-gray-500 p-2">8Hours<br/>Local/Outstation</th>
-                                <th className="border border-r-2 border-gray-500 p-2">Day Package</th>
-                                <th className="border border-r-2 border-gray-500 p-2">Airport Transfer<br/>(City Limits)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td className="border border-2 border-gray-400 p-2 w-40"><strong>Suzuki Dzire Toyota Etios Ford Aspire</strong> <br/>Sedan</td>
-                                <td className="border border-2 border-gray-400 p-2">4+1</td>
-                                <td className="border border-2 border-gray-400 p-2">₹1,300 <br/> (4hrs/40Kms)</td>
-                                <td className="border border-2 border-gray-400 p-2">₹200</td>
-                                <td className="border border-2 border-gray-400 p-2">₹18</td>
-                                <td className="border border-2 border-gray-400 p-2">₹2,200</td>
-                                <td className="border border-2 border-gray-400 p-2">₹2,400</td>
-                                <td className="border border-2 border-gray-400 p-2">₹1,300</td>
-                            </tr>
-                            <tr>
-                                <td className="border border-2 border-gray-400 p-2 w-40"><strong>Suzuki Ertiga</strong> <br/>Compact MUV</td>
-                                <td className="border border-2 border-gray-400 p-2">6+1</td>
-                                <td className="border border-2 border-gray-400 p-2">₹2,400 <br/> (8hrs/80Kms)</td>
-                                <td className="border border-2 border-gray-400 p-2">₹225</td>
-                                <td className="border border-2 border-gray-400 p-2">₹20</td>
-                                <td className="border border-2 border-gray-400 p-2">₹2,400</td>
-                                <td className="border border-2 border-gray-400 p-2">₹2,800</td>
-                                <td className="border border-2 border-gray-400 p-2">₹1,700</td>
-                            </tr>
-                            <tr>
-                                <td className="border border-2 border-gray-400 p-2 w-40"><strong>Toyota Innova Mahindra Marrazo</strong> <br/>Luxury MUV</td>
-                                <td className="border border-2 border-gray-400 p-2">6+1 and 7+1</td>
-                                <td className="border border-2 border-gray-400 p-2">₹3,000 <br/> (8hrs/80Kms)</td>
-                                <td className="border border-2 border-gray-400 p-2">₹300</td>
-                                <td className="border border-2 border-gray-400 p-2">₹23</td>
-                                <td className="border border-2 border-gray-400 p-2">₹3,000</td>
-                                <td className="border border-2 border-gray-400 p-2">₹3,500</td>
-                                <td className="border border-2 border-gray-400 p-2">₹3,000</td>
-                            </tr>
-                            <tr>
-                                <td className="border border-2 border-gray-400 p-2 w-40"><strong>Toyota Innova Crysta</strong> <br/>Ultra Luxury MUV</td>
-                                <td className="border border-2 border-gray-400 p-2">7+1</td>
-                                <td className="border border-2 border-gray-400 p-2">₹3,500 <br/> (8hrs/80Kms)</td>
-                                <td className="border border-2 border-gray-400 p-2">₹350</td>
-                                <td className="border border-2 border-gray-400 p-2">₹28</td>
-                                <td className="border border-2 border-gray-400 p-2">₹3,500</td>
-                                <td className="border border-2 border-gray-400 p-2">₹4,000</td>
-                                <td className="border border-2 border-gray-400 p-2">₹3,500</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+
+                <div className="overflow-auto scrollbar-thin scrollbar-thumb-rounded-lg scrollbar-thumb-gray-600 scrollbar-track-gray-300">
+  <table className="border border-1 border-gray-300 w-full text-center">
+    <thead>
+      <tr className="bg-gray-800 text-white">
+        <th className="border border-r-2 border-gray-500 p-2">Vehicle <br/>(Make/Model)</th>
+        <th className="border border-r-2 border-gray-500 p-2">Seating Capacity</th>
+        <th className="border border-r-2 border-gray-500 p-2">Minimum Tariff</th>
+        <th className="border border-r-2 border-gray-500 p-2" colSpan="2">Additional Hour/Km<br/>whichever comes higher</th>
+        <th className="border border-r-2 border-gray-500 p-2">8Hours<br/>Local/Outstation</th>
+        <th className="border border-r-2 border-gray-500 p-2">Day Package</th>
+        <th className="border border-r-2 border-gray-500 p-2">Airport Transfer<br/>(City Limits)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td className="border border-2 border-gray-400 p-2 w-40"><strong>Suzuki Dzire Toyota Etios Ford Aspire</strong><br/>Sedan</td>
+        <td className="border border-2 border-gray-400 p-2">4+1</td>
+        <td className="border border-2 border-gray-400 p-2">₹1,300 <br/> (4hrs/40Kms)</td>
+        <td className="border border-2 border-gray-400 p-2">₹200</td>
+        <td className="border border-2 border-gray-400 p-2">₹18</td>
+        <td className="border border-2 border-gray-400 p-2">₹2,200</td>
+        <td className="border border-2 border-gray-400 p-2">₹2,400</td>
+        <td className="border border-2 border-gray-400 p-2">₹1,300</td>
+      </tr>
+      <tr>
+        <td className="border border-2 border-gray-400 p-2 w-40"><strong>Suzuki Ertiga</strong><br/>Compact MUV</td>
+        <td className="border border-2 border-gray-400 p-2">6+1</td>
+        <td className="border border-2 border-gray-400 p-2">₹2,400 <br/> (8hrs/80Kms)</td>
+        <td className="border border-2 border-gray-400 p-2">₹225</td>
+        <td className="border border-2 border-gray-400 p-2">₹20</td>
+        <td className="border border-2 border-gray-400 p-2">₹2,400</td>
+        <td className="border border-2 border-gray-400 p-2">₹2,800</td>
+        <td className="border border-2 border-gray-400 p-2">₹1,700</td>
+      </tr>
+      <tr>
+        <td className="border border-2 border-gray-400 p-2 w-40"><strong>Toyota Innova Mahindra Marrazo</strong><br/>Luxury MUV</td>
+        <td className="border border-2 border-gray-400 p-2">6+1 and 7+1</td>
+        <td className="border border-2 border-gray-400 p-2">₹3,000 <br/> (8hrs/80Kms)</td>
+        <td className="border border-2 border-gray-400 p-2">₹300</td>
+        <td className="border border-2 border-gray-400 p-2">₹23</td>
+        <td className="border border-2 border-gray-400 p-2">₹3,000</td>
+        <td className="border border-2 border-gray-400 p-2">₹3,500</td>
+        <td className="border border-2 border-gray-400 p-2">₹3,000</td>
+      </tr>
+      <tr>
+        <td className="border border-2 border-gray-400 p-2 w-40"><strong>Toyota Innova Crysta</strong><br/>Ultra Luxury MUV</td>
+        <td className="border border-2 border-gray-400 p-2">7+1</td>
+        <td className="border border-2 border-gray-400 p-2">₹3,500 <br/> (8hrs/80Kms)</td>
+        <td className="border border-2 border-gray-400 p-2">₹350</td>
+        <td className="border border-2 border-gray-400 p-2">₹28</td>
+        <td className="border border-2 border-gray-400 p-2">₹3,500</td>
+        <td className="border border-2 border-gray-400 p-2">₹4,000</td>
+        <td className="border border-2 border-gray-400 p-2">₹3,500</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+               
                 <p className="my-5">*For Outstation Transfers/drop including the return km shall be charged and is applicable only for destinations above 35Kms from Cochin Airport or Ernakulam City Centre</p>
                 <p className="mb-5"><strong>Garage to Garage Billing: </strong>Mileage run shall be calculated either from our City Garage and back to our City Garage (OR) from our Airport Garage and back to our Airport Garage.</p>
 
-                <div className="overflow-auto">
+                <div className="overflow-auto scrollbar-thin scrollbar-thumb-rounded-lg scrollbar-thumb-gray-600 scrollbar-track-gray-300">
                     <table className="border border-1 border-gray-300 w-full text-center">
                         <thead>
                         <tr className="bg-gray-800 text-white">
@@ -191,6 +195,7 @@ const Tariff = () => {
             </div>
         </div>
         <Footer></Footer>
+    
     </div>
   )
 }

@@ -6,14 +6,14 @@ const WhyChooseUsSection = () => {
     <section className="bg-gray-100 py-20">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
         {/* Left Side Image */}
-        <div className="md:w-1/2 w-full mb-8 md:mb-0">
+        <div className="w-full sm:w-full md:w-[35%] lg:w-[35%] ml-0 md:ml-auto lg:ml-auto mb-8 md:mb-0 lg:mb-0">
           <Image
-            src="/images/assets/kochi-airport-taxi.jpg" // Add your actual image path
+            src="/images/assets/kochi-airport-taxi.jpg" // Replace with the actual image path
             alt="Taxi Car"
             layout="responsive"
             width={500}
             height={300}
-            className="object-cover rounded-lg"
+            className="object-cover"
           />
         </div>
 

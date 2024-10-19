@@ -14,7 +14,7 @@ import Footer from '../global/footer'
 import BannerSlider from './banner-slider/page'
 import FullWidthVideoSection from './video-section/page'
 import Newsletter from './newsletter/page'
-import FloatingBtns from './floating-btns/page'
+
 
 
 
@@ -42,8 +42,8 @@ const Homepage = () => {
         <About />
         <Features />
         <Slider></Slider>
-        <Information></Information>
         <TickerSection></TickerSection>
+        <Information></Information>
         <FleetSection></FleetSection>
         <WhyChooseUsSection/>
         <FaqSection></FaqSection>
@@ -52,7 +52,7 @@ const Homepage = () => {
         <Newsletter />
         <TrustedPartners images={images}></TrustedPartners>
         <Footer></Footer>
-        <FloatingBtns />
+   
     </div>
   )
 }

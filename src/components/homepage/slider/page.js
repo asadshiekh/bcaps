@@ -49,7 +49,7 @@ export default function Slider() {
       <h1 className="text-white text-4xl font-bold mb-4">Kerala Tour Packages</h1>
 
       {/* Description */}
-      <p className="text-white text-lg mb-8 max-w-lg">
+      <p className="text-lg mb-8 max-w-lg text-[#a7a7a7]">
         Hire a BCabs for your Kerala tour from BCabs and have total peace of mind with Guaranteed satisfaction.
       </p>
 

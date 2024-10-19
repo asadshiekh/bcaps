@@ -1,5 +1,6 @@
 import { Poppins } from 'next/font/google';
 import './globals.css';
+import FloatingBtns from '@/components/homepage/floating-btns/page';
 
 
 
@@ -17,7 +18,7 @@ export default function RootLayout({ children }) {
       <body>
 
         {children}
-    
+        <FloatingBtns></FloatingBtns>
       </body>
     </html>
   );

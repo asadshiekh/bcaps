@@ -54,7 +54,7 @@ const faqData = [
 ];
 
 const FaqSection = () => {
-  const [activeFilter, setActiveFilter] = useState('faq');
+  const [activeFilter, setActiveFilter] = useState('faq-1');
   const [openFaq, setOpenFaq] = useState(null);
 
   const toggleFaq = (id) => {
@@ -72,7 +72,7 @@ const FaqSection = () => {
         <h3 className="text-lg mb-4">How can we help you?</h3>
 
         {/* FAQ Filter Tabs */}
-        <ul className="flex justify-center space-x-2 lg:space-x-4 mb-2 lg:mb-6">
+        <ul className="flex justify-center space-x-2 lg:space-x-4 mb-2 lg:mb-6 px-4">
           <li>
             <button
               className={`text-xs lg:text-base transition-all duration-300 fw-semibold border-2 border-transparent rounded-full py-2 lg:px-4 ${activeFilter === 'faq' ? 'border-[#ed2124] text-[#ed2124] bg-white' : 'text-blue-500 hover:border-[#ed2124]'}`}
@@ -140,7 +140,7 @@ const FaqSection = () => {
         </ul>
 
         {/* FAQ Items */}
-        <div>
+        <div className='px-4'>
           {filteredFaqs.map((faq) => (
             <div key={faq.id} className="border-b border-gray-200 py-4">
               <button
