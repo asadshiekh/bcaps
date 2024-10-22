@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const FullWidthVideoSection = () => {
   return (
-    <section className="relative w-full h-[500px] overflow-hidden">
+    <section className="relative w-full h-[500px] overflow-hidden ">
       {/* Video Background */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"

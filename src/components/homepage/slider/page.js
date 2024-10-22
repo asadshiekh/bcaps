@@ -44,7 +44,7 @@ export default function Slider() {
   };
 
   return (
-    <section className="relative bg-[#000000] flex flex-col justify-center items-center text-center py-16 px-4">
+    <section className="relative bg-[#2A2E33] flex flex-col justify-center items-center text-center py-16 px-4">
       {/* Heading */}
       <h1 className="text-white text-4xl font-bold mb-4">Kerala Tour Packages</h1>
 

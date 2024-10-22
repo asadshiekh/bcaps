@@ -188,15 +188,18 @@ const BookNow = () => {
               </div>
             </div>
             <div className="mb-5">
-              <label>Pickup Date and Time*:</label>
+              <label htmlFor="pickupDateTime">Pickup Date and Time*:</label>
+        
               <input
-                type="date"
+                type="datetime-local"
                 name="pickupDate"
                 value={formData.pickupDate}
                 onChange={handleInputChange}
-                className="w-full p-2 border border-2 rounded-md"
+                className="w-full p-2 border-2 rounded-md"
                 required
+                id="pickupDateTime"
               />
+             
             </div>
             <div className="mb-5">
               <label>Vehicle Type*:</label>
@@ -463,9 +466,9 @@ const BookNow = () => {
               </div>
             )}
 
-<div class="bg-gray-100 p-3 rounded mt-4 border-2">
-  <div class="p-3">
-    <p class="mb-0">We shall connect with you and convey the complete tariff prior to confirming the booking.</p>
+<div className="bg-gray-100 p-3 rounded mt-4 border-2">
+  <div className="p-3">
+    <p className="mb-0">We shall connect with you and convey the complete tariff prior to confirming the booking.</p>
   </div>
 </div>
 

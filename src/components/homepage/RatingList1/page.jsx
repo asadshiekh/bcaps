@@ -1,7 +1,7 @@
 import Image from 'next/image'; // Ensure you import the Image component
 import { FaStar } from 'react-icons/fa'; // Import the star icon
 
-const RatingList = () => {
+const RatingList1 = () => {
     // Images and their respective ratings
     const ratingData = [
         {
@@ -25,8 +25,8 @@ const RatingList = () => {
                     <Image 
                         src={item.src} 
                         alt={`Image ${index + 1}`} 
-                        width={50} // Set width as needed
-                        height={50} // Set height as needed
+                        width={30} // Set width as needed
+                        height={30} // Set height as needed
                          // Add margin if needed
                          className="mr-2"
 
@@ -39,4 +39,4 @@ const RatingList = () => {
     );
 };
 
-export default RatingList;
+export default RatingList1;

@@ -5,7 +5,7 @@ import { GoTriangleRight } from "react-icons/go";
 const FleetSection = () => {
   return (
     <section className="bg-white">
-      <div className="container mx-auto  py-8 text-center">
+      <div className="container mx-auto px-4 py-8 text-center">
         <h2 className="text-4xl font-bold text-center">Our Fleet</h2>
         <p className="text-lg text-center mt-4 font-medium text-gray-400">
           Modern & Varied fleet of vehicles at your service.

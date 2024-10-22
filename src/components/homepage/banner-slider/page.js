@@ -9,6 +9,7 @@ import { FaStar } from 'react-icons/fa'; // Import the star icon
 import RatingList from '../RatingList/page';
 import { FaWhatsapp } from "react-icons/fa6";
 import { FaCar } from "react-icons/fa";
+import RatingList1 from '../RatingList1/page';
 
 
 const BannerSlider = () => {
@@ -34,7 +35,7 @@ const BannerSlider = () => {
             {/* Image section for larger screens */}
             {!isMobile && (
                 <Image 
-                    src='/images/assets/bcabs-kochi-cabs.jpg' 
+                    src='/images/assets/banner.jpeg' 
                     alt='BCabs Kochi' 
                     className='w-full h-[950px] lg:h-[700px] object-cover' 
                     width={1920} 
@@ -71,20 +72,19 @@ const BannerSlider = () => {
                                 Get a Quote
                             </Link>
                         </div>
-                        <ul className='flex flex-wrap items-center justify-center space-x-10 text-medium mt-10 text-center'>
+                        <ul className='flex flex-wrap items-center justify-center text-[13px] space-x-4  md:space-x-10 text-medium mt-10 text-center px-2'>
                             <li className='flex items-center mb-2'><FaCheck className='inline-block mr-3'/> On-Time</li>
                             <li className='flex items-center mb-2'><FaCheck className='inline-block mr-3'/> Reliable</li> 
-                            <li className='flex items-center mb-2'><FaCheck className='inline-block mr-3'/> Guaranteed</li> 
-                            <li className='flex items-center mb-2'><FaCheck className='inline-block mr-3'/> Satisfaction</li> 
+                            <li className='flex items-center mb-2'><FaCheck className='inline-block mr-3'/> Guaranteed Satisfaction</li> 
                             <li className='flex items-center mb-2'><FaCheck className='inline-block mr-3'/> 15+ Years in service</li>
                         </ul>
 
-                        <p className='flex  justify-center  text-center my-5 px-4'>
-                            <FaStar style={{ color: 'orange', fontSize: '14px' }} className='mr-2 mb-2 sm:mb-0'/> 
+                        <p className='flex justify-center baseline  text-center my-5 px-[20px] text-[14px] ml-[20px]'>
+                            <FaStar style={{ color: 'orange', fontSize: '25px' }}/> 
                             Consistently received 5-Star on Google, Facebook & Tripadvisor
                         </p>
                            
-                        <RatingList></RatingList>
+                        <RatingList1></RatingList1>
 
                     </div>
                 </div>
@@ -92,27 +92,27 @@ const BannerSlider = () => {
 
             {/* Overlay and white background for larger screens */}
             {!isMobile && (
-                <div className="banner-block absolute top-0 left-0 right-0 bottom-0 bg-[#00000090] text-white text-center flex items-center pt-[70px]">
+                <div className="banner-block absolute top-0 left-0 right-0 bottom-0  text-black text-center flex items-center pt-[70px]">
                     <div className="container mx-auto">
                         <div>
-                            <h4 className="text-2xl font-medium mb-6">BCabs Ride Easy...<span className='bg-red-300'>24x7 Taxi Service</span></h4>
-                            <TypingComponent fontColor="text-white" fontSize="4xl"></TypingComponent>
-                            <h4 className="text-2xl font-medium mb-6 w-full lg:w-2/4 mx-auto text-gray-50">Kerala's <b className='text-white'>Most Trusted <br /> & Largest</b> Taxi Cab Operator</h4>
-                            <h4 className="text-2xl font-medium mb-2"><span className="text-red-600">1000+</span> 5 Star reviews</h4>
+                            <h4 className="text-2xl font-medium mb-6 text-black">BCabs Ride Easy...<span className='bg-red-300'>24x7 Taxi Service</span></h4>
+                            <TypingComponent fontColor="text-black" fontSize="4xl"></TypingComponent>
+                            <h4 className="text-2xl font-medium mb-6 w-full lg:w-2/4 mx-auto text-black">Kerala's <b className='text-black'>Most Trusted <br /> & Largest</b> Taxi Cab Operator</h4>
+                            <h4 className="text-2xl font-medium mb-2 text-black"><span className="text-red-600">1000+</span> 5 Star reviews</h4>
                             <h4 className="text-2xl font-medium"><span className="text-red-600">18000+</span> regular customers</h4>
                             <div className='flex justify-center mt-8'>
-                                <Link href='/book-now' className='py-2 px-3 border border-[#ed2124] text-lg bg-[#ed2124] lg:px-6 lg:py-2 mr-2 rounded-md text-white inline-block hover:bg-[#ed2124] hover:border-[#ed2124] cursor-pointer flex items-center'>
+                                <Link href='/book-now' className='py-2 px-3 font-bold border border-[#ed2124] text-lg bg-[#ed2124] lg:px-6 lg:py-2 mr-2 rounded-md text-white inline-block hover:bg-primary hover:border-[#ed2124] cursor-pointer flex items-center'>
                                     <FaCar className='mr-1'/> Book Now!
                                 </Link>
-                                <Link href='https://wa.me/919895118877?text=Just%20visited%20www.bcabs.com,%20would%20like%20to%20get%20a%20quote?' className='py-2 px-3 border border-black-500 text-lg lg:px-6 lg:py-2 rounded-md text-black-500 inline-block hover:bg-black-500 hover:text-white cursor-pointer flex items-center'>
+                                <Link href='https://wa.me/919895118877?text=Just%20visited%20www.bcabs.com,%20would%20like%20to%20get%20a%20quote?' className='font-bold py-2 px-3 border-[1px] border-black text-lg lg:px-6 lg:py-2 rounded-md text-black-500 inline-block hover:boder-[1px] hover:border-[#ed2124]  hover:bg-[#ed2124] hover:text-white cursor-pointer flex items-center'>
                                 <FaWhatsapp className='mr-1' /> Get a Quote
                                 </Link>
                             </div>
                             <ul className='flex align-center justify-center space-x-10 text-medium mt-10'>
                                 <li className='text-[14px]'><FaCheck className='inline-block'/> On-Time</li>
                                 <li className='text-[14px]'><FaCheck className='inline-block'/> Reliable</li> 
-                                <li className='text-[14px]'><FaCheck className='inline-block'/> Guaranteed</li> 
-                                <li className='text-[14px]'><FaCheck className='inline-block'/> Satisfaction</li> 
+                                <li className='text-[14px]'><FaCheck className='inline-block'/> Guaranteed Satisfaction</li> 
+                
                                 <li className='text-[14px]'><FaCheck className='inline-block'/> 15+ Years in service</li>
                             </ul>
 

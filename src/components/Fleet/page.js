@@ -5,12 +5,13 @@ import GalleryCard from '../global/gallery-card'
 import { FaChevronRight } from "react-icons/fa6";
 import Footer from '../global/footer';
 
+
 const Fleet = () => {
   return (
     <div>
         <Header />
         <div className="contact-banner border border-b-2 h-[300px] lg:h-[383px] overflow-hidden relative">
-    <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover">
+        <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover">
         <source src="/videos/kochi-city-taxi-fleet.mp4" type="video/mp4" />
     </video>
     <div className="banner-block absolute top-0 left-0 right-0 bottom-0 bg-[#0000004f] text-white text-center flex items-center">

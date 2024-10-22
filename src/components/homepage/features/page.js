@@ -9,6 +9,7 @@ import { IoBusOutline } from "react-icons/io5";
 import { TbBus } from "react-icons/tb";
 import { FaCarSide } from "react-icons/fa";
 import { IoImageOutline } from "react-icons/io5";
+import Link from 'next/link';
 
 const Features = () => {
   return (
@@ -18,7 +19,9 @@ const Features = () => {
             {/* Feature boxes with responsive padding */}
             <div className="feature-box flex mb-3 px-4">
                 <div className="mr-3">
-                    <BsBuildings className="text-[#ed2124] text-3xl" />
+                    <Link href="/kochi-city-taxi">
+                        <BsBuildings className="text-[#ed2124] text-3xl" />
+                    </Link>                
                 </div>
                 <div>
                     <h4 className="text-xl font-medium mb-2">Kochi City Taxi</h4>
@@ -27,7 +30,9 @@ const Features = () => {
             </div>
             <div className="feature-box flex mb-3 px-4">
                 <div className="mr-3">
+                    <Link href="/kochi-city-taxi">
                     <BsAirplane className="text-[#ed2124] text-3xl" />
+                    </Link>
                 </div>
                 <div>
                     <h4 className="text-xl font-medium mb-2">Kochi Airport Taxi</h4>
@@ -36,7 +41,9 @@ const Features = () => {
             </div>
             <div className="feature-box flex mb-3 px-4 ">
                 <div className="mr-3">
+                    <Link href="/kochi-city-taxi">
                     <BsAppIndicator className="text-[#ed2124] text-3xl" />
+                    </Link>
                 </div>
                 <div>
                     <h4 className="text-xl font-medium mb-2">Sabarimala Taxi</h4>
@@ -45,7 +52,9 @@ const Features = () => {
             </div>
             <div className="feature-box flex mb-3 px-4 ">
                 <div className="mr-3">
+                <Link href="/kochi-city-taxi">
                     <IoImageOutline className="text-[#ed2124] text-3xl" />
+                    </Link>
                 </div>
                 <div>
                     <h4 className="text-xl font-medium mb-2">Kerala Tour Packages</h4>
@@ -54,7 +63,9 @@ const Features = () => {
             </div>
             <div className="feature-box flex mb-3 px-4">
                 <div className="mr-3">
+                <Link href="/kochi-city-taxi">
                     <FaCarSide className="text-[#ed2124] text-3xl" />
+                    </Link>
                 </div>
                 <div>
                     <h4 className="text-xl font-medium mb-2">Kochi Premium Cabs</h4>
@@ -63,7 +74,9 @@ const Features = () => {
             </div>
             <div className="feature-box flex mb-3 px-4">
                 <div className="mr-3">
+                <Link href="/kochi-city-taxi">
                     <TbBus className="text-[#ed2124] text-3xl" />
+                    </Link>
                 </div>
                 <div>
                     <h4 className="text-xl font-medium mb-2">Tempo Traveller</h4>
@@ -72,7 +85,9 @@ const Features = () => {
             </div>
             <div className="feature-box flex mb-3 px-4">
                 <div className="mr-3">
+                <Link href="/kochi-city-taxi">
                     <IoBusOutline className="text-[#ed2124] text-3xl" />
+                    </Link>
                 </div>
                 <div>
                     <h4 className="text-xl font-medium mb-2">Luxury Coaches and Bus</h4>
@@ -81,7 +96,9 @@ const Features = () => {
             </div>
             <div className="feature-box flex mb-3 px-4">
                 <div className="mr-3">
+                <Link href="/kochi-city-taxi">
                     <FaPix className="text-[#ed2124] text-3xl" />
+                    </Link>
                 </div>
                 <div>
                     <h4 className="text-xl font-medium mb-2">Corporate Transport Solutions</h4>
@@ -90,7 +107,9 @@ const Features = () => {
             </div>
             <div className="feature-box flex mb-3 px-4">
                 <div className="mr-3">
-                    <IoGitNetworkOutline className="text-[#ed2124] text-3xl" />
+                     <Link href="/kochi-city-taxi">
+                        <IoGitNetworkOutline className="text-[#ed2124] text-3xl" />
+                    </Link>
                 </div>
                 <div>
                     <h4 className="text-xl font-medium mb-2">Pan Kerala Network</h4>
