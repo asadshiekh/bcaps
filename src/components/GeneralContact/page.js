@@ -79,11 +79,11 @@ const GeneralContact = () => {
                     </div>
                     <div>
                         <ul className="flex space-x-3 text-gray-500 mt-5">
-                            <li><Link href="/">Home</Link></li>
+                            <li><Link href="/" className='hover:text-gray-700'>Home</Link></li>
                             <li>/</li>
-                            <li><Link href="/general-contact">Contact</Link></li>
+                            <li><Link href="/general-contact" className='hover:text-gray-700'>Contact</Link></li>
                             <li>/</li>
-                            <li><Link href="/general-contact">General Contact</Link></li>
+                            <li><Link href="/general-contact" className='hover:text-gray-700'>General Contact</Link></li>
                         </ul>
                     </div>
                 </div>

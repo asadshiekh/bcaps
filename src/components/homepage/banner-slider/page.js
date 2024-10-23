@@ -116,7 +116,7 @@ const BannerSlider = () => {
                                 <li className='text-[14px]'><FaCheck className='inline-block'/> 15+ Years in service</li>
                             </ul>
 
-                            <p className='flex justify-center items-center my-5'> <FaStar style={{ color: 'orange', fontSize: '14px' }} className='mr-2'/> Consistently revieved 5-Star on Google, Facebook & Tripadvisor</p>
+                            <p className='flex justify-center items-center my-5'> <FaStar style={{ color: 'orange', fontSize: '14px' }} className='mr-2'/> Consistently reviewed 5-Star on Google, Facebook & Tripadvisor</p>
                            
                             <RatingList></RatingList>
 

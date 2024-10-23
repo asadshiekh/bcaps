@@ -22,11 +22,11 @@ const Fleet = () => {
             </div>
             <div>
                 <ul className="flex space-x-2 text-gray-300 justify-center text-sm md:text-base mt-4">
-                    <li><Link href="/">Home</Link></li>
+                    <li><Link href="/" className='hover:text-gray-700'>Home</Link></li>
                     <li>/</li>
-                    <li><Link href="/kochi-city-taxi">Fleet</Link></li>
+                    <li><Link href="/kochi-city-taxi" className='hover:text-gray-700'>Fleet</Link></li>
                     <li>/</li>
-                    <li><Link href="/kochi-city-taxi">General Fleet</Link></li>
+                    <li><Link href="/kochi-city-taxi" className='hover:text-gray-700'>General Fleet</Link></li>
                 </ul>
             </div>
         </div>

@@ -1,4 +1,3 @@
-import Fleet from '@/components/Fleet/page'
 import Terms from '@/components/Terms/page';
 import React from 'react'
 

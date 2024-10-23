@@ -80,7 +80,7 @@ const Features = () => {
                 </div>
                 <div>
                     <h4 className="text-xl font-medium mb-2">Tempo Traveller</h4>
-                    <p className="text-gray-500">Complete control on each & every element that provides endless customization possibilities.</p>
+                    <p className="text-gray-500">Complete control on each & every element that provides endless customization possibilities.BCabs is Kerala’s premier provider of tempo traveller services, boasting an extensive fleet of Force Travellers and Force Urbanias. Our offerings include executive, premium, and luxury tempo travellers, all available in Ernakulam city and Cochin Airport.</p>
                 </div>
             </div>
             <div className="feature-box flex mb-3 px-4">

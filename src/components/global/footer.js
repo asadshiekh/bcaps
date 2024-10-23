@@ -97,9 +97,9 @@ const Footer = () => {
         B-Cabs, B-Cabs logo and Ride Easy... are trademarks or registered trademarks of Bintel Ventures (P) Limited - Kochi and is used under licence by BTransport Solutions Private Limited. All rights are reserved and any legal issues shall be dealt under Kochi Jurisdiction.
       </p>
       <div className="flex flex-row justify-center md:justify-start mt-3 space-y-2 md:space-y-0 md:space-x-5">
-        <a href="#" className="hover:text-white underline decoration-dotted text-[12px] md:text-[13px] text-gray-300">Terms & Conditions</a>
-        <a href="#" className="hover:text-white underline decoration-dotted text-[12px] md:text-[13px] text-gray-300">Cancellation & Refund Policy</a>
-        <a href="#" className="hover:text-white underline decoration-dotted text-[12px] md:text-[13px] text-gray-300">Privacy Policy</a>
+        <a href="/terms" className="hover:text-white underline decoration-dotted text-[12px] md:text-[13px] text-gray-300">Terms & Conditions</a>
+        <a href="/refund-policy" className="hover:text-white underline decoration-dotted text-[12px] md:text-[13px] text-gray-300">Cancellation & Refund Policy</a>
+        <a href="/privacy-policy" className="hover:text-white underline decoration-dotted text-[12px] md:text-[13px] text-gray-300">Privacy Policy</a>
       </div>
     </div>
 

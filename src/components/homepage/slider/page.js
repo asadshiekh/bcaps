@@ -50,7 +50,7 @@ export default function Slider() {
 
       {/* Description */}
       <p className="text-lg mb-8 max-w-lg text-[#a7a7a7]">
-        Hire a BCabs for your Kerala tour from BCabs and have total peace of mind with Guaranteed satisfaction.
+        Hire a BCabs for your Kerala tour taxi and have total peace of mind with Guaranteed satisfaction.
       </p>
 
       {/* Video Slider */}

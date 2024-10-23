@@ -13,6 +13,10 @@ const TickerSection = () => {
           </div>
           <div className="ticker-item text-white flex items-center w-full whitespace-nowrap  mr-5 lg:mr-10">
             <FaCheck className="text-green-500 mr-3" />
+            Legible and clear tariff, no surge
+          </div>
+          <div className="ticker-item text-white flex items-center w-full whitespace-nowrap  mr-5 lg:mr-10">
+            <FaCheck className="text-green-500 mr-3" />
             English and Hindi Speaking chauffeurs
           </div>
           <div className="ticker-item text-white flex items-center w-full whitespace-nowrap   mr-5 lg:mr-10">
@@ -22,10 +26,6 @@ const TickerSection = () => {
           <div className="ticker-item text-white flex items-center w-full whitespace-nowrap  mr-5  lg:mr-10">
             <FaCheck className="text-green-500 mr-3 " />
             Well maintained vehicles
-          </div>
-          <div className="ticker-item text-white flex items-center w-full whitespace-nowrap  mr-5  lg:mr-10">
-            <FaCheck className="text-green-500 mr-3" />
-            Legible and clear tariff, no surge
           </div>
           <div className="ticker-item text-white flex items-center w-full whitespace-nowrap  mr-5 lg:mr-10">
             <FaCheck className="text-green-500 mr-3" />
