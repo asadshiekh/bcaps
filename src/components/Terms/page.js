@@ -17,10 +17,10 @@ function Terms() {
                 </div>
                 <div>
                 <ul className="flex space-x-3 text-gray-500 mt-4">
-                    <li><Link href="/">Home</Link></li>
+                    <li><Link href="/" className='hover:text-gray-700'>Home</Link></li>
                     <li>/</li>
 
-                    <li><Link href="/terms">Terms and Conditions</Link></li>
+                    <li><Link href="/terms" className='hover:text-gray-700'>Terms and Conditions</Link></li>
                 </ul>
                 </div>
           </div>
@@ -107,9 +107,7 @@ function Terms() {
         <p className="mb-4">These terms shall be governed by the laws of [Your Country/Region].</p>
 
         <h3 className="text-lg font-bold mt-4 mb-2">Contact Us</h3>
-        <p className="mb-4">If you have any questions about these terms, please contact us at:</p>
-        <p className="mb-4"><Link href="mailto:bcabs@bintel.com">bcabs@bintel.com</Link></p>
-        <p className="mb-4"><Link href="tel:+919895118877">+919895118877</Link></p>
+        <p className="mb-4">If you have any questions about these terms, please contact us at: <Link href="mailto:bcabs@bintel.com" className='text-[#ed2124]'>bcabs@bintel.com</Link> or <Link href="tel:+919895118877">+919895118877</Link></p>
       </main>
 
       <Footer />

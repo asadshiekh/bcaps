@@ -23,7 +23,7 @@ const WhyChooseUsSection = () => {
             Kochi Airport Taxi
           </h2>
           <p className="text-gray-700 mb-6">
-            Cabs offers 24/7 taxi cab service from Cochin International Airport to any destination in Kerala and neighboring states. Our taxi cab services are available from both Domestic and International Terminals of Cochin International Airport and can be pre-booked via call, email, or WhatsApp.
+            BCabs offers 24/7 taxi cab service from Cochin International Airport to any destination in Kerala and neighbouring states. Our taxi cab services are available from both Domestic and International Terminals of Cochin International Airport and can be pre-booked via call, email, or WhatsApp.
           </p>
 
           {/* Why Choose Us Section */}

@@ -20,9 +20,9 @@ const Tariff = () => {
                     </div>
                     <div>
                         <ul className="flex space-x-3 text-gray-500 mt-5">
-                            <li><Link href="/">Home</Link></li>
+                            <li><Link href="/" className='hover:text-gray-700'>Home</Link></li>
                             <li>/</li>
-                            <li><Link href="/kochi-taxi-rates">Tariff</Link></li>
+                            <li><Link href="/kochi-taxi-rates" className='hover:text-gray-700'>Tariff</Link></li>
                         </ul>
                     </div>
                 </div>

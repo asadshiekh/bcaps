@@ -49,7 +49,7 @@ const Footer = () => {
                   <p>on Facebook</p>
                 </div>
               </Link>
-              <Link href="https://www.facebook.com/bcabs/" target="_blank" className='flex items-center mt-8 lg:mt-12 mr-0 lg:mr-32'>
+              <Link href="https://www.youtube.com/@bcabs" target="_blank" className='flex items-center mt-8 lg:mt-12 mr-0 lg:mr-32'>
                 <div className='h-[50px] w-[50px] text-white bg-[#c4302b] text-xl flex items-center justify-center rounded-md mr-3'>
                   <FaYoutube />
                 </div>
