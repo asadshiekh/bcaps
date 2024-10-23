@@ -35,7 +35,7 @@ const BannerSlider = () => {
             {/* Image section for larger screens */}
             {!isMobile && (
                 <Image 
-                    src='/images/assets/banner.jpeg' 
+                    src='/images/assets/slider1mian.png' 
                     alt='BCabs Kochi' 
                     className='w-full h-[950px] lg:h-[700px] object-cover' 
                     width={1920} 

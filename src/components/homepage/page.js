@@ -14,6 +14,7 @@ import Footer from '../global/footer'
 import BannerSlider from './banner-slider/page'
 import FullWidthVideoSection from './video-section/page'
 import Newsletter from './newsletter/page'
+import Reviews from './review/page'
 
 
 
@@ -39,6 +40,7 @@ const Homepage = () => {
     <div>
         <Header />
         <BannerSlider></BannerSlider>
+        <Reviews></Reviews>
         <About />
         <Features />
         <Slider></Slider>
