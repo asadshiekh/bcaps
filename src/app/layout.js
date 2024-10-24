@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         {/* Google Tag Manager */}
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
               (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -27,17 +27,17 @@ export default function RootLayout({ children }) {
               })(window,document,'script','dataLayer','GTM-TVQ7K9ZK');
             `,
           }}
-        />
+        /> */}
       </Head>
 
       <body className="relative">
         {/* Google Tag Manager (noscript) */}
-        <Script id="gtm-noscript" strategy="afterInteractive">
+        {/* <Script id="gtm-noscript" strategy="afterInteractive">
           {`
             <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVQ7K9ZK"
             height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           `}
-        </Script>
+        </Script> */}
 
         {/* Back to Top Button */}
         <BackToTopButton />
