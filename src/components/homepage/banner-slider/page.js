@@ -34,14 +34,15 @@ const BannerSlider = () => {
         <div className="overflow-hidden relative">
             {/* Image section for larger screens */}
             {!isMobile && (
-                <Image 
-                    src='/images/assets/slider1mian.png' 
-                    alt='BCabs Kochi' 
-                    className='w-full h-[950px] lg:h-[700px] object-cover hidden md:block' 
-                    width={1920} 
-                    height={650} 
-                    priority
-                />
+                 <Image 
+                 src='/images/assets/slider1mian.png' 
+                 alt='BCabs Kochi' 
+                 width={1920} // Set the original image width
+                 height={650} // Set the original image height
+                 className="w-full h-[950px] lg:h-[700px] object-cover hidden md:block" 
+                 sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw" // Adjust sizes based on viewport
+                 priority // Optional: only if this image is crucial for the initial load
+             />
             )}
             
             {/* White background section for mobile */}
