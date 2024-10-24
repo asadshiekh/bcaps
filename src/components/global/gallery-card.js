@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 import { FaUsers } from "react-icons/fa";
 import { GiStonePath } from "react-icons/gi";
@@ -6,9 +7,18 @@ import { GoBriefcase } from "react-icons/go";
 const GalleryCard = ({ cat, title, des, seats, miles, luggage, imagetag }) => {
   return (
     <div className="border borser-1 border-gray-400 rounded-md">
-      <img src={imagetag} alt='logo' className='w-full' />
+      {/* <img src={imagetag} alt='logo' className='w-full' /> */}
+
+             <Image 
+                src={imagetag} // Use the dynamic source here
+                alt={title} 
+                width={300} // Set the appropriate width
+                height={100} // Set the appropriate height
+                layout='responsive' // This allows the image to be responsive
+            />
+            
       <div className="p-3">
-        <span className="bg-blue-400 px-2 rounded-md text-sm mb-2 inline-block">{cat}</span>
+        <span className="bg-blue-400 px-2 rounded-md text-sm mb-2 inline-block">{cat} </span>
         <h4 className="mb-2 text-2xl font-semibold text-gray-700 mb-3">{title}</h4>
         <p className="mb-2 text-gray-500">{des}</p>
         <h6 className="uppercase font-semibold text-gray-500 mb-3">Features</h6>

@@ -29,7 +29,16 @@ const Header = () => {
             <div className="flex items-center justify-between w-full md:w-auto md:mb-0 pr-3 lg:border-r lg:border-gray-300">
               <div className='lg:border-r lg:border-gray-300 pr-5 ml-4 lg:ml-8 mr-5 py-1 flex items-center'>
                   <Link href='/' className='flex items-center w-[150px]'>
-                    <img src='/images/assets/bcabs-logo.png' alt='logo' className='w-full lg:w-44' />
+                    {/* <img src='/images/assets/bcabs-logo.png' alt='logo' className='w-full lg:w-44' /> */}
+
+                    <Image 
+                      src='/images/assets/bcabs-logo.png' 
+                      alt='logo' 
+                      className='w-full lg:w-44' 
+                      width={176} // Adjust this width based on your image size
+                      height={44} // Adjust this height based on your image size
+                  />
+
                   </Link>
               </div>
               <div className="md:hidden flex items-center">

@@ -16,7 +16,7 @@ const ThreeBlockSection = () => {
         <div className="flex-1 bg-[#34495E] p-10 py-20 overflow-hidden">
           <h3 className="text-uppercase font-semibold text-white text-3xl mb-5">BCabs Mission</h3>
           <p className="text-white leading-8">
-            At BCabs 24x7 Taxi Service, we are on a mission to revolutionise the way people travel. We believe that quality, comfort and technology are the key factors that make a difference in the transportation industry. That's why we offer our customers a fleet of modern, clean and safe vehicles, equipped with the latest features and amenities. Our goal is to make every ride an enjoyable and hassle-free experience for our customers.
+            At BCabs 24x7 Taxi Service, we are on a mission to revolutionise the way people travel. We believe that quality, comfort and technology are the key factors that make a difference in the transportation industry. That&apos;s why we offer our customers a fleet of modern, clean and safe vehicles, equipped with the latest features and amenities. Our goal is to make every ride an enjoyable and hassle-free experience for our customers.
           </p>
           <i className="bi-gear-fill bg-icon"></i>
         </div>

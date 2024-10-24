@@ -17,11 +17,6 @@ import Newsletter from './newsletter/page'
 
 
 
-
-
-
-
-
 const Homepage = () => {
 
   const images = [
@@ -40,7 +35,6 @@ const Homepage = () => {
     <div>
         <Header />
         <BannerSlider></BannerSlider>
- 
         <About />
         <Features />
         <Slider></Slider>

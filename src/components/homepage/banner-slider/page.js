@@ -37,7 +37,7 @@ const BannerSlider = () => {
                 <Image 
                     src='/images/assets/slider1mian.png' 
                     alt='BCabs Kochi' 
-                    className='w-full h-[950px] lg:h-[700px] object-cover' 
+                    className='w-full h-[950px] lg:h-[700px] object-cover hidden md:block' 
                     width={1920} 
                     height={650} 
                     priority
@@ -57,7 +57,7 @@ const BannerSlider = () => {
                         </div>
 
 
-                        <h4 className="text-2xl md:text-2xl font-medium mb-8 w-full lg:w-2/4 mx-auto">Kerala's Most Trusted <br /> & Largest Taxi Cab Operator</h4>
+                        <h4 className="text-2xl md:text-2xl font-medium mb-8 w-full lg:w-2/4 mx-auto">Kerala&apos;s Most Trusted <br /> & Largest Taxi Cab Operator</h4>
                         <h4 className="text-2xl md:text-2xl font-medium mb-2"><span className="text-red-600">1000+</span> 5 Star reviews</h4>
                         <h4 className="text-2xl md:text-2xl font-medium"><span className="text-red-600">18000+</span> regular customers</h4>
                         <div className='flex justify-center mt-8 space-x-2'> {/* Added space-x-2 for spacing between buttons */}
@@ -97,7 +97,7 @@ const BannerSlider = () => {
                         <div>
                             <h4 className="text-2xl font-medium mb-6 text-black">BCabs Ride Easy...<span className='bg-red-300'>24x7 Taxi Service</span></h4>
                             <TypingComponent fontColor="text-black" fontSize="4xl"></TypingComponent>
-                            <h4 className="text-2xl font-medium mb-6 w-full lg:w-2/4 mx-auto text-black">Kerala's <b className='text-black'>Most Trusted <br /> & Largest</b> Taxi Cab Operator</h4>
+                            <h4 className="text-2xl font-medium mb-6 w-full lg:w-2/4 mx-auto text-black">Kerala&apos;s <b className='text-black'>Most Trusted <br /> & Largest</b> Taxi Cab Operator</h4>
                             <h4 className="text-2xl font-medium mb-2 text-black"><span className="text-red-600">1000+</span> 5 Star reviews</h4>
                             <h4 className="text-2xl font-medium"><span className="text-red-600">18000+</span> regular customers</h4>
                             <div className='flex justify-center mt-8'>

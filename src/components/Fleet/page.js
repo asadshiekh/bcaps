@@ -4,6 +4,7 @@ import Link from 'next/link'
 import GalleryCard from '../global/gallery-card'
 import { FaChevronRight } from "react-icons/fa6";
 import Footer from '../global/footer';
+import Image from 'next/image';
 
 
 const Fleet = () => {
@@ -104,7 +105,16 @@ const Fleet = () => {
                         <Link href="" className="font-semibold">Visit our Coaches fleet page for more information <FaChevronRight className="inline-block" /></Link>
                     </div>
                     <div>
-                    <img src='/images/assets/kochi-bus-rental.jpg' alt='logo' className='w-full' />
+
+                    <Image 
+                        src='/images/assets/kochi-bus-rental.jpg' 
+                        alt='kochi-bus-rental' 
+                        className='w-full' 
+                        layout='responsive' // Optional: Use layout if you want responsive behavior
+                        width={500} // Set an appropriate width
+                        height={500} // Set an appropriate height
+                    />
+
                     </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
@@ -134,7 +144,17 @@ const Fleet = () => {
         {/* Top Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div>
-                <img src='/images/assets/bcabs-kochi-cabs.jpg' alt='Corporate Transport' className='w-full h-auto rounded-md' />
+                
+
+                <Image 
+                        src='/images/assets/bcabs-kochi-cabs.jpg' 
+                        alt='Corporate Transport' 
+                        className='w-full' 
+                        layout='responsive' // Optional: Use layout if you want responsive behavior
+                        width={500} // Set an appropriate width
+                        height={500} // Set an appropriate height
+                    />
+
             </div>
             <div>
                 <h4 className="text-3xl mb-5 font-semibold">Corporate Transport Solutions</h4>

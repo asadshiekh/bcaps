@@ -4,6 +4,7 @@ import { FaChevronRight, FaYoutube, FaFacebookF, FaTwitter, FaGoogle, FaPinteres
 import { MdEmail } from 'react-icons/md';
 import { AiOutlinePhone } from 'react-icons/ai';
 import { BsSkype, BsWhatsapp, BsArrowDownRightSquare } from 'react-icons/bs';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -76,7 +77,18 @@ const Footer = () => {
               height={50}  // Adjust height as necessary
               className="object-contain mb-4"
             /> */}
-             <img src='/images/assets/bcabs-cochin-taxi-logo-white.png' alt='logo' className='w-60 mb-5' />
+             {/* <img src='/images/assets/bcabs-cochin-taxi-logo-white.png' alt='logo' className='w-60 mb-5' /> */}
+
+             <Image 
+              src='/images/assets/bcabs-cochin-taxi-logo-white.png' 
+              alt='logo' 
+              className='w-60 mb-5' 
+              width={240} // Specify width in pixels
+              height={60} // Specify height in pixels
+          />
+
+
+
             <h4>Corporate Office:</h4>
             <p className='text-md'>
             <strong>BTransport Solutions Private Limited</strong> <br/>
