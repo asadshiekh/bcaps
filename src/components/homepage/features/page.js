@@ -3,7 +3,7 @@ import React from 'react'
 import { BsBuildings } from "react-icons/bs";
 import { BsAirplane } from "react-icons/bs";
 import { BsAppIndicator } from "react-icons/bs";
-import { IoGitNetworkOutline } from "react-icons/io5";
+import { IoAirplaneOutline } from "react-icons/io5";
 import { FaPix } from "react-icons/fa6";
 import { IoBusOutline } from "react-icons/io5";
 import { TbBus } from "react-icons/tb";
@@ -108,7 +108,7 @@ const Features = () => {
             <div className="feature-box flex mb-3 px-4">
                 <div className="mr-3">
                      <Link href="/kochi-city-taxi">
-                        <IoGitNetworkOutline className="text-[#ed2124] text-3xl" />
+                        <IoAirplaneOutline className="text-[#ed2124] text-3xl" />
                     </Link>
                 </div>
                 <div>

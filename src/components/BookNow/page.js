@@ -191,14 +191,16 @@ const BookNow = () => {
               <label htmlFor="pickupDateTime">Pickup Date and Time*:</label>
         
               <input
-                type="datetime-local"
-                name="pickupDate"
-                value={formData.pickupDate}
-                onChange={handleInputChange}
-                className="w-full p-2 border-2 rounded-md"
-                required
-                id="pickupDateTime"
-              />
+                  type="datetime-local"
+                  name="pickupDate"
+                  value={formData.pickupDate}
+                  onChange={handleInputChange}
+                  className="w-full p-2 border-2 rounded-md"
+                  required
+                  id="pickupDateTime"
+                  min={new Date().toISOString().slice(0, 16)} // Disable past dates
+                  step="900" // 15 minutes = 900 seconds
+                />
              
             </div>
             <div className="mb-5">
@@ -270,12 +272,12 @@ const BookNow = () => {
                   Select City
                 </option>
                 <option value="city-travel">City Travel</option>
+                <option value="multi-day-package">Multi Day Package</option>
                 <option value="airport-pickup">Pickup from Airport</option>
                 <option value="airport-drop">Drop to Airport</option>
                 <option value="drop-only">Drop Only</option>
                 <option value="outstation-trip">Outstation Trip</option>
                 <option value="sabarimala-package">Sabarimala Package</option>
-                <option value="multi-day-package">Multi Day Package</option>
               </select>
             </div>
 
@@ -444,6 +446,7 @@ const BookNow = () => {
               onChange={handleInputChange}
               className="w-full p-2 border border-2 rounded-md"
               required
+              min={new Date().toISOString().split("T")[0]} // Disable past dates
             />
           </div>
 

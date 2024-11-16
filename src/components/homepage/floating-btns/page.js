@@ -35,12 +35,12 @@ const FloatingBtns = () => {
         <div className='fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center'>
           <div className='bg-white p-6 w-[300px] md:w-[400px]'>
             <h3 className='text-center text-lg font-bold mb-0 mb-2'>Share</h3>
-            <p className='text-center'> Bcabs 24x7 Taxi Service at Kerala</p>
+            <p className='text-center'> Please find the link to <strong>BCabs; Kochi’s</strong> most premier and largest taxi cab service; you can reach them 24x7 on <a href="https://wa.me/919895118877" target="_blank" className="text-green-500 hover:text-black text-[13px]">+919895118877</a></p>
 
             <hr className='my-5'></hr>
             <div className='text-center'>
               <h3 className='text-center text-[12px] font-bold mb-0 mb-2 text-[#4f7fa9]'>No Contacts? No Problem.</h3>
-              <p className='text-[12px]'>Tab to start adding the most important people to you</p>
+              {/* <p className='text-[12px]'>Tab to start adding the most important people to you</p> */}
             </div>
             <hr className='my-5'></hr>
             <div className='flex justify-around'>

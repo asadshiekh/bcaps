@@ -35,9 +35,9 @@ const BackToTopButton = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-4 right-4 z-50 p-3 rounded-full bg-secondary text-white shadow-lg hover:bg-primary transition duration-300 ease-in-out"
+          className="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-secondary text-white shadow-lg hover:bg-primary transition duration-300 ease-in-out"
         >
-          <FaArrowUp size={24} /> {/* Use the react-icons arrow icon */}
+          <FaArrowUp size={24}  /> {/* Use the react-icons arrow icon */}
         </button>
       )}
     </div>

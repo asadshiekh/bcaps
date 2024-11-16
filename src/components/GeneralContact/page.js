@@ -103,10 +103,10 @@ const GeneralContact = () => {
                             Kochi, Kerala 682025, India</p>
                             <div className="border border-1 border-gray-900 my-5"/>
                             <ul className="flex space-x-3">
-                                <li><Link href="/" className="bg-white flex p-2 rounded-md"><GrFacebookOption/></Link></li>
-                                <li><Link href="/" className="bg-white flex p-2 rounded-md"><FaPinterestP/></Link></li>
-                                <li><Link href="/" className="bg-white flex p-2 rounded-md"><FaTwitter/></Link></li>
-                                <li><Link href="/" className="bg-white flex p-2 rounded-md"><FaYoutube/></Link></li>
+                                <li><Link href="https://www.facebook.com/bcabs/" target="_blank" className="bg-white flex p-2 rounded-md"><GrFacebookOption/></Link></li>
+                                <li><Link href="https://in.pinterest.com/bcabsrideeasy/" target="_blank" className="bg-white flex p-2 rounded-md"><FaPinterestP/></Link></li>
+                                <li><Link href="https://twitter.com/bcabsrideeasy/" target="_blank" className="bg-white flex p-2 rounded-md"><FaTwitter/></Link></li>
+                                <li><Link href="https://www.youtube.com/@bcabs" target="_blank" className="bg-white flex p-2 rounded-md"><FaYoutube/></Link></li>
                             </ul>
                         </div>
                     </div>
@@ -197,22 +197,30 @@ const GeneralContact = () => {
             <div className="container mx-auto">
                 <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
                     <div className="contact-box relative border border-1 w-full px-3 py-8 text-center">
-                        <IoMailOutline className="bg-white text-[#ed2124] text-4xl absolute top-[-15%] left-[45%]"/>
+                        <Link href="mailto:bcabs@bintel.com">
+                          <IoMailOutline className="bg-white text-[#ed2124] text-4xl absolute top-[-15%] left-[45%]"/>
+                        </Link>
                         <h4 className="font-semibold">Mail us on</h4>
                         <p>bcabs@bintel.com</p>
                     </div>
                     <div className="contact-box relative border border-1 w-full px-3 py-8 text-center">
+                    <Link href="tel:+919895118877">
                         <FaPhone className="bg-white text-[#ed2124] text-4xl absolute top-[-15%] left-[45%]"/>
+                        </Link>
                         <h4 className="font-semibold">24x7 Taxi Hotline</h4>
                         <p>(+91) 9895 11 88 77</p>
                     </div>
                     <div className="contact-box relative border border-1 w-full px-3 py-8 text-center">
+                    <Link href="https://maps.app.goo.gl/yHhNHxfk6uctkh7z6" target="_blank">
                         <FaGoogle className="bg-white text-[#ed2124] text-4xl absolute top-[-15%] left-[45%]"/>
+                        </Link>
                         <h4 className="font-semibold">Visit Us</h4>
                         <p>On Google</p>
                     </div>
                     <div className="contact-box relative border border-1 w-full px-3 py-8 text-center">
-                        <FaWhatsapp className="bg-white text-[#ed2124] text-4xl absolute top-[-15%] left-[45%]"/>
+                        <Link href="https://wa.me/919895118877" target="_blank">
+                          <FaWhatsapp className="bg-white text-[#ed2124] text-4xl absolute top-[-15%] left-[45%]"/>
+                        </Link>
                         <h4 className="font-semibold">WhatsApp</h4>
                         <p>Send us a message</p>
                     </div>

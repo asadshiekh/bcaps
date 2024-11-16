@@ -108,10 +108,10 @@ const Footer = () => {
       <p className='text-sm w-full md:w-[60%]'>
         B-Cabs, B-Cabs logo and Ride Easy... are trademarks or registered trademarks of Bintel Ventures (P) Limited - Kochi and is used under licence by BTransport Solutions Private Limited. All rights are reserved and any legal issues shall be dealt under Kochi Jurisdiction.
       </p>
-      <div className="flex flex-row justify-center md:justify-start mt-3 space-y-2 md:space-y-0 md:space-x-5">
-        <a href="/terms" className="hover:text-white underline decoration-dotted text-[12px] md:text-[13px] text-gray-300">Terms & Conditions</a>
-        <a href="/refund-policy" className="hover:text-white underline decoration-dotted text-[12px] md:text-[13px] text-gray-300">Cancellation & Refund Policy</a>
-        <a href="/privacy-policy" className="hover:text-white underline decoration-dotted text-[12px] md:text-[13px] text-gray-300">Privacy Policy</a>
+      <div className="flex flex-col md:flex-row justify-center md:justify-start mt-3 space-y-2 md:space-y-0 md:space-x-5">
+        <a href="/terms" className="hover:text-white underline decoration-dotted text-[13px] md:text-[13px] text-gray-300">Terms & Conditions</a>
+        <a href="/refund-policy" className="hover:text-white underline decoration-dotted text-[13px] md:text-[13px] text-gray-300">Cancellation & Refund Policy</a>
+        <a href="/privacy-policy" className="hover:text-white underline decoration-dotted text-[13px] md:text-[13px] text-gray-300">Privacy Policy</a>
       </div>
     </div>
 
@@ -138,6 +138,7 @@ const Footer = () => {
           <BsSkype className="text-blue-500" size="15" />
           <a href="skype:BCabsOnSkype?call" className="hover:text-white text-[13px]">BCabsOnSkype</a>
           <span className="hidden md:inline-block text-gray-500">·</span>
+       
           <BsWhatsapp className="text-green-500" size="15" />
           <a href="https://wa.me/919895118877" className="text-green-500 hover:text-white text-[13px]">Connect with us on WhatsApp!</a>
         </p>
