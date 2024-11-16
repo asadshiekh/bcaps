@@ -34,15 +34,14 @@ const BannerSlider = () => {
         <div className="overflow-hidden relative">
             {/* Image section for larger screens */}
             {!isMobile && (
-                 <Image 
-                 src='/images/assets/slider1mian.png' 
-                 alt='BCabs Kochi' 
-                 width={1920} // Set the original image width
-                 height={650} // Set the original image height
-                 className="w-full h-[950px] lg:h-[700px] object-cover hidden md:block" 
-                 sizes="(max-width: 768px) 100vw, (min-width: 769px) 50vw" // Adjust sizes based on viewport
-                 priority // Optional: only if this image is crucial for the initial load
-             />
+                <Image 
+                    src='/images/assets/slider1mian.png' 
+                    alt='BCabs Kochi' 
+                    className='w-full h-[950px] lg:h-[700px] object-cover hidden md:block' 
+                    width={1920} 
+                    height={650} 
+                    priority
+                />
             )}
             
             {/* White background section for mobile */}
@@ -58,7 +57,7 @@ const BannerSlider = () => {
                         </div>
 
 
-                        <h4 className="text-2xl md:text-2xl font-medium mb-8 w-full lg:w-2/4 mx-auto">Kerala&apos;s Most Trusted <br /> & Largest Taxi Cab Operator</h4>
+                        <h4 className="text-2xl md:text-2xl font-medium mb-8 w-full lg:w-2/4 mx-auto">Kerala's Most Trusted <br /> & Largest Taxi Cab Operator</h4>
                         <h4 className="text-2xl md:text-2xl font-medium mb-2"><span className="text-red-600">1000+</span> 5 Star reviews</h4>
                         <h4 className="text-2xl md:text-2xl font-medium"><span className="text-red-600">18000+</span> regular customers</h4>
                         <div className='flex justify-center mt-8 space-x-2'> {/* Added space-x-2 for spacing between buttons */}

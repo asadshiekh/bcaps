@@ -44,16 +44,16 @@ const FloatingBtns = () => {
             </div>
             <hr className='my-5'></hr>
             <div className='flex justify-around'>
-              <Link href="https://www.facebook.com/bcabs/" target="_blank" className='text-[#3B5998] text-2xl'>
+              <Link href="https://www.facebook.com/sharer/sharer.php?u=https://www.bcabs.com" target="_blank" className='text-[#3B5998] text-2xl'>
                 <FaFacebookF />
               </Link>
-              <Link href="https://wa.me/919895118877" target="_blank" className='text-[#25D366] text-2xl'>
+              <Link href="https://api.whatsapp.com/send?text=Check%20out%20this%20amazing%20website%20https%3A%2F%2Fbcabs.com%2F" target="_blank" className='text-[#25D366] text-2xl'>
                 <IoLogoWhatsapp />
               </Link>
               <Link href="mailto:bcabs@bintel.com" className='text-[#0072c6] text-2xl'>
                 <FiMail />
               </Link>
-              <Link href="https://twitter.com/bcabsrideeasy/" target="_blank" className='text-[#1DA1F2] text-2xl'>
+              <Link href="https://twitter.com/intent/tweet?text=Check%20out%20this%20amazing%20website%20https%3A%2F%2Fbcabs.com%2F" target="_blank" className='text-[#1DA1F2] text-2xl'>
                 <FiTwitter />
               </Link>
               <Link href="https://instagram.com/bcabs_taxi" target="_blank" className='text-[#0077B5] text-2xl'>

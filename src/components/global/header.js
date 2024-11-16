@@ -28,23 +28,14 @@ const Header = () => {
           <div className='px-3 py-3 flex flex-wrap justify-between items-center text-black rounded-md'>
             <div className="flex items-center justify-between w-full md:w-auto md:mb-0 pr-3 lg:border-r lg:border-gray-300">
               <div className='lg:border-r lg:border-gray-300 pr-5 ml-4 lg:ml-8 mr-5 py-1 flex items-center'>
-                  <Link href='/' className='flex items-center w-[150px]'>
-                    {/* <img src='/images/assets/bcabs-logo.png' alt='logo' className='w-full lg:w-44' /> */}
-
-                    <Image 
-                      src='/images/assets/bcabs-logo.png' 
-                      alt='logo' 
-                      className='w-full lg:w-44' 
-                      width={176} // Adjust this width based on your image size
-                      height={44} // Adjust this height based on your image size
-                  />
-
-                  </Link>
+                  <a href='/' className='flex items-center w-[150px]'>
+                    <img src='/images/assets/bcabs-logo.png' alt='logo' className='w-full lg:w-44' />
+                  </a>
               </div>
               <div className="md:hidden flex items-center">
-                <Link href='/book-now' className='border border-red bg-[#ed2124] w-[110px]  px-4 py-2 rounded-md text-white inline-block hover:bg-[#ed2124] hover:border-[#ed2124] cursor-pointer text-sm md:text-base mr-3'>
+                <a href='/book-now' className='border border-red bg-[#ed2124] w-[110px]  px-4 py-2 rounded-md text-white inline-block hover:bg-[#ed2124] hover:border-[#ed2124] cursor-pointer text-sm md:text-base mr-3'>
                   Book Now!
-                </Link>
+                </a>
                 <button onClick={toggleMenu} className={`text-2xl focus:outline-none ${!menuOpen ? 'inline-block': 'hidden'}`}>
                   &#9776;
                 </button>
@@ -53,11 +44,11 @@ const Header = () => {
                 </button>
               </div>
               <ul className='hidden md:flex items-center space-x-4 md:space-x-8 font-semibold text-sm md:text-medium pr-3'>
-                <li><Link href="/" className={`${ isActive('/') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>HOME</Link></li>
-                <li><Link href="/kochi-city-taxi" className={`${ isActive('/kochi-city-taxi') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>FLEET</Link></li>
-                <li><Link href="/kochi-taxi-rates" className={`${ isActive('/kochi-taxi-rates') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>TARIFF</Link></li>
-                <li><Link href="/general-contact" className={`${ isActive('/general-contact') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>CONTACT</Link></li>
-                <li><Link href="/book-now" className={`${ isActive('/book-now') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>BOOK NOW</Link></li>
+                <li><a href="/" className={`${ isActive('/') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>HOME</a></li>
+                <li><a href="/kochi-city-taxi" className={`${ isActive('/kochi-city-taxi') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>FLEET</a></li>
+                <li><a href="/kochi-taxi-rates" className={`${ isActive('/kochi-taxi-rates') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>TARIFF</a></li>
+                <li><a href="/general-contact" className={`${ isActive('/general-contact') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>CONTACT</a></li>
+                <li><a href="/book-now" className={`${ isActive('/book-now') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>BOOK NOW</a></li>
               </ul>
             </div>
 
@@ -90,11 +81,11 @@ const Header = () => {
           {/* <button onClick={toggleMenu} className="text-2xl">&times;</button> */}
         </div>
         <ul className='text-sm md:text-medium font-semibold pr-3 p-4 space-y-6'>
-            <li><Link href="/" className={`${ isActive('/') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>HOME</Link></li>
-            <li><Link href="/kochi-city-taxi" className={`${ isActive('/kochi-city-taxi') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>FLEET</Link></li>
-            <li><Link href="/kochi-taxi-rates" className={`${ isActive('/kochi-taxi-rates') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>TARIFF</Link></li>
-            <li><Link href="/general-contact" className={`${ isActive('/general-contact') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>CONTACT</Link></li>
-            <li><Link href="/book-now" className={`${ isActive('/book-now') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>BOOK NOW</Link></li>
+            <li><a href="/" className={`${ isActive('/') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>HOME</a></li>
+            <li><a href="/kochi-city-taxi" className={`${ isActive('/kochi-city-taxi') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>FLEET</a></li>
+            <li><a href="/kochi-taxi-rates" className={`${ isActive('/kochi-taxi-rates') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>TARIFF</a></li>
+            <li><a href="/general-contact" className={`${ isActive('/general-contact') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>CONTACT</a></li>
+            <li><a href="/book-now" className={`${ isActive('/book-now') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>BOOK NOW</a></li>
           </ul>
 
         {/* Social icons */}

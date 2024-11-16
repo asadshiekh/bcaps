@@ -3,9 +3,9 @@ import React from 'react'
 
 
 export const metadata = {
-  title: "4x7 Kochi Taxi Cab Service | Contact BCabs 24x7 | BCabs Ride Easy...",
-  description: "24x7 Airport Taxi & General Taxi Cab Service at Ernakulam, Kochi, Cochin",
-  keywords: "kerala taxi, taxi in cochin, cabs in cochin, kochi taxi, cochin taxi service, kochi airport taxi, 24x7 taxi service in kerala, contact bcabs taxi, best taxi in kerala",
+  title: "Contact us| 24/7 Kochi Taxi Cab and Kochi Airport Taxi Service | Bcabs Ride Easy…",
+  description: "Get in touch with BCabs for reliable Taxi cab service in Kerala. Our dedicated team is here to assist you with bookings, inquiries, and support. ",
+  keywords: "ernakulam taxi, palarivattom taxi, cochin taxi",
   alternates: {
     canonical: "https://bcabs.com/general-contact", // Update the URL to match your live URL when deployed
   },

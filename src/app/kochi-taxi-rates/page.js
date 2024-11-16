@@ -2,9 +2,9 @@ import Tariff from '@/components/Tariff/page'
 import React from 'react'
 
 export const metadata = {
-  title: "24x7 Kochi Taxi Cab Service | Taxi Tariff | BCabs Ride Easy...",
-  description: "24x7 Airport Taxi & General Taxi Cab Service at Ernakulam, Kochi, Cochin",
-  keywords: "kerala taxi, taxi in cochin, cabs in cochin, kochi taxi, cochin taxi service, kochi airport taxi, kochi taxi fare, kochi cab fare, kochi taxi tariff, cheapest taxi in kerala",
+  title: "Kochi Taxi Tariff| 24/7 Kochi Taxi Cab Service | Bcabs Ride Easy…",
+  description: "Discover competitive Kochi Airport Taxi tariffs with BCabs. Our transparent pricing ensures you get the best value for reliable and comfortable airport transfers. Check our tariff page for detailed rates and book your Kochi Airport Taxi today for a hassle-free travel experience!",
+  keywords: "kochi airport taxi tariff, kochi cab tariff, ernakulam taxi tariff",
   alternates: {
     canonical: "https://bcabs.com/kochi-taxi-rates", // Update the URL to match your live URL when deployed
   },
