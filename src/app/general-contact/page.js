@@ -1,4 +1,5 @@
 import GeneralContact from '@/components/GeneralContact/page'
+import JsonLd from '@/components/GeneralContact/schema-component';
 import React from 'react'
 
 
@@ -18,6 +19,7 @@ export const metadata = {
 const page = () => {
   return (
     <div>
+      <JsonLd></JsonLd>
        <GeneralContact /> 
        
     </div>

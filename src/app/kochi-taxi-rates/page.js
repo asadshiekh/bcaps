@@ -1,4 +1,5 @@
 import Tariff from '@/components/Tariff/page'
+import JsonLd from '@/components/Tariff/schema-component';
 import React from 'react'
 
 export const metadata = {
@@ -17,6 +18,7 @@ export const metadata = {
 const page = () => {
   return (
     <div>
+        <JsonLd></JsonLd>
         <Tariff />
     </div>
   )
