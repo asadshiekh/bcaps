@@ -51,7 +51,7 @@ const Tariff = () => {
     </thead>
     <tbody>
       <tr>
-        <td className="border border-2 border-gray-400 p-2 w-40"><strong>Suzuki Dzire Toyota Etios Ford Aspire</strong><br/>Sedan</td>
+        <td className="border border-2 border-gray-400 p-2 w-40 sticky left-0 bg-gray-200 md:bg-white"><strong>Suzuki Dzire Toyota Etios Ford Aspire</strong><br/>Sedan</td>
         <td className="border border-2 border-gray-400 p-2">4+1</td>
         <td className="border border-2 border-gray-400 p-2">₹1,300 <br/> (4hrs/40Kms)</td>
         <td className="border border-2 border-gray-400 p-2">₹200</td>
@@ -61,7 +61,7 @@ const Tariff = () => {
         <td className="border border-2 border-gray-400 p-2">₹1,300</td>
       </tr>
       <tr>
-        <td className="border border-2 border-gray-400 p-2 w-40"><strong>Suzuki Ertiga</strong><br/>Compact MUV</td>
+        <td className="border border-2 border-gray-400 p-2 w-40 sticky left-0 bg-gray-200 md:bg-white"><strong>Suzuki Ertiga</strong><br/>Compact MUV</td>
         <td className="border border-2 border-gray-400 p-2">6+1</td>
         <td className="border border-2 border-gray-400 p-2">₹2,400 <br/> (8hrs/80Kms)</td>
         <td className="border border-2 border-gray-400 p-2">₹225</td>
@@ -71,7 +71,7 @@ const Tariff = () => {
         <td className="border border-2 border-gray-400 p-2">₹1,700</td>
       </tr>
       <tr>
-        <td className="border border-2 border-gray-400 p-2 w-40"><strong>Toyota Innova Mahindra Marrazo</strong><br/>Luxury MUV</td>
+        <td className="border border-2 border-gray-400 p-2 w-40 sticky left-0 bg-gray-200 md:bg-white"><strong>Toyota Innova Mahindra Marrazo</strong><br/>Luxury MUV</td>
         <td className="border border-2 border-gray-400 p-2">6+1 and 7+1</td>
         <td className="border border-2 border-gray-400 p-2">₹3,000 <br/> (8hrs/80Kms)</td>
         <td className="border border-2 border-gray-400 p-2">₹300</td>
@@ -81,7 +81,7 @@ const Tariff = () => {
         <td className="border border-2 border-gray-400 p-2">₹3,000</td>
       </tr>
       <tr>
-        <td className="border border-2 border-gray-400 p-2 w-40"><strong>Toyota Innova Crysta</strong><br/>Ultra Luxury MUV</td>
+        <td className="border border-2 border-gray-400 p-2 w-40 sticky left-0 bg-gray-200 md:bg-white"><strong>Toyota Innova Crysta</strong><br/>Ultra Luxury MUV</td>
         <td className="border border-2 border-gray-400 p-2">7+1</td>
         <td className="border border-2 border-gray-400 p-2">₹3,500 <br/> (8hrs/80Kms)</td>
         <td className="border border-2 border-gray-400 p-2">₹350</td>

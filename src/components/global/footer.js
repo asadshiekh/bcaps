@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { FaChevronRight, FaYoutube, FaFacebookF, FaTwitter, FaGoogle, FaPinterest, FaInstagram } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import { AiOutlinePhone } from 'react-icons/ai';
+import { MdCall } from "react-icons/md";
 import { BsSkype, BsWhatsapp, BsArrowDownRightSquare } from 'react-icons/bs';
 import Image from 'next/image';
 
@@ -14,51 +14,55 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
   
           {/* Second Section: Links */}
-          <div className="flex flex-col text-xl space-y-2 w-full">
-            {/* <h4 className="font-bold mb-2">Useful Links</h4> */}
-            <Link href="/" className="hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' size="10" />Home</Link>
-            <Link href="/kochi-city-taxi" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />Fleet </Link>
-            <Link href="/kochi-taxi-rates" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />Tariff</Link>
-            <Link href="/general-contact" className=" hover:underline flex items-center text-[16px] font-medium"><BsArrowDownRightSquare className='inline-block text-md mr-2' />Contact</Link>
-            <Link href="/general-contact" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />General Contact</Link>
-            <Link href="/book-now" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />Book Now</Link>
+          <div className='order-1 md:order-1'>
+            <div className="flex flex-col text-xl space-y-2 w-full">
+              {/* <h4 className="font-bold mb-2">Useful Links</h4> */}
+              <Link href="/" className="hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' size="10" />Home</Link>
+              <Link href="/kochi-city-taxi" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />Fleet </Link>
+              <Link href="/kochi-taxi-rates" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />Tariff</Link>
+              <Link href="/general-contact" className=" hover:underline flex items-center text-[16px] font-medium"><BsArrowDownRightSquare className='inline-block text-md mr-2' />Contact</Link>
+              <Link href="/general-contact" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />General Contact</Link>
+              <Link href="/book-now" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />Book Now</Link>
+            </div>
           </div>
 
           {/* Third Section: Additional Links */}
-          <div className="flex flex-col my-5 md:mb-0 col-span-2">
-            <div className='block lg:flex justify-between'>
-              <div>
+          <div className='md:col-span-2 order-3 md:order-2'>
+            <div className="flex flex-col my-5 md:mb-0">
+              <div className='block lg:flex justify-between'>
                 <div>
-                  <h4 className="font-bold text-3xl text-gray-200">15,065,421</h4>
-                  <p className='font-semibold text-gray-400 uppercase'>Total Trips</p>
+                  <div>
+                    <h4 className="font-bold text-3xl text-gray-200">15,065,421</h4>
+                    <p className='font-semibold text-gray-400 uppercase'>Total Trips</p>
+                  </div>
+                </div>
+                <div className='mr-0 lg:mr-32 mt-5 lg:mt-0'>
+                  <div>
+                  <h4 className="font-bold text-3xl text-gray-200">18,465</h4>
+                  <p className='font-semibold text-gray-400 uppercase'>Regular Clients</p>
+                  </div>
                 </div>
               </div>
-              <div className='mr-0 lg:mr-32 mt-5 lg:mt-0'>
-                <div>
-                <h4 className="font-bold text-3xl text-gray-200">18,465</h4>
-                <p className='font-semibold text-gray-400 uppercase'>Regular Clients</p>
-                </div>
+              <div className='block lg:flex justify-between'>
+                <Link href="https://www.facebook.com/bcabs/" target="_blank" className='flex items-center mt-8 lg:mt-12'>
+                  <div className='h-[50px] w-[50px] text-white bg-[#3B5998] text-xl flex items-center justify-center rounded-md mr-3'>
+                    <FaFacebookF />
+                  </div>
+                  <div>
+                    <strong>Like Us</strong>
+                    <p>on Facebook</p>
+                  </div>
+                </Link>
+                <Link href="https://www.youtube.com/@bcabs" target="_blank" className='flex items-center mt-8 lg:mt-12 mr-0 lg:mr-24'>
+                  <div className='h-[50px] w-[50px] text-white bg-[#c4302b] text-xl flex items-center justify-center rounded-md mr-3'>
+                    <FaYoutube />
+                  </div>
+                  <div>
+                    <strong>Subscribe</strong>
+                    <p> to our Youtube</p>
+                  </div>
+                </Link>
               </div>
-            </div>
-            <div className='flex justify-between'>
-              <Link href="https://www.facebook.com/bcabs/" target="_blank" className='flex items-center mt-8 lg:mt-12'>
-                <div className='h-[50px] w-[50px] text-white bg-[#3B5998] text-xl flex items-center justify-center rounded-md mr-3'>
-                  <FaFacebookF />
-                </div>
-                <div>
-                  <strong>Like Us</strong>
-                  <p>on Facebook</p>
-                </div>
-              </Link>
-              <Link href="https://www.youtube.com/@bcabs" target="_blank" className='flex items-center mt-8 lg:mt-12 mr-0 lg:mr-32'>
-                <div className='h-[50px] w-[50px] text-white bg-[#c4302b] text-xl flex items-center justify-center rounded-md mr-3'>
-                  <FaYoutube />
-                </div>
-                <div>
-                  <strong>Subscribe</strong>
-                  <p> to our Youtube</p>
-                </div>
-              </Link>
             </div>
           </div>
         
@@ -69,7 +73,7 @@ const Footer = () => {
           </div> */}
 
           {/* First Section: Logo */}
-          <div className="">
+          <div className="order-2 md:order-3">
             {/* <Image
               src="/images/assets/bcabs-cochin-taxi-logo-white.png" // Replace with your logo image path
               alt="BCabs Logo"
@@ -108,8 +112,8 @@ const Footer = () => {
       <p className='text-sm w-full md:w-[60%]'>
         B-Cabs, B-Cabs logo and Ride Easy... are trademarks or registered trademarks of Bintel Ventures (P) Limited - Kochi and is used under licence by BTransport Solutions Private Limited. All rights are reserved and any legal issues shall be dealt under Kochi Jurisdiction.
       </p>
-      <div className="flex flex-col md:flex-row justify-center md:justify-start mt-3 space-y-2 md:space-y-0 md:space-x-5">
-        <a href="/terms" className="hover:text-white underline decoration-dotted text-[13px] md:text-[13px] text-gray-300">Terms & Conditions</a>
+      <div className="mt-3 space-y-2 md:space-y-0 space-x-3 md:space-x-5">
+        <a href="/terms" className="hover:text-white underline decoration-dotted text-[13px] md:text-[13px] text-gray-300 block md:inline-block">Terms & Conditions</a>
         <a href="/refund-policy" className="hover:text-white underline decoration-dotted text-[13px] md:text-[13px] text-gray-300">Cancellation & Refund Policy</a>
         <a href="/privacy-policy" className="hover:text-white underline decoration-dotted text-[13px] md:text-[13px] text-gray-300">Privacy Policy</a>
       </div>
@@ -117,7 +121,7 @@ const Footer = () => {
 
     {/* Right Section */}
     <div className="text-center md:text-right w-full">
-      <div className="flex justify-center md:justify-end space-x-4 md:space-x-6">
+      <div className="flex justify-center md:justify-end space-x-4 md:space-x-6 text-gray-500">
         <a href="https://www.facebook.com/bcabs/" target="_blank" className="hover:text-white"><FaFacebookF /></a>
         <a href="https://twitter.com/bcabsrideeasy/" target="_blank" className="hover:text-white"><FaTwitter /></a>
         <a href="https://maps.app.goo.gl/yHhNHxfk6uctkh7z6" target="_blank" className="hover:text-white"><FaGoogle /></a>
@@ -126,22 +130,28 @@ const Footer = () => {
       </div>
   
       <div className="text-center md:text-right mt-4">
-        <p className="flex md:flex-row items-center justify-center md:justify-end space-x-2 space-y-2 md:space-y-0 md:space-x-2">
-          <MdEmail className="text-blue-500" size="15" />
-          <a href="mailto:bcabs@bintel.com" className="hover:text-white text-[13px]">bcabs@bintel.com</a>
+        <div className='flex justify-around items-center md:justify-end md:space-x-3 md:mb-3'>
+          <p className="flex md:flex-row items-center justify-center md:justify-end space-x-2 md:space-x-2">
+            <MdEmail className="text-[#87CEEB]" size="15" />
+            <a href="mailto:bcabs@bintel.com" className="text-[#87CEEB] hover:text-white text-[13px]">bcabs@bintel.com</a>
+          </p>
           <span className="hidden md:inline-block text-gray-500">·</span>
-          <AiOutlinePhone className="text-[#ed2124]" size="15" />
-          <a href="tel:+919895118877" className="text-[#ed2124] hover:text-white text-[13px]">+91 9895 11 88 77</a>
-        </p>
-        
-        <p className="flex  md:flex-row items-center justify-center md:justify-end space-x-2 space-y-2 md:space-y-0 md:space-x-2 mt-4">
-          <BsSkype className="text-blue-500" size="15" />
-          <a href="skype:BCabsOnSkype?call" className="hover:text-white text-[13px]">BCabsOnSkype</a>
+          <p className="flex md:flex-row items-center justify-center md:justify-end space-x-2 md:space-x-1">
+            <MdCall className="text-[#ed2124]" size="15" />
+            <a href="tel:+919895118877" className="text-[#ed2124] hover:text-white text-[13px]">+91 9895 11 88 77</a>
+          </p>
+        </div>
+        <div className='md:flex md:justify-end md:space-x-3'>
+          <p className="flex md:flex-row items-center justify-center md:justify-end space-x-2 md:space-x-2">
+            <BsSkype className="text-[#00aff0]" size="15" />
+            <a href="skype:BCabsOnSkype?call" className="text-[#00aff0] hover:text-white text-[13px]">BCabsOnSkype</a>
+          </p>
           <span className="hidden md:inline-block text-gray-500">·</span>
-       
-          <BsWhatsapp className="text-green-500" size="15" />
-          <a href="https://wa.me/919895118877" className="text-green-500 hover:text-white text-[13px]">Connect with us on WhatsApp!</a>
-        </p>
+          <p className="flex md:flex-row items-center justify-center md:justify-end space-x-2 md:space-x-2">
+            <BsWhatsapp className="text-green-500" size="15" />
+            <a href="https://wa.me/919895118877" className="text-green-500 hover:text-white text-[13px]">Connect with us on WhatsApp!</a>
+          </p>
+        </div>
       </div>
     </div>
   </div>

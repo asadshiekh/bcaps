@@ -1,4 +1,5 @@
 import BookNow from '@/components/BookNow/page'
+import SchemaComponent from '@/components/BookNow/schema-component';
 import React from 'react'
 
 export const metadata = {
@@ -18,6 +19,7 @@ export const metadata = {
 const page = () => {
   return (
     <div>
+        <SchemaComponent></SchemaComponent>
         <BookNow />
     </div>
   )
