@@ -1,163 +1,212 @@
-// components/Footer.jsx
-import Link from 'next/link';
-import { FaChevronRight, FaYoutube, FaFacebookF, FaTwitter, FaGoogle, FaPinterest, FaInstagram } from 'react-icons/fa';
-import { MdEmail } from 'react-icons/md';
-import { MdCall } from "react-icons/md";
-import { BsSkype, BsWhatsapp, BsArrowDownRightSquare } from 'react-icons/bs';
-import Image from 'next/image';
+"use client";
+import React, { useState } from "react";
+import Links from "../Footer/Links";
+import FooterLogo from "../Footer/Logo";
+import FooterBase from "../Footer/FooterBase";
+import { BsArrowDownRightSquare, BsArrowRightSquareFill } from "react-icons/bs";
+import { IoMdArrowDropright } from "react-icons/io";
+
+const leftDropdownData = [
+  {
+    key: "kochi",
+    title: "Services: Kochi",
+    links: [
+      { href: "/kochi-cab-service", label: "Kochi Cab Service" },
+      { href: "/kochi-airport-taxi", label: "Kochi Airport Taxi" },
+      { href: "/kerala-tour-package", label: "Kerala Tour Package" },
+      { href: "/kochi-outstation-taxi", label: "Kochi Outstation Taxi" },
+      { href: "/sabarimala-taxi", label: "Sabarimala Taxi" },
+    ],
+  },
+  {
+    key: "airports",
+    title: "Services: Other Airports",
+    links: [
+      { href: "/trivandrum-airport-taxi", label: "Trivandrum Airport Taxi" },
+      { href: "/kozhikode-airport-taxi", label: "Kozhikode Airport Taxi" },
+      { href: "/kannur-airport-taxi", label: "Kannur Airport Taxi" },
+      { href: "/coimbatore-airport-taxi1", label: "Coimbatore Airport Taxi" },
+    ],
+  },
+  {
+    key: "services",
+    title: "Services: Other Cities",
+    links: [
+      { href: "/trivandrum-airport-taxi", label: "Trivandrum Taxi Service" },
+      { href: "/kozhikode-airport-taxi", label: "Kozhikode Taxi Service" },
+      { href: "/kannur-airport-taxi", label: "Kottayam Taxi Service" },
+      { href: "/coimbatore-airport-taxi2", label: "Thrissur Taxi Service" },
+    ],
+  },
+  {
+    key: "special",
+    title: "Special Services",
+    links: [
+      {
+        href: "/trivandrum-airport-taxi",
+        label: "Corporate Transport Solutions",
+      },
+      {
+        href: "/kozhikode-airport-taxi",
+        label: "Wedding/Event Transportation",
+      },
+      { href: "/kannur-airport-taxi", label: "Special Vehicles" },
+      { href: "/coimbatore-airport-taxi3", label: "Premium Cabs" },
+      { href: "/coimbatore-airport-taxi4", label: "Kerala Caravan Tour" },
+    ],
+  },
+];
+
+const rightDropdownData = [
+  {
+    key: "tariff",
+    title: "Tariff",
+    links: [
+      { href: "/general-tariff", label: "General Tariff" },
+      {
+        href: "/kochi-outstation-taxi-tariff",
+        label: "Kochi Outstation Taxi Tariff",
+      },
+      { href: "/kochi-aiport-taxi-tariff", label: "Kochi Aiport Taxi Tariff" },
+      {
+        href: "/Kochi-airport-os-tariff",
+        label: "Kochi Airport Taxi - O/S Tariff",
+      },
+      { href: "/sabarimala-taxi-tariff", label: "Sabarimala Taxi Tariff" },
+      { href: "/kerala-taxi", label: "Kerala Tour Taxi Tariff" },
+      { href: "/kochi-taxi", label: "Kochi Premium Cab Tariff" },
+      { href: "/special-taxi", label: "Special Offers" },
+    ],
+  },
+  {
+    key: "blog",
+    title: "Blog",
+    links: [
+      { href: "/kochi", label: "Kochi" },
+      { href: "/munnar", label: "Munnar" },
+      { href: "/thekkady", label: "Thekkady" },
+      { href: "/alleppey", label: "Alleppey" },
+      { href: "/kovalam", label: "Kovalam" },
+      { href: "/varkala", label: "Varkala" },
+      { href: "/wayanad", label: "Wayanad" },
+    ],
+  },
+  {
+    key: "contact",
+    title: "Contact",
+    links: [
+      { href: "/general-contact", label: "General Contact" },
+      { href: "/work-with-BCabs", label: "Work with BCabs" },
+      { href: "/book-now", label: "Book Now" },
+      { href: "/bcabs-on-social-media", label: "BCabs on Social Media" },
+      { href: "/faq", label: "FAQ" },
+    ],
+  },
+];
 
 const Footer = () => {
+  const [openDropdowns, setOpenDropdowns] = useState({
+    [leftDropdownData[0].key]: true,
+    [rightDropdownData[0].key]: true,
+  });
+
+  const toggleDropdown = (key) => {
+    setOpenDropdowns((prev) => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
+  };
+
   return (
-    <>
-    <footer className="bg-[#343A40] text-white pt-[40px] pb-[40px] px-4 md:px-0">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-  
-          {/* Second Section: Links */}
-          <div className='order-1 md:order-1'>
-            <div className="flex flex-col text-xl space-y-2 w-full">
-              {/* <h4 className="font-bold mb-2">Useful Links</h4> */}
-              <Link href="/" className="hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' size="10" />Home</Link>
-              <Link href="/kochi-city-taxi" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />Fleet </Link>
-              <Link href="/kochi-taxi-rates" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />Tariff</Link>
-              <Link href="/general-contact" className=" hover:underline flex items-center text-[16px] font-medium"><BsArrowDownRightSquare className='inline-block text-md mr-2' />Contact</Link>
-              <Link href="/general-contact" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />General Contact</Link>
-              <Link href="/book-now" className=" hover:underline flex items-center text-[14px] font-medium"><FaChevronRight className='inline-block text-sm mr-1' />Book Now</Link>
-            </div>
-          </div>
-
-          {/* Third Section: Additional Links */}
-          <div className='md:col-span-2 order-3 md:order-2'>
-            <div className="flex flex-col my-5 md:mb-0">
-              <div className='block lg:flex justify-between'>
-                <div>
-                  <div>
-                    <h4 className="font-bold text-3xl text-gray-200">15,065,421</h4>
-                    <p className='font-semibold text-gray-400 uppercase'>Total Trips</p>
-                  </div>
+    <footer className="bg-[#343A40] text-white pt-16">
+      <div className="container mx-auto pb-16 px-4 xl:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-10 space-y-6 md:space-y-0">
+          <Links />
+          <div>
+            {leftDropdownData.map(({ key, title, links }) => (
+              <React.Fragment key={key}>
+                <button
+                  onClick={() => toggleDropdown(key)}
+                  className="flex items-center justify-between w-full text-[16px] font-medium focus:outline-none py-3 border-b border-b-white border-opacity-10"
+                >
+                  <span className="flex items-center">
+                    {openDropdowns[key] ? (
+                      <BsArrowDownRightSquare className="inline-block text-md mr-2 transition-transform duration-300" />
+                    ) : (
+                      <BsArrowRightSquareFill className="inline-block text-md mr-2 transition-transform duration-300" />
+                    )}
+                    {title}
+                  </span>
+                </button>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    openDropdowns[key]
+                      ? "max-h-screen opacity-100 pb-2"
+                      : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <ul className="pl-0 mt-2 text-sm space-y-2">
+                    {links.map(({ href, label }) => (
+                      <li key={href}>
+                        <a href={href}>
+                          <IoMdArrowDropright
+                            className="inline-block text-sm mr-0.5"
+                            size={20}
+                          />
+                          {label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <div className='mr-0 lg:mr-32 mt-5 lg:mt-0'>
-                  <div>
-                  <h4 className="font-bold text-3xl text-gray-200">18,465</h4>
-                  <p className='font-semibold text-gray-400 uppercase'>Regular Clients</p>
-                  </div>
+              </React.Fragment>
+            ))}
+          </div>
+          <div>
+            {rightDropdownData.map(({ key, title, links }) => (
+              <React.Fragment key={key}>
+                <button
+                  onClick={() => toggleDropdown(key)}
+                  className="flex items-center justify-between w-full text-[16px] font-medium focus:outline-none py-3 border-b border-b-white border-opacity-10"
+                >
+                  <span className="flex items-center">
+                    {openDropdowns[key] ? (
+                      <BsArrowDownRightSquare className="inline-block text-md mr-2 transition-transform duration-300" />
+                    ) : (
+                      <BsArrowRightSquareFill className="inline-block text-md mr-2 transition-transform duration-300" />
+                    )}
+                    {title}
+                  </span>
+                </button>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    openDropdowns[key]
+                      ? "max-h-screen opacity-100 pb-2"
+                      : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <ul className="pl-0 mt-2 text-sm space-y-2">
+                    {links.map(({ href, label }) => (
+                      <li key={href}>
+                        <a href={href}>
+                          <IoMdArrowDropright
+                            className="inline-block text-sm mr-0.5"
+                            size={20}
+                          />
+                          {label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
-              <div className='block lg:flex justify-between'>
-                <Link href="https://www.facebook.com/bcabs/" target="_blank" className='flex items-center mt-8 lg:mt-12'>
-                  <div className='h-[50px] w-[50px] text-white bg-[#3B5998] text-xl flex items-center justify-center rounded-md mr-3'>
-                    <FaFacebookF />
-                  </div>
-                  <div>
-                    <strong>Like Us</strong>
-                    <p>on Facebook</p>
-                  </div>
-                </Link>
-                <Link href="https://www.youtube.com/@bcabs" target="_blank" className='flex items-center mt-8 lg:mt-12 mr-0 lg:mr-24'>
-                  <div className='h-[50px] w-[50px] text-white bg-[#c4302b] text-xl flex items-center justify-center rounded-md mr-3'>
-                    <FaYoutube />
-                  </div>
-                  <div>
-                    <strong>Subscribe</strong>
-                    <p> to our Youtube</p>
-                  </div>
-                </Link>
-              </div>
-            </div>
+              </React.Fragment>
+            ))}
           </div>
-        
-          {/* Fourth Section: Stats and Contact */}
-          {/* <div className="flex flex-col mb-5 md:mb-0">
-        
-           
-          </div> */}
-
-          {/* First Section: Logo */}
-          <div className="order-2 md:order-3">
-            {/* <Image
-              src="/images/assets/bcabs-cochin-taxi-logo-white.png" // Replace with your logo image path
-              alt="BCabs Logo"
-              width={150} // Adjust width as necessary
-              height={50}  // Adjust height as necessary
-              className="object-contain mb-4"
-            /> */}
-             {/* <img src='/images/assets/bcabs-cochin-taxi-logo-white.png' alt='logo' className='w-60 mb-5' /> */}
-
-             <Image 
-              src='/images/assets/bcabs-cochin-taxi-logo-white.png' 
-              alt='logo' 
-              className='w-60 mb-5' 
-              width={240} // Specify width in pixels
-              height={60} // Specify height in pixels
-          />
-
-
-
-            <h4>Corporate Office:</h4>
-            <p className='text-md'>
-            <strong>BTransport Solutions Private Limited</strong> <br/>
-            PRA-167, Pallissery Rd, Palarivattom
-            Kochi, Kerala 682025, India
-            </p>
-    
-          </div>
+          <FooterLogo />
         </div>
       </div>
+      <FooterBase />
     </footer>
-<section className="bg-[#2A2E33] text-gray-400 py-6 px-4 md:px-2">
-  <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-    {/* Left Section */}
-    <div className="text-center md:text-left space-y-2">
-      <p className='text-sm'>Copyrights © 2024 BTransport Solutions Private Limited, Kochi-25</p>
-      <p className='text-sm w-full md:w-[60%]'>
-        B-Cabs, B-Cabs logo and Ride Easy... are trademarks or registered trademarks of Bintel Ventures (P) Limited - Kochi and is used under licence by BTransport Solutions Private Limited. All rights are reserved and any legal issues shall be dealt under Kochi Jurisdiction.
-      </p>
-      <div className="mt-3 space-y-2 md:space-y-0 space-x-3 md:space-x-5">
-        <a href="/terms" className="hover:text-white underline decoration-dotted text-[13px] md:text-[13px] text-gray-300 block md:inline-block">Terms & Conditions</a>
-        <a href="/refund-policy" className="hover:text-white underline decoration-dotted text-[13px] md:text-[13px] text-gray-300">Cancellation & Refund Policy</a>
-        <a href="/privacy-policy" className="hover:text-white underline decoration-dotted text-[13px] md:text-[13px] text-gray-300">Privacy Policy</a>
-      </div>
-    </div>
-
-    {/* Right Section */}
-    <div className="text-center md:text-right w-full">
-      <div className="flex justify-center md:justify-end space-x-4 md:space-x-6 text-gray-500">
-        <a href="https://www.facebook.com/bcabs/" target="_blank" className="hover:text-white"><FaFacebookF /></a>
-        <a href="https://twitter.com/bcabsrideeasy/" target="_blank" className="hover:text-white"><FaTwitter /></a>
-        <a href="https://maps.app.goo.gl/yHhNHxfk6uctkh7z6" target="_blank" className="hover:text-white"><FaGoogle /></a>
-        <a href="https://in.pinterest.com/bcabsrideeasy/" target="_blank" className="hover:text-white"><FaPinterest /></a>
-        <a href="https://instagram.com/bcabs_taxi" target="_blank" className="hover:text-white"><FaInstagram /></a>
-      </div>
-  
-      <div className="text-center md:text-right mt-4">
-        <div className='flex justify-around items-center md:justify-end md:space-x-3 md:mb-3'>
-          <p className="flex md:flex-row items-center justify-center md:justify-end space-x-2 md:space-x-2">
-            <MdEmail className="text-[#87CEEB]" size="15" />
-            <a href="mailto:bcabs@bintel.com" className="text-[#87CEEB] hover:text-white text-[13px]">bcabs@bintel.com</a>
-          </p>
-          <span className="hidden md:inline-block text-gray-500">·</span>
-          <p className="flex md:flex-row items-center justify-center md:justify-end space-x-2 md:space-x-1">
-            <MdCall className="text-[#ed2124]" size="15" />
-            <a href="tel:+919895118877" className="text-[#ed2124] hover:text-white text-[13px]">+91 9895 11 88 77</a>
-          </p>
-        </div>
-        <div className='md:flex md:justify-end md:space-x-3'>
-          <p className="flex md:flex-row items-center justify-center md:justify-end space-x-2 md:space-x-2">
-            <BsSkype className="text-[#00aff0]" size="15" />
-            <a href="skype:BCabsOnSkype?call" className="text-[#00aff0] hover:text-white text-[13px]">BCabsOnSkype</a>
-          </p>
-          <span className="hidden md:inline-block text-gray-500">·</span>
-          <p className="flex md:flex-row items-center justify-center md:justify-end space-x-2 md:space-x-2">
-            <BsWhatsapp className="text-green-500" size="15" />
-            <a href="https://wa.me/919895118877" className="text-green-500 hover:text-white text-[13px]">Connect with us on WhatsApp!</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-</>
   );
 };
 
