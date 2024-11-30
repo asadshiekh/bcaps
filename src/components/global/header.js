@@ -1,112 +1,317 @@
 "use client";
-import Link from 'next/link';
-import React, {useEffect, useState } from 'react';
-import Image from 'next/image'; // Import Next.js Image component
-import { FaFacebookF, FaInstagram, FaPinterestP, FaGoogle, FaTwitter } from 'react-icons/fa'; // Import social icons
+import React, { useState, useEffect } from "react";
+import Logo from "../Header/Logo";
+import Link from "next/link";
 
 const Header = () => {
-  const [currentPath, setCurrentPath] = useState('');
+  const [currentPath, setCurrentPath] = useState("");
 
   useEffect(() => {
-    // This ensures that window.location.pathname is only accessed on the client
     setCurrentPath(window.location.pathname);
+
+    const menuItems = document.querySelectorAll(".menu > ul > li");
+    const menuMobile = document.querySelector(".menu-mobile");
+    const subMenus = document.querySelectorAll(".menu > ul > li > ul");
+    const mainMenu = document.querySelector(".menu > ul");
+
+    menuItems.forEach((item) => {
+      if (item.querySelector("ul")) {
+        item.classList.add("menu-dropdown-icon");
+      } else {
+        item.classList.add("normal-sub");
+      }
+    });
+
+    const handleHover = (e) => {
+      if (window.innerWidth > 943) {
+        const target = e.currentTarget;
+        const subMenu = target.querySelector("ul");
+        const menuLink = target.querySelector("a");
+        if (subMenu) subMenu.classList.toggle("show");
+        menuLink.classList.toggle("text-secondary");
+      }
+    };
+
+    const closeAllSubMenus = (exceptMenu = null) => {
+      subMenus.forEach((menu) => {
+        if (menu !== exceptMenu) {
+          menu.classList.remove("show");
+        }
+      });
+    };
+
+    const handleClick = (e) => {
+      if (window.innerWidth <= 943) {
+        const target = e.currentTarget;
+        const subMenu = target.querySelector("ul");
+        closeAllSubMenus(subMenu);
+        if (subMenu) subMenu.classList.toggle("show");
+      }
+    };
+
+    menuItems.forEach((item) => {
+      item.addEventListener("mouseover", handleHover);
+      item.addEventListener("mouseout", handleHover);
+      item.addEventListener("click", handleClick);
+    });
+
+    const handleMobileClick = (e) => {
+      e.preventDefault();
+      mainMenu?.classList.toggle("show-on-mobile");
+    };
+
+    menuMobile?.addEventListener("click", handleMobileClick);
+
+    const handleResize = () => {
+      subMenus.forEach((menu) => menu.classList.remove("show"));
+      mainMenu?.classList.remove("show-on-mobile");
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      menuItems.forEach((item) => {
+        item.removeEventListener("mouseover", handleHover);
+        item.removeEventListener("mouseout", handleHover);
+        item.removeEventListener("click", handleClick);
+      });
+      menuMobile?.removeEventListener("click", handleMobileClick);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
-  const isActive = (path) => currentPath === path;
-
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
   return (
-    <div className='inset-0' id="header">
-      {/* Fixed Header */}
-      <header className='fixed top-0 left-0 right-0 bg-white shadow-md z-50'>
-        <div className='container-fluid mx-auto'>
-          <div className='px-3 py-3 flex flex-wrap justify-between items-center text-black rounded-md'>
-            <div className="flex items-center justify-between w-full md:w-auto md:mb-0 pr-3 lg:border-r lg:border-gray-300">
-              <div className='lg:border-r lg:border-gray-300 pr-5 ml-4 lg:ml-8 mr-5 py-1 flex items-center'>
-                  <a href='/' className='flex items-center w-[150px]'>
-                    <img src='/images/assets/bcabs-logo.png' alt='logo' className='w-full lg:w-44' />
-                  </a>
-              </div>
-              <div className="md:hidden flex items-center">
-                <a href='/book-now' className='border border-red bg-[#ed2124] w-[110px]  px-4 py-2 rounded-md text-white inline-block hover:bg-[#ed2124] hover:border-[#ed2124] cursor-pointer text-sm md:text-base mr-3'>
-                  Book Now!
-                </a>
-                <button onClick={toggleMenu} className={`text-2xl focus:outline-none ${!menuOpen ? 'inline-block': 'hidden'}`}>
-                  &#9776;
-                </button>
-                <button onClick={toggleMenu} className={`text-3xl focus:outline-none ${menuOpen ? 'inline-block': 'hidden'}`}>
-                  &times;
-                </button>
-              </div>
-              <ul className='hidden md:flex items-center space-x-4 md:space-x-8 font-semibold text-sm md:text-medium pr-3'>
-                <li><a href="/" className={`${ isActive('/') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>HOME</a></li>
-                <li><a href="/kochi-city-taxi" className={`${ isActive('/kochi-city-taxi') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>FLEET</a></li>
-                <li><a href="/kochi-taxi-rates" className={`${ isActive('/kochi-taxi-rates') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>TARIFF</a></li>
-                <li><a href="/general-contact" className={`${ isActive('/general-contact') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>CONTACT</a></li>
-                <li><a href="/book-now" className={`${ isActive('/book-now') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>BOOK NOW</a></li>
-              </ul>
-            </div>
+    <div className="menu fixed top-0 left-0 right-0 w-full h-[100px] flex items-center px-[30px] border-b z-[9999] bg-white">
+      <a href="#" className="menu-mobile lg:hidden">
+        <svg width="30" height="30" viewBox="0 0 30 30">
+          <g fill="none" stroke="black" strokeWidth="2">
+            <line x1="5" y1="7" x2="25" y2="7" />
+            <line x1="5" y1="15" x2="25" y2="15" />
+            <line x1="5" y1="23" x2="25" y2="23" />
+          </g>
+        </svg>
+      </a>
+      <Logo
+        src="/images/assets/bcabs-logo.png"
+        alt="Header Logo"
+        width={230}
+        className="w-[230px] p-2.5 pr-10 border-r"
+      />
 
-            <div className='hidden md:flex w-auto justify-center md:justify-end'>
-              <Link href='tel:+919895118877' className='border border-[#ed2124] px-4 py-2 mr-2 rounded-md text-[#ed2124] inline-block hover:bg-[#ed2124] hover:text-white cursor-pointer text-sm md:text-base'>
-                +91 9895 11 8877
-              </Link>
-              <Link href='/book-now' className='border border-red bg-[#ed2124] px-4 py-2 rounded-md text-white inline-block hover:bg-[#ed2124] hover:border-[#ed2124] cursor-pointer text-sm md:text-base'>
-                Book Now!
-              </Link>
-            </div>
-          </div>
-        </div>
-      </header>
+      <ul className="clearfix flex flex-row justify-end items-center">
+        <li>
+          <a
+            href="#"
+            className="hover:text-secondary text-[#202020] font-medium text-[0.82rem] uppercase py-[2.5rem] px-[1.4em] block"
+          >
+            Home
+          </a>
+        </li>
 
-      {/* Side Menu for Mobile */}
-      <div className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transition-transform transform ${menuOpen ? 'translate-x-0' : '-translate-x-full'} ease-in-out duration-300 z-50 border-t border-b`}>
-        <div className="p-4 flex justify-center items-center border-b">
-          <h3 className='text-xl font-bold'>
-            <Link href='/' className='flex items-center'>
-              <Image
-                src='/images/assets/side-menu-logo.png'
-                alt='logo'
-                width={100} // Replace this with the actual width of your image
-                height={100} // Replace this with the actual height of your image
-                className='w-full'
-              />
-            </Link>
-          </h3>
-          {/* <button onClick={toggleMenu} className="text-2xl">&times;</button> */}
-        </div>
-        <ul className='text-sm md:text-medium font-semibold pr-3 p-4 space-y-6'>
-            <li><a href="/" className={`${ isActive('/') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>HOME</a></li>
-            <li><a href="/kochi-city-taxi" className={`${ isActive('/kochi-city-taxi') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>FLEET</a></li>
-            <li><a href="/kochi-taxi-rates" className={`${ isActive('/kochi-taxi-rates') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>TARIFF</a></li>
-            <li><a href="/general-contact" className={`${ isActive('/general-contact') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>CONTACT</a></li>
-            <li><a href="/book-now" className={`${ isActive('/book-now') ? 'text-[#ed2124]' : 'text-gray-600' } hover:text-[#ed2124] tracking-wider`}>BOOK NOW</a></li>
+        <li>
+          <a
+            href="#"
+            className="hover:text-secondary text-[#202020] font-medium text-[0.82rem] uppercase py-[2.5rem] px-[1.4em] block"
+          >
+            About
+          </a>
+          <ul className="normal-sub">
+            <li>
+              <a href="#">About BCabs</a>
+            </li>
+            <li>
+              <a href="#">Md&apos;s Message</a>
+            </li>
+            <li>
+              <a href="#">About Kerala</a>
+            </li>
+            <li>
+              <a href="#">About Kochi</a>
+            </li>
+            <li>
+              <a href="#">About Cial</a>
+            </li>
           </ul>
+        </li>
 
-        {/* Social icons */}
-        <div className="flex justify-around items-center p-4 border-t border-b">
-          <a href="https://www.facebook.com/bcabs/" target='_blank' className="text-lg"><FaFacebookF /></a>
-          <a href="https://twitter.com/bcabsrideeasy/" target='_blank' className="text-lg"><FaTwitter /></a>
-          <a href="https://maps.app.goo.gl/yHhNHxfk6uctkh7z6" target='_blank' className="text-lg"><FaGoogle /></a>
-          <a href="https://in.pinterest.com/bcabsrideeasy/" target='_blank' className="text-lg"><FaPinterestP /></a>
-          <a href="https://instagram.com/bcabs_taxi" target='blank' className="text-lg"><FaInstagram /></a>
-        </div>
+        <li>
+          <a
+            href="#"
+            className="hover:text-secondary text-[#202020] font-medium text-[0.82rem] uppercase py-[2.5rem] px-[1.4em] block"
+          >
+            Services
+          </a>
+          <ul>
+            <li>
+              <a href="#" className="!text-sm !font-bold !leading-normal">
+                Kochi
+              </a>
+              <ul>
+                <li>
+                  <a href="#">Kochi Cab Service</a>
+                </li>
+                <li>
+                  <a href="#">Kochi Airport Taxi</a>
+                </li>
+                <li>
+                  <a href="#">Kerala Tour Package</a>
+                </li>
+                <li>
+                  <a href="#">Kochi Outstation Taxi</a>
+                </li>
+                <li>
+                  <a href="#">Sabarimala Taxi Service</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" className="!text-sm !font-bold !leading-normal">
+                Other Airports
+              </a>
+              <ul>
+                <li>
+                  <a href="#">Trivandrum Airport taxi</a>
+                </li>
+                <li>
+                  <a href="#">Kozhikode Airport Taxi</a>
+                </li>
+                <li>
+                  <a href="#">Kannur Airport taxi</a>
+                </li>
+                <li>
+                  <a href="#">Coimbatore Airport taxi</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" className="!text-sm !font-bold !leading-normal">
+                Other Cities
+              </a>
+              <ul>
+                <li>
+                  <a href="#">Trivandrum Taxi Service</a>
+                </li>
+                <li>
+                  <a href="#">Calicut Taxi Service</a>
+                </li>
+                <li>
+                  <a href="#">Kottayam Taxi Service</a>
+                </li>
+                <li>
+                  <a href="#">Thrissur Taxi Service</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" className="!text-sm !font-bold !leading-normal">
+                Special Services
+              </a>
+              <ul>
+                <li>
+                  <a href="#">Corporate Transport Solutions</a>
+                </li>
+                <li>
+                  <a href="#">Event Transportation</a>
+                </li>
+                <li>
+                  <a href="#">Wedding Cars</a>
+                </li>
+                <li>
+                  <a href="#">Premium Cabs</a>
+                </li>
+                <li>
+                  <a href="#">Kerala Caravan Tour</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
 
-        {/* Bottom copyright text */}
-        <div className="p-2 mt-4 text-center text-sm">
-          <p>&copy; 2024 <br /> BTransport Solutions (P) Limited</p>
-          <p>All rights reserved</p>
-        </div>
+        <li>
+          <a
+            href="#"
+            className="hover:text-secondary text-[#202020] font-medium text-[0.82rem] uppercase py-[2.5rem] px-[1.4em] block"
+          >
+            Fleet
+          </a>
+          <ul className="normal-sub">
+            <li>
+              <a href="#">General</a>
+            </li>
+            <li>
+              <a href="#">Premium</a>
+            </li>
+            <li>
+              <a href="#">Coaches</a>
+            </li>
+            <li>
+              <a href="#">Caravan</a>
+            </li>
+            <li>
+              <a href="#">Special Vehicles</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a
+            href="#"
+            className="hover:text-secondary text-[#202020] font-medium text-[0.82rem] uppercase py-[2.5rem] px-[1.4em] block"
+          >
+            Tariff
+          </a>
+          <ul className="normal-sub">
+            <li>
+              <a href="#">General Tariff</a>
+            </li>
+            <li>
+              <a href="#">Kochi Outstation Taxi Tariff</a>
+            </li>
+            <li>
+              <a href="#">Kochi Airport Taxi Tariff</a>
+            </li>
+            <li>
+              <a href="#">Kochi Airport Taxi-Outstation</a>
+            </li>
+            <li>
+              <a href="#">Sabarimala Taxi Tariff</a>
+            </li>
+            <li>
+              <a href="#">Kerala Tour Taxi Tariff</a>
+            </li>
+            <li>
+              <a href="#">Kochi Premium Taxi Tariff</a>
+            </li>
+            <li>
+              <a href="#">Special Offers</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a
+            href="#"
+            className="hover:text-secondary text-[#202020] font-medium text-[0.82rem] uppercase py-[2.5rem] px-[1.4em] block"
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+
+      <div className="hidden lg:flex items-center space-x-2 border-l h-full pl-6">
+        <Link
+          href="tel:+919895118877"
+          className="border border-[#ed2124] min-w-[170px] px-4 py-2 text-center rounded-md text-[#ed2124] hover:bg-[#ed2124] hover:text-white text-sm md:text-base"
+        >
+          +91 9895 11 8877
+        </Link>
+        <Link
+          href="/book-now"
+          className="border bg-[#ed2124] min-w-[125px] px-4 py-2 text-center rounded-md text-white hover:bg-[#ed2124] hover:border-[#ed2124] text-sm md:text-base"
+        >
+          Book Now!
+        </Link>
       </div>
-
-      {menuOpen && (
-        <div className="fixed inset-0 bg-black opacity-50 z-40" onClick={toggleMenu}></div>
-      )}
     </div>
   );
 };

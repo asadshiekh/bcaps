@@ -105,16 +105,14 @@ const rightDropdownData = [
 ];
 
 const Footer = () => {
-  const [openDropdowns, setOpenDropdowns] = useState({
-    [leftDropdownData[0].key]: true,
-    [rightDropdownData[0].key]: true,
-  });
+  const [openDropdown, setOpenDropdown] = useState(leftDropdownData[0].key);
 
   const toggleDropdown = (key) => {
-    setOpenDropdowns((prev) => ({
-      ...prev,
-      [key]: !prev[key],
-    }));
+    if (openDropdown === key) {
+      setOpenDropdown(null);
+    } else {
+      setOpenDropdown(key);
+    }
   };
 
   return (
@@ -130,17 +128,17 @@ const Footer = () => {
                   className="flex items-center justify-between w-full text-[16px] font-medium focus:outline-none py-3 border-b border-b-white border-opacity-10"
                 >
                   <span className="flex items-center">
-                    {openDropdowns[key] ? (
-                      <BsArrowDownRightSquare className="inline-block text-md mr-2 transition-transform duration-300" />
+                    {openDropdown === key ? (
+                      <BsArrowDownRightSquare className="inline-block text-md mr-2 transition-transform duration-500" />
                     ) : (
-                      <BsArrowRightSquareFill className="inline-block text-md mr-2 transition-transform duration-300" />
+                      <BsArrowRightSquareFill className="inline-block text-md mr-2 transition-transform duration-500" />
                     )}
                     {title}
                   </span>
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    openDropdowns[key]
+                  className={`overflow-hidden transition-all duration-500 ${
+                    openDropdown === key
                       ? "max-h-screen opacity-100 pb-2"
                       : "max-h-0 opacity-0"
                   }`}
@@ -170,17 +168,17 @@ const Footer = () => {
                   className="flex items-center justify-between w-full text-[16px] font-medium focus:outline-none py-3 border-b border-b-white border-opacity-10"
                 >
                   <span className="flex items-center">
-                    {openDropdowns[key] ? (
-                      <BsArrowDownRightSquare className="inline-block text-md mr-2 transition-transform duration-300" />
+                    {openDropdown === key ? (
+                      <BsArrowDownRightSquare className="inline-block text-md mr-2 transition-transform duration-500" />
                     ) : (
-                      <BsArrowRightSquareFill className="inline-block text-md mr-2 transition-transform duration-300" />
+                      <BsArrowRightSquareFill className="inline-block text-md mr-2 transition-transform duration-500" />
                     )}
                     {title}
                   </span>
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    openDropdowns[key]
+                  className={`overflow-hidden transition-all duration-500 ${
+                    openDropdown === key
                       ? "max-h-screen opacity-100 pb-2"
                       : "max-h-0 opacity-0"
                   }`}
