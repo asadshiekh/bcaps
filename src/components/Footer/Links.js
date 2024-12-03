@@ -6,7 +6,7 @@ const links = [
   {
     section: "About",
     items: [
-      { href: "/", text: "About BCabs" },
+      { href: "/about-bcabs-kochi-taxi", text: "About BCabs" },
       { href: "/", text: "MD's Message" },
       { href: "/", text: "About Kerala" },
       { href: "/", text: "About Kochi" },
