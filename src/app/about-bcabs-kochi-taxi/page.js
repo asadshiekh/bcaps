@@ -25,7 +25,7 @@ const page = () => {
     <div>
       <Header />
       {/* banner section */}
-      <div className="contact-banner bg-[#f8f9fa] border border-b-2 px-8 lg:px-0 pt-[120px] pb-[20px]">
+      <div className="contact-banner bg-[#f8f9fa] border border-b-2 px-4 lg:px-0 pt-[120px] pb-[20px]">
         <div className="container mx-auto">
           <div className="block md:flex items-center justify-between">
             <div>
@@ -66,7 +66,7 @@ const page = () => {
         <div className="container mx-auto">
           <ImageCarousel />
 
-          <div className="text-center px-8">
+          <div className="text-center">
             <h1 className="text-2xl md:text-4xl font-medium leading-relaxed">
               BCabs Ride Easy...
             </h1>
@@ -81,7 +81,7 @@ const page = () => {
       </div>
 
       <div className="container mx-auto mb-8">
-        <p className="px-8">
+        <p className="px-4">
           BCabs was started in the year 2009 in the city of Cochin to provide
           quality vehicle rental service and has been since catering to
           thousands of tourist, businessmen, corporates, instutions etc. with
@@ -114,7 +114,7 @@ const page = () => {
       </div>
 
       <div className="pb-12 lg:pb-20">
-        <div className="container mx-auto my-12 px-8">
+        <div className="container mx-auto my-12 px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Why Choose Us */}
             <div>

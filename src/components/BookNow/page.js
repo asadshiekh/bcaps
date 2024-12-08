@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Header from '../global/header';
 import Link from 'next/link';
 import Footer from '../global/footer';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const BookNow = () => {
   const [selectedOption, setSelectedOption] = useState('yes');
@@ -190,17 +192,20 @@ const BookNow = () => {
             <div className="mb-5">
               <label htmlFor="pickupDateTime">Pickup Date and Time*:</label>
         
-              <input
-                  type="datetime-local"
-                  name="pickupDate"
-                  value={formData.pickupDate}
-                  onChange={handleInputChange}
-                  className="w-full p-2 border-2 rounded-md"
-                  required
-                  id="pickupDateTime"
-                  min={new Date().toISOString().slice(0, 16)} // Disable past dates
-                  step="900" // 15 minutes = 900 seconds
-                />
+                    <DatePicker
+            selected={formData.pickupDate} // Bind to formData
+            onChange={handleInputChange} // Update state
+            showTimeSelect // Enable time selection
+            dateFormat="yyyy-MM-dd HH:mm" // Format to match datetime-local
+            timeFormat="HH:mm"
+            timeIntervals={15} // Step for 15 minutes
+            minDate={new Date()} // Disable past dates
+            id="pickupDateTime" // Keep the same id
+            name="pickupDate" // Keep the same name
+            className="w-full p-2 border-2 rounded-md" // Styling
+            placeholderText="Select pickup date and time" // Placeholder for better UX
+            required
+          />
              
             </div>
             <div className="mb-5">

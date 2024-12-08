@@ -156,13 +156,11 @@ body {
   .menu {
     display: inline-block;
     padding: 10px 0 0;
-    height: 80px;
-    transition: all 0.3s ease-in-out;
   }
   .menu-mobile {
     display: block;
     float: right;
-    padding: 15px 20px 0;
+    padding: 20px 20px 0;
   }
   .menu-dropdown-icon:before {
     display: none;
