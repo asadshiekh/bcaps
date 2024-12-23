@@ -10,7 +10,7 @@ const ImageCarousel = () => {
   ];
 
   return (
-    <div className="carousel-container mt-20 mb-16">
+    <div className="carousel-container">
       <Swiper
         modules={[Navigation, Pagination]}
         navigation

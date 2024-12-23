@@ -7,10 +7,10 @@ const links = [
     section: "About",
     items: [
       { href: "/about-bcabs-kochi-taxi", text: "About BCabs" },
-      { href: "/", text: "MD's Message" },
-      { href: "/", text: "About Kerala" },
-      { href: "/", text: "About Kochi" },
-      { href: "/", text: "About Cochin Airport" },
+      { href: "/about-bcabs-kochi-taxi-mdmessage", text: "MD's Message" },
+      { href: "/about-bcabs-kerala", text: "About Kerala" },
+      { href: "/about-bcabs-kochi", text: "About Kochi" },
+      { href: "/about-cochin-airport", text: "About Cochin Airport" },
     ],
   },
   {

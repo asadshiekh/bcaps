@@ -5,6 +5,7 @@ import Link from "next/link";
 
 const Header = () => {
   const [currentPath, setCurrentPath] = useState("");
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     setCurrentPath(window.location.pathname);
@@ -45,7 +46,10 @@ const Header = () => {
         const target = e.currentTarget;
         const subMenu = target.querySelector("ul");
         closeAllSubMenus(subMenu);
-        if (subMenu) subMenu.classList.toggle("show");
+        if (subMenu) {
+          e.preventDefault();
+          subMenu.classList.toggle("show");
+        }
       }
     };
 
@@ -80,8 +84,30 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10 && window.innerWidth <= 959) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="menu fixed top-0 left-0 right-0 w-full h-[100px] flex items-center px-[30px] border-b z-[9999] bg-white">
+    <div
+      className={`menu fixed top-0 left-0 right-0 h-[100px] flex items-center px-[30px] border-b z-[9999] bg-white transition-all duration-300 ${
+        isScrolled
+          ? "w-[92%] mx-auto mt-4 rounded-md shadow-lg bg-white/80 backdrop-blur-lg"
+          : "w-full px-[30px] py-[20px] shadow-none"
+      }`}
+    >
       <a href="#" className="menu-mobile lg:hidden">
         <svg width="30" height="30" viewBox="0 0 30 30">
           <g fill="none" stroke="black" strokeWidth="2">
@@ -95,7 +121,7 @@ const Header = () => {
         src="/images/assets/bcabs-logo.png"
         alt="Header Logo"
         width={230}
-        className="w-[230px] p-2.5 pr-10 border-r"
+        className="p-2.5 pr-10 border-r w-[180px] lg:w-[230px]"
       />
 
       <ul className="clearfix flex flex-row justify-end items-center">
@@ -117,19 +143,19 @@ const Header = () => {
           </a>
           <ul className="normal-sub">
             <li>
-              <a href="#">About BCabs</a>
+              <a href="/about-bcabs-kochi-taxi">About BCabs</a>
             </li>
             <li>
-              <a href="#">Md&apos;s Message</a>
+              <a href="/about-bcabs-kochi-taxi-mdmessage">Md&apos;s Message</a>
             </li>
             <li>
-              <a href="#">About Kerala</a>
+              <a href="/about-bcabs-kerala">About Kerala</a>
             </li>
             <li>
-              <a href="#">About Kochi</a>
+              <a href="/about-bcabs-kochi">About Kochi</a>
             </li>
             <li>
-              <a href="#">About Cial</a>
+              <a href="/about-cochin-airport">About Cial</a>
             </li>
           </ul>
         </li>
@@ -148,10 +174,10 @@ const Header = () => {
               </a>
               <ul>
                 <li>
-                  <a href="#">Kochi Cab Service</a>
+                  <a href="/kochi-cab-service">Kochi Cab Service</a>
                 </li>
                 <li>
-                  <a href="#">Kochi Airport Taxi</a>
+                  <a href="/kochi-airport-taxi">Kochi Airport Taxi</a>
                 </li>
                 <li>
                   <a href="#">Kerala Tour Package</a>
@@ -260,32 +286,6 @@ const Header = () => {
           >
             Tariff
           </a>
-          <ul className="normal-sub">
-            <li>
-              <a href="#">General Tariff</a>
-            </li>
-            <li>
-              <a href="#">Kochi Outstation Taxi Tariff</a>
-            </li>
-            <li>
-              <a href="#">Kochi Airport Taxi Tariff</a>
-            </li>
-            <li>
-              <a href="#">Kochi Airport Taxi-Outstation</a>
-            </li>
-            <li>
-              <a href="#">Sabarimala Taxi Tariff</a>
-            </li>
-            <li>
-              <a href="#">Kerala Tour Taxi Tariff</a>
-            </li>
-            <li>
-              <a href="#">Kochi Premium Taxi Tariff</a>
-            </li>
-            <li>
-              <a href="#">Special Offers</a>
-            </li>
-          </ul>
         </li>
 
         <li>
@@ -295,6 +295,15 @@ const Header = () => {
           >
             Contact
           </a>
+        </li>
+
+        <li>
+          <Link
+            href="/book-now"
+            className="md:hidden border bg-[#ed2124] !w-[140px] px-3 !py-3 mx-4 mb-4 mt-2 text-center rounded-md text-white text-sm"
+          >
+            Book Now!
+          </Link>
         </li>
       </ul>
 
