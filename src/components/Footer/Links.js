@@ -16,7 +16,7 @@ const links = [
   {
     section: "Fleet",
     items: [
-      { href: "/", text: "General" },
+      { href: "/kochi-city-taxi", text: "General" },
       { href: "/", text: "Premium" },
       { href: "/", text: "Coach" },
       { href: "/", text: "Caravan" },

@@ -222,7 +222,9 @@ const page = () => {
       <div className="py-10 text-white text-center text-2xl md:text-3xl bg-[#ed2124] hover:bg-black transition-all">
         <h3>
           Ready for unmatched convenience,{" "}
-          <strong className="underline">Book your BCabs Now!</strong>{" "}
+          <a href="/book-now">
+            <strong className="underline">Book your BCabs Now!</strong>{" "}
+          </a>
         </h3>
       </div>
 

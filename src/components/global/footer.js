@@ -13,7 +13,7 @@ const leftDropdownData = [
     links: [
       { href: "/kochi-cab-service", label: "Kochi Cab Service" },
       { href: "/kochi-airport-taxi", label: "Kochi Airport Taxi" },
-      { href: "/kerala-tour-package", label: "Kerala Tour Package" },
+      { href: "/kerala-tour-packages", label: "Kerala Tour Package" },
       { href: "/kochi-outstation-taxi", label: "Kochi Outstation Taxi" },
       { href: "/sabarimala-taxi", label: "Sabarimala Taxi" },
     ],

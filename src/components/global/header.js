@@ -127,7 +127,7 @@ const Header = () => {
       <ul className="clearfix flex flex-row justify-end items-center">
         <li>
           <a
-            href="#"
+            href="/"
             className="hover:text-secondary text-[#202020] font-medium text-[0.82rem] uppercase py-[2.5rem] px-[1.4em] block"
           >
             Home
@@ -180,7 +180,7 @@ const Header = () => {
                   <a href="/kochi-airport-taxi">Kochi Airport Taxi</a>
                 </li>
                 <li>
-                  <a href="#">Kerala Tour Package</a>
+                  <a href="/kerala-tour-packages">Kerala Tour Package</a>
                 </li>
                 <li>
                   <a href="#">Kochi Outstation Taxi</a>
@@ -262,7 +262,7 @@ const Header = () => {
           </a>
           <ul className="normal-sub">
             <li>
-              <a href="#">General</a>
+              <a href="/kochi-city-taxi">General</a>
             </li>
             <li>
               <a href="#">Premium</a>
@@ -281,7 +281,7 @@ const Header = () => {
 
         <li>
           <a
-            href="#"
+            href="/kochi-taxi-rates"
             className="hover:text-secondary text-[#202020] font-medium text-[0.82rem] uppercase py-[2.5rem] px-[1.4em] block"
           >
             Tariff
@@ -290,7 +290,7 @@ const Header = () => {
 
         <li>
           <a
-            href="#"
+            href="/contact-bcabs-kochi-taxi"
             className="hover:text-secondary text-[#202020] font-medium text-[0.82rem] uppercase py-[2.5rem] px-[1.4em] block"
           >
             Contact

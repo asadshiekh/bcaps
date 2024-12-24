@@ -1,19 +1,20 @@
 import React from "react";
 import Link from "next/link";
-import Footer from "@/components/global/footer";
-import Header from "@/components/global/header";
 import { MdStars } from "react-icons/md";
 import { FaCarAlt } from "react-icons/fa";
 import { FaClock } from "react-icons/fa6";
+import Footer from "@/components/global/footer";
+import Header from "@/components/global/header";
+import BannerForm from "@/components/BannerForm/page";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
-import AirportTaxiAccordion from "@/components/Accordion/AirportTaxiAccordion";
+import TourPackageAccordion from "@/components/Accordion/TourPackageAccordion";
 
 export const metadata = {
-  title: "Kochi airport taxi, Kochi taxi, airport taxi in Kochi",
+  title: "Kerala tour package, Tour Package, Kerala Tour",
   description:
-    "Reliable Kochi Airport Taxi Services by BCabs: Comfortable rides, 24/7 availability, expert drivers, & seamless transfers from all terminals.",
+    "Explore Kerala with BCabs: Top taxi services for tours, airport pickups, & local sights. Comfortable rides, tailored packages, 24/7 support.",
   keywords:
-    "kochi airport taxi tariff, kochi cab tariff, ernakulam taxi tariff",
+    "taxis services in Kerala, Kerala taxi packages, taxi at Kerala, Kerala best taxi service",
   alternates: {
     canonical: "https://bcabs.com/kochi-taxi-rates",
   },
@@ -58,7 +59,7 @@ const page = () => {
                     href="/kochi-taxi-rates"
                     className="hover:text-gray-700"
                   >
-                    Kochi Airport Taxi
+                    Kerala Tour Package
                   </Link>
                 </li>
               </ul>
@@ -67,11 +68,13 @@ const page = () => {
         </div>
       </div>
 
+      <BannerForm />
+
       <div className="bg-white py-12 px-4 md:px-8">
         <div className="container mx-auto">
           <div className="mb-12">
             <h2 className="text-2xl md:text-3xl font-semibold">
-              Comfortable Rides for Kochi Airport Transfers
+              24-Hour Taxi Cab Services in Kerala
             </h2>
             <ul className="mt-6 space-y-4">
               <li className="flex items-center">
@@ -84,12 +87,15 @@ const page = () => {
               </li>
               <li className="flex items-center">
                 <span className="text-red-500 mr-2">✔</span>
-                <span className="text-lg">Well-maintained vehicles</span>
+                <span className="text-lg">
+                  English and Hindi Speaking Chauffeurs
+                </span>
               </li>
               <li className="flex items-center">
                 <span className="text-red-500 mr-2">✔</span>
                 <span className="text-lg">
-                  All-inclusive fares, no additional or hidden charges
+                  Proud receipient of the 2024 Tripadvisors Travellers Choice
+                  Award
                 </span>
               </li>
             </ul>
@@ -97,25 +103,26 @@ const page = () => {
 
           <div className="text-left">
             <h3 className="text-xl md:text-2xl font-semibold">
-              Kochi Airport Taxi Services with BCabs
+              Discover Kerala with BCabs Taxi Services
             </h3>
             <p className="mt-4 text-gray-700">
-              Travelling to and from Kochi Airport (Cochin International
-              Airport) is either the first or last part of your trip. BCabs is
-              committed to ensuring everything runs smoothly. Whether we’re
-              picking you up from arrivals or dropping you off at departures, we
-              arrive on time, ready to take you to your destination.
+              Kerala is one of the most beautiful parts of India, renowned for
+              its rich wildlife, cultural hotspots, and natural beauty. Our taxi
+              services in Kerala transport you from the airport, train station,
+              or hotel to any destination within the local region.
             </p>
             <p className="mt-4 text-gray-700">
-              We can take you anywhere in Kerala or the surrounding states.
-              Simply make a reservation, let us know your drop-off point, and we
-              will handle the rest.
+              BCabs is the best Kerala taxi service, guaranteeing a comfortable,
+              luxurious experience for every traveller. Our friendly chauffeurs
+              speak either English or Hindi, providing insightful advice on
+              Kerala and its attraction. We’re committed to making your trip as
+              simple and enjoyable as possible.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="container mx-auto py-20 border-t border-gray-300 px-4">
+      <div className="container mx-auto pt-20 pb-10 border-t border-gray-300 px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div className="feature-box flex flex-col items-center mb-3 px-4">
             <div className="mr-3 mb-4">
@@ -158,27 +165,36 @@ const page = () => {
             </p>
           </div>
         </div>
-      </div>
 
-      <div className="container mx-auto px-4 md:px-8">
-        <div className="text-left">
-          <h3 className="text-xl md:text-2xl font-semibold">
-            Comfortable Rides for Every Traveler
-          </h3>
-          <p className="mt-4 text-gray-700">
-            BCabs maintains a fleet of exceptional vehicles, from affordable
-            sedans to luxury SUVs. Each of our vehicles is fully serviced and
-            sanitised to provide the highest quality to our customers. All of
-            our vehicles are available as a Kochi airport taxi.
-          </p>
-          <p className="mt-4 text-gray-700">
-            If you’re travelling as part of a larger group, we offer both
-            minivans and coaches to transport people to their final destination.
-            Please speak to our team for further information.
-          </p>
+        <div className="bg-white py-12 px-4 md:px-8">
+          <div className="container mx-auto">
+            <div className="text-left">
+              <h3 className="text-xl md:text-2xl font-semibold">
+                Explore Kerala’s Top Destinations
+              </h3>
+              <p className="mt-4 text-gray-700">
+                Kerala is an enchanting paradise covering a vast stretch of
+                India’s southern coastline, from Poovar up to Manjeshwar.
+                Travelling through this region is a challenge for tourists eager
+                to see what the landscape and culture have to offer. That’s
+                where we come in.
+              </p>
+              <p className="mt-4 text-gray-700">
+                Our taxi services in Kerala help you visit all the top sights,
+                including Munnar, Thekkady, Alleppey, Kovalam, or any other part
+                of the region. Better still, our friendly drivers can help
+                advise you on the best places to visit.
+              </p>
+              <p className="mt-4 text-gray-700">
+                We offer personalised and affordable travel packages, working
+                around your itinerary. Wherever you want to go, we’ll provide a
+                bespoke offer just for you.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <div className="my-10 overflow-auto scrollbar-thin scrollbar-thumb-rounded-lg scrollbar-thumb-gray-600 scrollbar-track-gray-300">
+        <div className="mb-10 overflow-auto scrollbar-thin scrollbar-thumb-rounded-lg scrollbar-thumb-gray-600 scrollbar-track-gray-300">
           <table className="border border-1 border-gray-300 w-full text-center">
             <thead>
               <tr className="bg-gray-800 text-white">
@@ -288,17 +304,20 @@ const page = () => {
 
         <div className="text-left">
           <h3 className="text-xl md:text-2xl font-semibold">
-            Seamless Transfers for Domestic and International Terminals
+            Comfortable Rides for Every Traveller
           </h3>
           <p className="mt-4 text-gray-700">
-            We can provide a pickup or drop-off service for both domestic and
-            international terminals at Cochin International Airport. Our
-            friendly drivers are highly familiar with the airport, ensuring the
-            shortest possible route. We provide a quick, reliable, and efficient
-            service that gets you where you need to be when you need to be
-            there. With competitive pricing, expert local knowledge, and a focus
-            on customer satisfaction, BCabs is your trusted travel partner for
-            hassle-free airport transfers. View our full fleet at{" "}
+            Your comfort is our top priority. We maintain a fleet of exceptional
+            vehicles, from sedans and SUVs to luxury coaches. Whether you’re a
+            small group or a large cohort, we’ve got the right vehicle to
+            transport you comfortably and securely throughout Kerala. That’s a
+            promise.
+          </p>
+          <p className="mt-4 text-gray-700">
+            Each vehicle is guaranteed to take you to your destination. With
+            more than 25+ categories of vehicles, we’re confident we’ve got the
+            premier transportation option for your trip to India’s natural
+            paradise.{" "}
             <a href="/kochi-city-taxi" className="text-[#ed2124]">
               Fleet Page
             </a>
@@ -319,7 +338,7 @@ const page = () => {
         </h3>
       </div>
 
-      <AirportTaxiAccordion />
+      <TourPackageAccordion />
 
       <Footer />
     </div>
