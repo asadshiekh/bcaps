@@ -102,7 +102,7 @@ const Fleet = () => {
                     <div>
                         <h4 className="text-3xl mb-5 font-semibold">Luxury Coach Rental</h4>
                         <p className="mb-5 text-gray-100">If you are looking for a comfortable and convenient way to travel with your group to Kerala, look no further than BCabs Traveller and Bus rental service at Kochi. We offer a range of coaches that can accommodate from 12 to 50 passengers, all equipped with modern amenities and safety features. Whether you need a coach for a corporate event, a wedding, a sightseeing tour, or any other occasion, we can provide you with the best option for your needs and budget.</p>
-                        <Link href="" className="font-semibold">Visit our Coaches fleet page for more information <FaChevronRight className="inline-block" /></Link>
+                        <Link href="/kochi-city-taxi" className="font-semibold">Visit our Coaches fleet page for more information <FaChevronRight className="inline-block" /></Link>
                     </div>
                     <div>
 

@@ -88,7 +88,7 @@ const page = () => {
                   sightseeing tour, or any other occasion, we can provide you
                   with the best option for your needs and budget.
                 </p>
-                <Link href="" className="font-semibold">
+                <Link href="/kochi-city-taxi" className="font-semibold">
                   Visit our Coaches fleet page for more information{" "}
                   <FaChevronRight className="inline-block" />
                 </Link>

@@ -41,28 +41,6 @@ const ServicesSection = () => {
           <li>Guide Support</li>
         </ul>
       </div>
-
-      {/* Social Media Buttons */}
-      <div className="fixed right-4 top-1/3 space-y-3">
-        <a
-          href="#"
-          className="block w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center text-white"
-        >
-          <i className="fas fa-share-alt"></i>
-        </a>
-        <a
-          href="#"
-          className="block w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white"
-        >
-          <i className="fas fa-phone"></i>
-        </a>
-        <a
-          href="#"
-          className="block w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white"
-        >
-          <i className="fab fa-whatsapp"></i>
-        </a>
-      </div>
     </div>
   );
 };

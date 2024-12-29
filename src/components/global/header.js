@@ -290,20 +290,11 @@ const Header = () => {
 
         <li>
           <a
-            href="/contact-bcabs-kochi-taxi"
+            href="/general-contact"
             className="hover:text-secondary text-[#202020] font-medium text-[0.82rem] uppercase py-[2.5rem] px-[1.4em] block"
           >
             Contact
           </a>
-        </li>
-
-        <li>
-          <Link
-            href="/book-now"
-            className="md:hidden border bg-[#ed2124] !w-[140px] px-3 !py-3 mx-4 mb-4 mt-2 text-center rounded-md text-white text-sm"
-          >
-            Book Now!
-          </Link>
         </li>
       </ul>
 

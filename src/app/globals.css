@@ -233,3 +233,11 @@ body {
     margin-top: auto;
   }
 }
+
+
+@media (max-width: 640px) {
+  .flatpickr-mobile{
+     position: relative !important;
+    top: -45px !important; 
+  }
+}
